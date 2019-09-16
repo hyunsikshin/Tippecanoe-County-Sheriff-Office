@@ -1,31 +1,18 @@
-import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import Header from './Header';
-import ButtonSet from './ButtonSet';
-import background from './assets/background.jpg';
+import React, { Component } from 'react';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import MainPage from './pages/MainPage';
+import MailPage from './pages/MailPage';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Header style={styles.header} />
-      <Image style={styles.logo} source={background} />
-      <ButtonSet />
-    </View>
-  );
-}
+const App = createStackNavigator(
+  {
+    MainPage: { screen: MainPage },
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    MailPage: { screen: MailPage },
   },
-  header: {
-    flex: 1,
-  },
-  logo: {
-    width: 370,
-    height: 200,
-  },
-});
+  {
+    initialRouteName: 'MainPage',
+  }
+);
+
+export default createAppContainer(App);
