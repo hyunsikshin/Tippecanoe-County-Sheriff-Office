@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
-import tipslogo from './assets/tipslogo.png';
+import tipslogo from '../assets/tipslogo.png';
 
 function Header() {
   return (

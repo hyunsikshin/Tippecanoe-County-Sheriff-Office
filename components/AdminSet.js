@@ -1,43 +1,43 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
-function ButtonSet() {
+function AdminSet() {
   return (
     <>
       <View style={styles.container}>
         <View style={styles.cell}>
-          <Text>a</Text>
+          <Text>aa</Text>
         </View>
         <View style={styles.cell}>
-          <Text>b</Text>
+          <Text>ab</Text>
         </View>
         <View style={styles.cell}>
-          <Text>c</Text>
+          <Text>ac</Text>
         </View>
         <View style={styles.cell}>
-          <Text>d</Text>
+          <Text>ad</Text>
         </View>
         <View style={styles.cell}>
-          <Text>e</Text>
+          <Text>ae</Text>
         </View>
         <View style={styles.cell}>
-          <Text>f</Text>
+          <Text>af</Text>
         </View>
         <View style={styles.cell}>
-          <Text>g</Text>
+          <Text>ag</Text>
         </View>
         <View style={styles.cell}>
-          <Text>h</Text>
+          <Text>ah</Text>
         </View>
         <View style={styles.cell}>
-          <Text>i</Text>
+          <Text>ai</Text>
         </View>
       </View>
     </>
   );
 }
 
-export default ButtonSet;
+export default AdminSet;
 
 const styles = StyleSheet.create({
   container: {
@@ -50,6 +50,6 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     margin: 5,
-    backgroundColor: '#3498db',
+    backgroundColor: '#2ecc71',
   },
 });
