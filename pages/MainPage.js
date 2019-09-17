@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
 import Header from '../components/Header';
 import ButtonSet from '../components/ButtonSet';
+import AdminSet from '../components/AdminSet';
 import background from '../assets/background.jpg';
 import getLink from '../actions/getLink';
 
@@ -19,6 +20,10 @@ class MainPage extends Component {
       fontWeight: 'bold',
       //Sets Header text style
     },
+  };
+
+  state = {
+    isAdmin: false,
   };
 
   render() {
@@ -48,5 +53,8 @@ const styles = StyleSheet.create({
   logo: {
     width: 370,
     height: 200,
+  },
+  gone: {
+    display: 'none',
   },
 });

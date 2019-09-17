@@ -1,47 +1,41 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image, Linking, Button } from 'react-native';
-import getLink from '../actions/getLink';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
-const ButtonSet = ({ navigate }) => {
+function ServiceSet() {
   return (
     <View style={styles.container}>
       <View style={styles.cell}>
-        {/* <Button
-          title="a"
-          onPress={() => {
-            getLink.getLink('Lafayette', 'jobApply');
-          }}></Button> */}
-        <Text>Admin</Text>
+        <Text>Sheriff's Sale</Text>
       </View>
       <View style={styles.cell}>
-        <Text onPress={() => navigate('MailPage')}>Sex Offenders</Text>
+        <Text>Gun Permits</Text>
       </View>
       <View style={styles.cell}>
-        <Text>Corrections</Text>
+        <Text>Crash Report</Text>
       </View>
       <View style={styles.cell}>
-        <Text>We-Tip</Text>
+        <Text>Records Request</Text>
       </View>
       <View style={styles.cell}>
-        <Text>Contacts</Text>
+        <Text>Animal Control</Text>
       </View>
       <View style={styles.cell}>
-        <Text>Services</Text>
+        <Text>Security and extra patrol request</Text>
       </View>
       <View style={styles.cell}>
-        <Text>Social Media</Text>
+        <Text>Tax Warrants</Text>
       </View>
       <View style={styles.cell}>
-        <Text>Privacy Policy</Text>
+        <Text>Traffic complaints</Text>
       </View>
-      <View style={styles.gone}>
-        <Text></Text>
+      <View style={styles.cell}>
+        <Text>BACK</Text>
       </View>
     </View>
   );
-};
+}
 
-export default ButtonSet;
+export default ServiceSet;
 
 const styles = StyleSheet.create({
   container: {
@@ -54,7 +48,7 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     margin: 5,
-    backgroundColor: '#3498db',
+    backgroundColor: '#2ecc71',
   },
   gone: {
     width: 100,

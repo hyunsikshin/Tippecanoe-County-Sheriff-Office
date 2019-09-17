@@ -4,12 +4,10 @@ import tipslogo from '../assets/tipslogo.png';
 
 function Header() {
   return (
-    <>
-      <View style={styles.container}>
-        <Image style={{ width: 150, height: 60 }} source={tipslogo} />
-        <Text style={styles.temp}>Weather</Text>
-      </View>
-    </>
+    <View style={styles.container}>
+      <Image style={{ width: 150, height: 60 }} source={tipslogo} />
+      <Text style={styles.temp}>Weather</Text>
+    </View>
   );
 }
 
