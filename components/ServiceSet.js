@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import ControllContainer from '../actions/ControllContainer';
 
 function ServiceSet() {
   return (
@@ -29,7 +30,7 @@ function ServiceSet() {
         <Text>Traffic complaints</Text>
       </View>
       <View style={styles.cell}>
-        <Text>BACK</Text>
+        <Text onPress={() => ControllContainer.getInstance().showButtonList("Main")}>BACK</Text>
       </View>
     </View>
   );
