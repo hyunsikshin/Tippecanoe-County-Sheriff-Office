@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
-function AdminSet() {
+function SnsSet() {
   return (
     <View style={styles.container}>
       <View style={styles.cell}>
-        <Text>Phone Directory</Text>
+        <Text>Facebook</Text>
       </View>
       <View style={styles.cell}>
-        <Text>Admin Line</Text>
+        <Text>Twitter</Text>
       </View>
       <View style={styles.cell}>
-        <Text>Job Apply</Text>
+        <Text>Instagram</Text>
       </View>
       <View style={styles.cell}>
         <Text>BACK</Text>
@@ -35,7 +35,7 @@ function AdminSet() {
   );
 }
 
-export default AdminSet;
+export default SnsSet;
 
 const styles = StyleSheet.create({
   container: {
