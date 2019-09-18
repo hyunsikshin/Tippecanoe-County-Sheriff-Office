@@ -1,24 +1,25 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import ControllContainer from '../actions/ControllContainer';
+import getLink from '../actions/getLink';
 
 function CorrectionSet() {
   return (
     <View style={styles.container}>
       <View style={styles.cell}>
-        <Text>Inmate lookup</Text>
+        <Text onPress={() => {getLink.getLink('Lafayette', 'immateLookup')}}>Inmate lookup</Text>
       </View>
       <View style={styles.cell}>
-        <Text>Commissary</Text>
+        <Text onPress={() => {getLink.getLink('Lafayette', 'commissary')}}>Commissary</Text>
       </View>
       <View style={styles.cell}>
         <Text>Video Visitation</Text>
       </View>
       <View style={styles.cell}>
-        <Text>Visitation Policy</Text>
+        <Text onPress={() => {getLink.getLink('Lafayette', 'visitationPolicy')}}>Visitation Policy</Text>
       </View>
       <View style={styles.cell}>
-        <Text onPress={() => ControllContainer.getInstance().showButtonList("Main")}>BACK</Text>
+        <Text onPress={() => ControllContainer.getInstance().openButton("Main")}>BACK</Text>
       </View>
       <View style={styles.gone}>
         <Text></Text>

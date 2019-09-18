@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import ControllContainer from '../actions/ControllContainer';
+import getLink from '../actions/getLink';
 
 function SnsSet() {
   return (
@@ -15,7 +16,7 @@ function SnsSet() {
         <Text>Instagram</Text>
       </View>
       <View style={styles.cell}>
-        <Text onPress={() => ControllContainer.getInstance().showButtonList("Main")}>BACK</Text>
+        <Text onPress={() => ControllContainer.getInstance().openButton("Main")}>BACK</Text>
       </View>
       <View style={styles.gone}>
         <Text></Text>

@@ -6,9 +6,18 @@ import ButtonScreen from '../actions/ButtonScreen';
 //import AdminSet from '../components/AdminSet';
 import background from '../assets/background.jpg';
 //import getLink from '../actions/getLink';
+import ControllContainer from '../actions/ControllContainer';
 
+
+const API_KEY = 'e02b7ad151e0ceafbbe427b2ac4dbc2f'; //날씨 api key
 
 class MainPage extends Component {
+  constructor(){
+    super();
+    ControllContainer.getInstance().initModalControl(this);
+  }
+
+
   static navigationOptions = {
     title: 'Main Page',
     //Sets Header text of Status Bar
@@ -24,17 +33,58 @@ class MainPage extends Component {
     },
   };
 
+  componentDidMount() {
+    navigator.geolocation.getCurrentPosition(
+      position => {
+        console.log(position);
+        this._getWeather(position.coords.latitude, position.coords.longitude);
+      },
+      error => {
+        this.setState({
+          error: error,
+        });
+      }
+    );
+  }
+
+  _getWeather = (lat, lon) => {
+    fetch(
+      `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${API_KEY}`
+    )
+      .then(response => response.json())
+      .then(json => {
+        console.log(json);
+        this.setState({
+          city: json.name,
+          name: json.weather[0].main,
+          tempertature: json.main.temp,
+          isLoaded: true,
+        });
+      });
+  };
+
   state = {
-    isAdmin: false,
+    isLoaded: false,
+    error: null,
+    name: null,
+    city: null,
+    tempertature: null,
   };
 //ButtonSet navigate={navigate}
   render() {
+    const { isLoaded, error, tempertature, name, city } = this.state;
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
-        <Header style={styles.header} />
+        <Header
+          style={styles.header}
+          temp={Math.ceil(((tempertature - 273.15) * 9) / 5 + 32)}
+          city={city}
+          weatherName={name}
+        />
         <Image style={styles.logo} source={background} />
         <ButtonScreen/>
+        {ControllContainer.getInstance().checkItems("Modal")}
       </View>
     );
   }

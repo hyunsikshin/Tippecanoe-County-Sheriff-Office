@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import ControllContainer from '../actions/ControllContainer';
+import getLink from '../actions/getLink';
 
 function AdminSet() {
   return (
     <View style={styles.container}>
       <View style={styles.cell}>
-        <Text>Phone Directory</Text>
+        <Text onPress={() => {getLink.getLink('Lafayette', 'phoneDirectory')}}>Phone Directory</Text>
       </View>
       <View style={styles.cell}>
-        <Text>Admin Line</Text>
+        <Text onPress={() => {getLink.getLink('Lafayette', 'adminLine')}}>Admin Line</Text>
       </View>
       <View style={styles.cell}>
-        <Text>Job Apply</Text>
+        <Text onPress={() => {getLink.getLink('Lafayette', 'jobApply')}}>Job Apply</Text>
       </View>
       <View style={styles.cell}>
-        <Text onPress={() => ControllContainer.getInstance().showButtonList("Main")} >BACK</Text>
+        <Text onPress={() => ControllContainer.getInstance().openButton("Main")} >BACK</Text>
       </View>
       <View style={styles.gone}>
         <Text></Text>
