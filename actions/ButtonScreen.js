@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 import ControllContainer from './ControllContainer';
 
-
 export default class ButtonScreen  extends Component {
     constructor(){
       super();
@@ -12,7 +11,7 @@ export default class ButtonScreen  extends Component {
     render() {
       return (
         <View >
-           {ControllContainer.getInstance().checkButton()}
+           {ControllContainer.getInstance().checkItems("Button")}
         </View>
       );
     }

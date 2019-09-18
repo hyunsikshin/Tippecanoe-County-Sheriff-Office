@@ -1,4 +1,4 @@
-import constants from './Text';
+import constants from './Links';
 import { Linking } from 'react-native';
 import { String } from 'core-js';
 

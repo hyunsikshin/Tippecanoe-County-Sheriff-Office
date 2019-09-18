@@ -6,11 +6,18 @@ import ButtonScreen from '../actions/ButtonScreen';
 //import AdminSet from '../components/AdminSet';
 import background from '../assets/background.jpg';
 //import getLink from '../actions/getLink';
+import ControllContainer from '../actions/ControllContainer';
 
 
 const API_KEY = 'e02b7ad151e0ceafbbe427b2ac4dbc2f'; //날씨 api key
 
 class MainPage extends Component {
+  constructor(){
+    super();
+    ControllContainer.getInstance().initModalControl(this);
+  }
+
+
   static navigationOptions = {
     title: 'Main Page',
     //Sets Header text of Status Bar
@@ -77,6 +84,7 @@ class MainPage extends Component {
         />
         <Image style={styles.logo} source={background} />
         <ButtonScreen/>
+        {ControllContainer.getInstance().checkItems("Modal")}
       </View>
     );
   }

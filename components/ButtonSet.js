@@ -8,33 +8,28 @@ const ButtonSet = ({ navigate }) => {
   return (
     <View style={styles.container}>
       <View style={styles.cell}>
-        {/* <Button
-          title="a"
-          onPress={() => {
-            getLink.getLink('Lafayette', 'jobApply');
-          }}></Button> */}
-        <Text onPress={() => ControllContainer.getInstance().showButtonList("Admin")} >Admin</Text>
+        <Text onPress={() => ControllContainer.getInstance().openButton("Admin")} >Admin</Text>
       </View>
       <View style={styles.cell}>
-        <Text onPress={() => navigate('MailPage')}>Sex Offenders</Text>
+        <Text  onPress={() => {getLink.getLink('Lafayette', 'sexOffenders')}}>Sex Offenders</Text>
       </View>
       <View style={styles.cell}>
-        <Text onPress={() => ControllContainer.getInstance().showButtonList("Corrections")}>Corrections</Text>
+        <Text onPress={() => ControllContainer.getInstance().openButton("Corrections")}>Corrections</Text>
       </View>
       <View style={styles.cell}>
-        <Text>We-Tip</Text>
+        <Text  onPress={() => {getLink.getLink('Lafayette', 'weTip')}} >We-Tip</Text>
       </View>
       <View style={styles.cell}>
-        <Text>Contacts</Text>
+        <Text  onPress={() => ControllContainer.getInstance().openModal("BasicModalA")} >Contacts</Text>
       </View>
       <View style={styles.cell}>
-        <Text onPress={() => ControllContainer.getInstance().showButtonList("Service")}>Services</Text>
+        <Text onPress={() => ControllContainer.getInstance().openButton("Service")}>Services</Text>
       </View>
       <View style={styles.cell}>
-        <Text onPress={() => ControllContainer.getInstance().showButtonList("SocialMedia")}>Social Media</Text>
+        <Text onPress={() => ControllContainer.getInstance().openButton("SocialMedia")}>Social Media</Text>
       </View>
       <View style={styles.cell}>
-        <Text>Privacy Policy</Text>
+        <Text onPress={() => {getLink.getLink('Lafayette', 'privacyPolicy')}}>Privacy Policy</Text>
       </View>
       <View style={styles.gone}>
         <Text></Text>
