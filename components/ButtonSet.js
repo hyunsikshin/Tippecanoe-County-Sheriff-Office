@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, Linking, Button } from 'react-native';
 import getLink from '../actions/getLink';
+import ControllContainer from '../actions/ControllContainer';
+
 
 const ButtonSet = ({ navigate }) => {
   return (
@@ -11,13 +13,13 @@ const ButtonSet = ({ navigate }) => {
           onPress={() => {
             getLink.getLink('Lafayette', 'jobApply');
           }}></Button> */}
-        <Text>Admin</Text>
+        <Text onPress={() => ControllContainer.getInstance().showButtonList("Admin")} >Admin</Text>
       </View>
       <View style={styles.cell}>
         <Text onPress={() => navigate('MailPage')}>Sex Offenders</Text>
       </View>
       <View style={styles.cell}>
-        <Text>Corrections</Text>
+        <Text onPress={() => ControllContainer.getInstance().showButtonList("Corrections")}>Corrections</Text>
       </View>
       <View style={styles.cell}>
         <Text>We-Tip</Text>
@@ -26,10 +28,10 @@ const ButtonSet = ({ navigate }) => {
         <Text>Contacts</Text>
       </View>
       <View style={styles.cell}>
-        <Text>Services</Text>
+        <Text onPress={() => ControllContainer.getInstance().showButtonList("Service")}>Services</Text>
       </View>
       <View style={styles.cell}>
-        <Text>Social Media</Text>
+        <Text onPress={() => ControllContainer.getInstance().showButtonList("SocialMedia")}>Social Media</Text>
       </View>
       <View style={styles.cell}>
         <Text>Privacy Policy</Text>

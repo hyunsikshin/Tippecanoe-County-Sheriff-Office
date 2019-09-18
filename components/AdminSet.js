@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import ControllContainer from '../actions/ControllContainer';
 
 function AdminSet() {
   return (
@@ -14,7 +15,7 @@ function AdminSet() {
         <Text>Job Apply</Text>
       </View>
       <View style={styles.cell}>
-        <Text>BACK</Text>
+        <Text onPress={() => ControllContainer.getInstance().showButtonList("Main")} >BACK</Text>
       </View>
       <View style={styles.gone}>
         <Text></Text>
