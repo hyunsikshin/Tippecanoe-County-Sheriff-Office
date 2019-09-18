@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
 import Header from '../components/Header';
-import ButtonSet from '../components/ButtonSet';
-import AdminSet from '../components/AdminSet';
+import ButtonScreen from '../actions/ButtonScreen';
+//import ButtonSet from '../components/ButtonSet';
+//import AdminSet from '../components/AdminSet';
 import background from '../assets/background.jpg';
-import getLink from '../actions/getLink';
+//import getLink from '../actions/getLink';
+
 
 const API_KEY = 'e02b7ad151e0ceafbbe427b2ac4dbc2f'; //날씨 api key
 
@@ -61,7 +63,7 @@ class MainPage extends Component {
     city: null,
     tempertature: null,
   };
-
+//ButtonSet navigate={navigate}
   render() {
     const { isLoaded, error, tempertature, name, city } = this.state;
     const { navigate } = this.props.navigation;
@@ -74,7 +76,7 @@ class MainPage extends Component {
           weatherName={name}
         />
         <Image style={styles.logo} source={background} />
-        <ButtonSet navigate={navigate} />
+        <ButtonScreen/>
       </View>
     );
   }
