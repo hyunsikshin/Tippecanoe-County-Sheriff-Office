@@ -7,13 +7,13 @@ function SnsSet() {
   return (
     <View style={styles.container}>
       <View style={styles.cell}>
-        <Text>Facebook</Text>
+        <Text onPress={() => {getLink.getLink('Lafayette', 'faceBook')}}>Facebook</Text>
       </View>
       <View style={styles.cell}>
-        <Text>Twitter</Text>
+        <Text onPress={() => {getLink.getLink('Lafayette', 'twitter')}}>Twitter</Text>
       </View>
       <View style={styles.cell}>
-        <Text>Instagram</Text>
+        <Text onPress={() => {getLink.getLink('Lafayette', 'instargram')}}>Instagram</Text>
       </View>
       <View style={styles.cell}>
         <Text onPress={() => ControllContainer.getInstance().openButton("Main")}>BACK</Text>
