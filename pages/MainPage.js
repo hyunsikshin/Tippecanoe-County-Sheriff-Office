@@ -15,6 +15,7 @@ class MainPage extends Component {
   constructor(){
     super();
     ControllContainer.getInstance().initModalControl(this);
+    console.disableYellowBox = true;
   }
 
 
