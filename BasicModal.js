@@ -9,11 +9,11 @@ export default class BasicModal extends Component {
   render() {
     const modalBackgroundStyle = {
       backgroundColor: 'rgba(103, 89, 71, 50)',
+      offset : 0.5
     };
     return (
         <Modal
           open ={true}
-          offset = { 0 }
           style={{ modalBackgroundStyle , alignItems: 'center' }}
           modalDidClose={() => ControllContainer.getInstance().closeModal()}
           >

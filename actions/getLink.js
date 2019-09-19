@@ -14,7 +14,7 @@ const getLink = {
       case 'Lafayette':
         str = constants.Lafayette[event];
     }
-    if (str != '') Linking.openURL(str);
+    if (str != '')  Linking.openURL(str);
     else return;
   },
 };

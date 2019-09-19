@@ -7,6 +7,7 @@ import ButtonScreen from '../actions/ButtonScreen';
 import background from '../assets/background.jpg';
 //import getLink from '../actions/getLink';
 import ControllContainer from '../actions/ControllContainer';
+import { BackHandler } from 'react-native';
 
 
 const API_KEY = 'e02b7ad151e0ceafbbe427b2ac4dbc2f'; //날씨 api key
@@ -16,8 +17,26 @@ class MainPage extends Component {
     super();
     ControllContainer.getInstance().initModalControl(this);
     console.disableYellowBox = true;
+    this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
   }
 
+  componentWillMount() {
+    BackHandler.addEventListener('hardwareBackPress', this.handleBackButtonClick);
+}
+
+componentWillUnmount() {
+    BackHandler.removeEventListener('hardwareBackPress', this.handleBackButtonClick);
+}
+
+handleBackButtonClick() {
+   if(ControllContainer.getInstance().isModalOn())
+      ControllContainer.getInstance().closeModal();
+   else if(ControllContainer.getInstance().isMainScreen())
+      return false;
+   else
+      ControllContainer.getInstance().openButton("Main");
+    return true;
+}
 
   static navigationOptions = {
     title: 'Main Page',
