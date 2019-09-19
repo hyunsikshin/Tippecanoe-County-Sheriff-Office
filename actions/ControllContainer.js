@@ -24,6 +24,7 @@ export default class ControllContainer{
     //#endregion
 
     buttonlist = [
+        { name: "Main", isShow: false , list :<ButtonSet></ButtonSet>},
         { name: "Admin", isShow: false , list :<AdminSet></AdminSet>},
         { name: "Corrections", isShow: false ,list : <CorrectionSet></CorrectionSet>},
         { name: "Service", isShow: false , list : <ServiceSet></ServiceSet> },
@@ -45,7 +46,19 @@ export default class ControllContainer{
     }
 
 
-   
+    isMainScreen(){
+        if(this.buttonlist[0].isShow == true)
+            return true;
+        else
+            return false;
+    }
+
+    isModalOn(){
+      for(i = 0;i<this.modallist.length;i++)
+        if(this.modallist[i].isShow == true)
+             return true;
+      return false;
+    }
     
      openListByName(itemlist,name){
       for(i = 0;i<itemlist.length;i++)
