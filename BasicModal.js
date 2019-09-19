@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Modal from 'react-native-simple-modal';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { Text, TouchableOpacity, View, StyleSheet,Button } from 'react-native';
 import { Linking } from 'expo';
 import ControllContainer from './actions/ControllContainer';
+import getLink from './actions/getLink';
 
-
-export default class BasicModal extends Component {   
+export default class BasicModal extends Component {
   render() {
     const modalBackgroundStyle = {
       backgroundColor: 'rgba(103, 89, 71, 50)',
@@ -34,3 +34,39 @@ export default class BasicModal extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+
+  TitleText:{
+      color:'white',
+      alignItems:'center',
+    fontSize:40 
+  },
+
+  InnerText:{
+    fontSize: 40,
+    color:'white',
+    textDecorationLine: 'underline',
+  },
+
+  Cell_Title: {
+    width: 330,
+    height: 55,
+    margin: 5,
+    backgroundColor: '#55330E',
+    alignItems:'center',
+  },
+
+  Cell_Close: {
+    width: 300,
+    height: 45,
+    marginVertical: 10,
+    backgroundColor: '#D6D8D7'
+  },
+   modalBackgroundStyle : {
+    backgroundColor: 'rgba(78,62,46, 1)'
+    ,margin : -10
+    ,alignItems:'center'
+  }
+
+});

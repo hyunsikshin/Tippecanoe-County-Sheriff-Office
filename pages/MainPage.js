@@ -9,6 +9,7 @@ import background from '../assets/background.jpg';
 import ControllContainer from '../actions/ControllContainer';
 import { BackHandler } from 'react-native';
 
+import MailPage from './MailPage';
 
 const API_KEY = 'e02b7ad151e0ceafbbe427b2ac4dbc2f'; //날씨 api key
 
@@ -29,7 +30,10 @@ componentWillUnmount() {
 }
 
 handleBackButtonClick() {
-   if(ControllContainer.getInstance().isModalOn())
+
+   if(ControllContainer.getInstance().isCheckMailPage())
+      ControllContainer.getInstance().setMailPage();
+   else if(ControllContainer.getInstance().isModalOn())
       ControllContainer.getInstance().closeModal();
    else if(ControllContainer.getInstance().isMainScreen())
       return false;
@@ -94,19 +98,28 @@ handleBackButtonClick() {
   render() {
     const { isLoaded, error, tempertature, name, city } = this.state;
     const { navigate } = this.props.navigation;
-    return (
-      <View style={styles.container}>
-        <Header
-          style={styles.header}
-          temp={Math.ceil(((tempertature - 273.15) * 9) / 5 + 32)}
-          city={city}
-          weatherName={name}
-        />
-        <Image style={styles.logo} source={background} />
-        <ButtonScreen/>
-        {ControllContainer.getInstance().checkItems("Modal")}
-      </View>
-    );
+    if(!ControllContainer.getInstance().isCheckMailPage())
+    {
+      return (
+        <View style={styles.container}>
+          <Header
+            style={styles.header}
+            temp={Math.ceil(((tempertature - 273.15) * 9) / 5 + 32)}
+            city={city}
+            weatherName={name}
+          />
+          <Image style={styles.logo} source={background} />
+          <ButtonScreen/>
+          {ControllContainer.getInstance().checkItems("Modal")}
+        </View>
+      );
+    }
+    else
+    {
+      return(
+        <MailPage></MailPage>
+      )
+    }
   }
 }
 

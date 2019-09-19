@@ -6,6 +6,10 @@ import ServiceSet from '../components/ServiceSet';
 import SnsSet from '../components/SnsSet';
 import BaiscModal from '../BasicModal';
 import BaiscModalA from '../BasicModalA';
+import MailPage from '../pages/MailPage';
+import BasicModalB from '../BasicModalB';
+import BasicModalC from '../BasicModalC';
+import BasicModalD from '../BasicModalD';
 
 export default class ControllContainer{
 
@@ -34,6 +38,13 @@ export default class ControllContainer{
     modallist = [
         { name: "BasicModal", isShow: false , list :<BaiscModal></BaiscModal>},
         { name: "BasicModalA", isShow: false , list :<BaiscModalA></BaiscModalA>},
+        { name: "BasicModalB", isShow: false , list :<BasicModalB></BasicModalB>},
+        { name: "BasicModalC", isShow: false , list :<BasicModalC></BasicModalC>},
+        { name: "BasicModalD", isShow: false , list :<BasicModalD></BasicModalD>}
+    ];
+
+    Navigator = [
+      { name: "MailPage", isShow: false , list :<MailPage></MailPage>},
     ];
 
     
@@ -43,6 +54,19 @@ export default class ControllContainer{
 
     initModalControl(object){
         this.ModalControl = object;
+    }
+
+
+    setMailPage(){
+        this.Navigator[0].isShow = !this.Navigator[0].isShow
+        this.ModalControl.forceUpdate();
+    }
+
+    isCheckMailPage(){
+        if( this.Navigator[0].isShow == true)
+            return true;
+        else
+            return false;
     }
 
 

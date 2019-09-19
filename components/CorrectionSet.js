@@ -13,10 +13,10 @@ function CorrectionSet() {
         <Text onPress={() => {getLink.getLink('Lafayette', 'commissary')}}>Commissary</Text>
       </View>
       <View style={styles.cell}>
-        <Text  onPress={() => ControllContainer.getInstance().openModal("BasicModalA")}>Video Visitation</Text>
+      <Text  onPress={() => ControllContainer.getInstance().openModal("BasicModalB")}>Video Visitation</Text>
       </View>
       <View style={styles.cell}>
-        <Text onPress={() => {getLink.getLink('Lafayette', 'visitationPolicy')}}>Visitation Policy</Text>
+      <Text onPress={() => {getLink.getLink('Lafayette', 'visitationPolicy')}} >Visitation Policy</Text>
       </View>
       <View style={styles.cell}>
         <Text onPress={() => ControllContainer.getInstance().openButton("Main")}>BACK</Text>

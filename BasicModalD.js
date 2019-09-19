@@ -4,8 +4,9 @@ import { Text, TouchableOpacity, View, StyleSheet,Button } from 'react-native';
 import { Linking } from 'expo';
 import ControllContainer from './actions/ControllContainer';
 import getLink from './actions/getLink';
+import {ToastAndroid} from 'react-native';
 
-export default class BasicModalA extends Component {
+export default class BasicModalD extends Component {
   render() {
     return (
         <Modal
@@ -17,24 +18,20 @@ export default class BasicModalA extends Component {
               
             <View style={[styles.container, styles.modalBackgroundStyle]}>
                 <View style={styles.Cell_Title}>
-                    <Text style ={styles.TitleText}>Contact</Text>
+                    <Text style ={styles.TitleText}>Security and Extra Patrol Request</Text>
                </View>
             
             <View style={{alignItems:'center'}}>
                 <TouchableOpacity style = {styles.InnerText}
-                onPress={() =>  getLink.getLink('Lafayette','administration')}>
-                <Text style ={styles.InnerText}>ADMINISTRATION</Text>
+                onPress={() => ControllContainer.getInstance().setMailPage()}>
+                <Text style ={styles.InnerText_SECURITYREQUEST}>SECURITY REQUEST</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style = {styles.InnerText}
-                onPress={() => getLink.getLink('Lafayette','dispatch')}>
-                <Text style ={styles.InnerText}>DISPATCH</Text>
+                onPress={() => ControllContainer.getInstance().setMailPage()}>
+                <Text style ={styles.InnerText}>EXTRA PATROL REQUEST</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style = {styles.InnerText}
-                onPress={() => getLink.getLink('Lafayette','jail')}>
-                <Text style ={styles.InnerText}>JAIL</Text>
-                </TouchableOpacity>
 
                 <View style={styles.Cell_Close}>
                     <TouchableOpacity
@@ -53,39 +50,48 @@ export default class BasicModalA extends Component {
 const styles = StyleSheet.create({
 
   TitleText:{
-      color:'white',
-      alignItems:'center',
-    fontSize:40,
-    padding:5,
-  },
+    color:'white',
+    alignItems:'center',
+  fontSize:25,
+  margin:5,
+},
 
-  InnerText:{
-    fontSize: 40,
+InnerText:{
+  fontSize: 30,
+  color:'white',
+  fontWeight:'bold',
+  marginBottom:10,
+  textDecorationLine: 'underline',
+},
+InnerText_SECURITYREQUEST:{
+    fontSize: 38,
     color:'white',
     fontWeight:'bold',
-    marginBottom:5,
+    marginBottom:10,
     textDecorationLine: 'underline',
   },
 
-  Cell_Title: {
-    width: 330,
-    height: 52,
-    margin: 5,
-    backgroundColor: '#55330E',
-    alignItems:'center',
-  },
+Cell_Title: {
+  width: 330,
+  height: 52,
+  margin: 5,
+  paddingTop:5,
+  backgroundColor: '#55330E',
+  alignItems:'center',
+  marginBottom:5,
+},
 
-  Cell_Close: {
-    width: 300,
-    height: 45,
-    marginVertical: 10,
-    padding:5,
-    backgroundColor: '#D6D8D7'
-  },
-   modalBackgroundStyle : {
-    backgroundColor: 'rgba(78,62,46, 1)'
-    ,margin : -10
-    ,alignItems:'center'
-  }
+Cell_Close: {
+  width: 300,
+  height: 45,
+  marginVertical: 10,
+  padding:5,
+  backgroundColor: '#D6D8D7'
+},
+ modalBackgroundStyle : {
+  backgroundColor: 'rgba(78,62,46, 1)'
+  ,margin : -10
+  ,alignItems:'center'
+}
 
 });

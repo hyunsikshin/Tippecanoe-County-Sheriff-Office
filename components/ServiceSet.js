@@ -7,7 +7,7 @@ function ServiceSet() {
   return (
     <View style={styles.container}>
       <View style={styles.cell}>
-        <Text  onPress={() => ControllContainer.getInstance().openModal("BasicModalA")} >Sheriff's Sale</Text>
+        <Text  onPress={() => ControllContainer.getInstance().openModal("BasicModalC")} >Sheriff's Sale</Text>
       </View>
       <View style={styles.cell}>
         <Text onPress={() => {getLink.getLink('Lafayette', 'gunPermits')}}>Gun Permits</Text>
@@ -22,13 +22,13 @@ function ServiceSet() {
         <Text onPress={() => {getLink.getLink('Lafayette', 'animalControl')}}>Animal Control</Text>
       </View>
       <View style={styles.cell}>
-        <Text  onPress={() => ControllContainer.getInstance().openModal("BasicModalA")} >Security and extra patrol request</Text>
+        <Text  onPress={() => ControllContainer.getInstance().openModal("BasicModalD")} >Security and extra patrol request</Text>
       </View>
       <View style={styles.cell}>
         <Text onPress={() => {getLink.getLink('Lafayette', 'taxWarrants')}}>Tax Warrants</Text>
       </View>
       <View style={styles.cell}>
-        <Text>Traffic complaints</Text>
+        <Text onPress={() => ControllContainer.getInstance().setMailPage()} >Traffic complaints</Text>
       </View>
       <View style={styles.cell}>
         <Text onPress={() => ControllContainer.getInstance().openButton("Main")}>BACK</Text>
