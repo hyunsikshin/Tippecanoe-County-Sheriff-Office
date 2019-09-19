@@ -7,7 +7,7 @@ export default class Dialog extends Component {
   state = { open: false };
   render() {
     const modalBackgroundStyle = {
-      backgroundColor: 'rgba(103, 89, 71, 50)',
+      backgroundColor: 'rgba(105, 89, 71, 50)',
     };
     const innerContainerTransparentStyle = {
       backgroundColor: '#fff',

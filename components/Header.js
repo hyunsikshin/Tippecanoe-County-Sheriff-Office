@@ -22,7 +22,7 @@ function Header({ temp, city, weatherName }) {
       <Text style={styles.temp}>{city}</Text>
       <View style={styles.vertical_con}>
         <MaterialCommunityIcons
-          color="black"
+          color="white"
           size={30}
           name={weatherCases[weatherName]}
         />
@@ -39,7 +39,6 @@ Header.propTypes = {
   temp: PropTypes.number.isRequired,
 };
 
-
 const styles = StyleSheet.create({
   container: {
     display: 'flex',
@@ -48,7 +47,7 @@ const styles = StyleSheet.create({
   },
   temp: {
     fontSize: 20,
-    color: 'black',
+    color: 'white',
   },
   vertical_con: {
     marginLeft: 10,

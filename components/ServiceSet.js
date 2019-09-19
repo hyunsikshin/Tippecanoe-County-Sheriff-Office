@@ -1,37 +1,110 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import {
+  MaterialIcons,
+  Entypo,
+  MaterialCommunityIcons,
+  AntDesign,
+  Ionicons,
+} from '@expo/vector-icons';
 import ControllContainer from '../actions/ControllContainer';
 import getLink from '../actions/getLink';
 
 function ServiceSet() {
   return (
     <View style={styles.container}>
-      <View style={styles.cell}>
-        <Text  onPress={() => ControllContainer.getInstance().openModal("BasicModalC")} >Sheriff's Sale</Text>
+      <View style={styles.cell_odd}>
+        <MaterialCommunityIcons
+          color="white"
+          size={50}
+          name="sale"
+          onPress={() =>
+            ControllContainer.getInstance().openModal('BasicModalC')
+          }
+        />
+        <Text>Sheriff's Sale</Text>
       </View>
-      <View style={styles.cell}>
-        <Text onPress={() => {getLink.getLink('Lafayette', 'gunPermits')}}>Gun Permits</Text>
+      <View
+        style={styles.cell_even}
+        onPress={() => {
+          getLink.getLink('Lafayette', 'gunPermits');
+        }}>
+        <Text>Gun Permits</Text>
       </View>
-      <View style={styles.cell}>
-        <Text onPress={() => {getLink.getLink('Lafayette', 'crashReports')}}>Crash Report</Text>
+      <View style={styles.cell_odd}>
+        <AntDesign
+          color="white"
+          size={50}
+          name="car"
+          onPress={() => {
+            getLink.getLink('Lafayette', 'crashReports');
+          }}
+        />
+        <Text>Crash Report</Text>
       </View>
-      <View style={styles.cell}>
-        <Text onPress={() => {getLink.getLink('Lafayette', 'recordsRequest')}}>Records Request</Text>
+      <View style={styles.cell_even}>
+        <MaterialCommunityIcons
+          color="white"
+          size={50}
+          name="account-search"
+          onPress={() => {
+            getLink.getLink('Lafayette', 'recordsRequest');
+          }}
+        />
+        <Text>Records Request</Text>
       </View>
-      <View style={styles.cell}>
-        <Text onPress={() => {getLink.getLink('Lafayette', 'animalControl')}}>Animal Control</Text>
+      <View style={styles.cell_odd}>
+        <MaterialCommunityIcons
+          color="white"
+          size={50}
+          name="dog-side"
+          onPress={() => {
+            getLink.getLink('Lafayette', 'animalControl');
+          }}
+        />
+        <Text>Animal Control</Text>
       </View>
-      <View style={styles.cell}>
-        <Text  onPress={() => ControllContainer.getInstance().openModal("BasicModalD")} >Security and extra patrol request</Text>
+
+      <View style={styles.cell_even}>
+        <MaterialCommunityIcons
+          color="white"
+          size={50}
+          name="security"
+          onPress={() =>
+            ControllContainer.getInstance().openModal('BasicModalD')
+          }
+        />
+        <Text>Security and extra patrol request</Text>
       </View>
-      <View style={styles.cell}>
-        <Text onPress={() => {getLink.getLink('Lafayette', 'taxWarrants')}}>Tax Warrants</Text>
+      <View style={styles.cell_odd}>
+        <MaterialIcons
+          color="white"
+          size={50}
+          name="monetization-on"
+          onPress={() => {
+            getLink.getLink('Lafayette', 'taxWarrants');
+          }}
+        />
+        <Text>Tax Warrants</Text>
       </View>
-      <View style={styles.cell}>
-        <Text onPress={() => ControllContainer.getInstance().setMailPage()} >Traffic complaints</Text>
+
+      <View style={styles.cell_even}>
+        <Entypo
+          color="white"
+          size={50}
+          name="traffic-cone"
+          onPress={() => ControllContainer.getInstance().setMailPage()}
+        />
+        <Text>Traffic complaints</Text>
       </View>
-      <View style={styles.cell}>
-        <Text onPress={() => ControllContainer.getInstance().openButton("Main")}>BACK</Text>
+      <View style={styles.cell_odd}>
+        <Ionicons
+          color="white"
+          size={50}
+          name="md-arrow-round-back"
+          onPress={() => ControllContainer.getInstance().openButton('Main')}
+        />
+        <Text>BACK</Text>
       </View>
     </View>
   );
@@ -46,16 +119,22 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
   },
-  cell: {
-    width: 100,
-    height: 100,
-    margin: 5,
-    backgroundColor: '#2ecc71',
+  cell_odd: {
+    width: 105,
+    height: 105,
+    margin: 0,
+    backgroundColor: '#846C4D',
+  },
+  cell_even: {
+    width: 105,
+    height: 105,
+    margin: 0,
+    backgroundColor: '#998668',
   },
   gone: {
-    width: 100,
-    height: 100,
-    margin: 5,
+    width: 105,
+    height: 105,
+    margin: 0,
     opacity: 0.4,
   },
 });

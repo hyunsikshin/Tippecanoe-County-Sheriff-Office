@@ -2,19 +2,15 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
 import Header from '../components/Header';
 import ButtonScreen from '../actions/ButtonScreen';
-//import ButtonSet from '../components/ButtonSet';
-//import AdminSet from '../components/AdminSet';
 import background from '../assets/background.jpg';
-//import getLink from '../actions/getLink';
 import ControllContainer from '../actions/ControllContainer';
 import { BackHandler } from 'react-native';
-
 import MailPage from './MailPage';
 
 const API_KEY = 'e02b7ad151e0ceafbbe427b2ac4dbc2f'; //날씨 api key
 
 class MainPage extends Component {
-  constructor(){
+  constructor() {
     super();
     ControllContainer.getInstance().initModalControl(this);
     console.disableYellowBox = true;
@@ -22,25 +18,28 @@ class MainPage extends Component {
   }
 
   componentWillMount() {
-    BackHandler.addEventListener('hardwareBackPress', this.handleBackButtonClick);
-}
+    BackHandler.addEventListener(
+      'hardwareBackPress',
+      this.handleBackButtonClick
+    );
+  }
 
-componentWillUnmount() {
-    BackHandler.removeEventListener('hardwareBackPress', this.handleBackButtonClick);
-}
+  componentWillUnmount() {
+    BackHandler.removeEventListener(
+      'hardwareBackPress',
+      this.handleBackButtonClick
+    );
+  }
 
-handleBackButtonClick() {
-
-   if(ControllContainer.getInstance().isCheckMailPage())
+  handleBackButtonClick() {
+    if (ControllContainer.getInstance().isCheckMailPage())
       ControllContainer.getInstance().setMailPage();
-   else if(ControllContainer.getInstance().isModalOn())
+    else if (ControllContainer.getInstance().isModalOn())
       ControllContainer.getInstance().closeModal();
-   else if(ControllContainer.getInstance().isMainScreen())
-      return false;
-   else
-      ControllContainer.getInstance().openButton("Main");
+    else if (ControllContainer.getInstance().isMainScreen()) return false;
+    else ControllContainer.getInstance().openButton('Main');
     return true;
-}
+  }
 
   static navigationOptions = {
     title: 'Main Page',
@@ -94,12 +93,11 @@ handleBackButtonClick() {
     city: null,
     tempertature: null,
   };
-//ButtonSet navigate={navigate}
+
   render() {
     const { isLoaded, error, tempertature, name, city } = this.state;
     const { navigate } = this.props.navigation;
-    if(!ControllContainer.getInstance().isCheckMailPage())
-    {
+    if (!ControllContainer.getInstance().isCheckMailPage()) {
       return (
         <View style={styles.container}>
           <Header
@@ -109,16 +107,12 @@ handleBackButtonClick() {
             weatherName={name}
           />
           <Image style={styles.logo} source={background} />
-          <ButtonScreen/>
-          {ControllContainer.getInstance().checkItems("Modal")}
+          <ButtonScreen />
+          {ControllContainer.getInstance().checkItems('Modal')}
         </View>
       );
-    }
-    else
-    {
-      return(
-        <MailPage></MailPage>
-      )
+    } else {
+      return <MailPage></MailPage>;
     }
   }
 }
@@ -128,7 +122,7 @@ export default MainPage;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#5A4E40',
     alignItems: 'center',
     justifyContent: 'center',
   },

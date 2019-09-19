@@ -1,22 +1,58 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import {
+  AntDesign,
+  Feather,
+  MaterialIcons,
+  Ionicons,
+} from '@expo/vector-icons';
 import ControllContainer from '../actions/ControllContainer';
 import getLink from '../actions/getLink';
 
 function AdminSet() {
   return (
     <View style={styles.container}>
-      <View style={styles.cell}>
-        <Text onPress={() => {getLink.getLink('Lafayette', 'phoneDirectory')}}>Phone Directory</Text>
+      <View style={styles.cell_odd}>
+        <Feather
+          color="white"
+          size={50}
+          name="user-check"
+          onPress={() => {
+            getLink.getLink('Lafayette', 'phoneDirectory');
+          }}
+        />
+        <Text>Phone Directory</Text>
       </View>
-      <View style={styles.cell}>
-        <Text onPress={() => {getLink.getLink('Lafayette', 'adminLine')}}>Admin Line</Text>
+      <View style={styles.cell_even}>
+        <AntDesign
+          color="white"
+          size={50}
+          name="user"
+          onPress={() => {
+            getLink.getLink('Lafayette', 'adminLine');
+          }}
+        />
+        <Text>Admin Line</Text>
       </View>
-      <View style={styles.cell}>
-        <Text onPress={() => {getLink.getLink('Lafayette', 'jobApply')}}>Job Apply</Text>
+      <View style={styles.cell_odd}>
+        <MaterialIcons
+          color="white"
+          size={50}
+          name="store"
+          onPress={() => {
+            getLink.getLink('Lafayette', 'jobApply');
+          }}
+        />
+        <Text>Job Apply</Text>
       </View>
-      <View style={styles.cell}>
-        <Text onPress={() => ControllContainer.getInstance().openButton("Main")} >BACK</Text>
+      <View style={styles.cell_even}>
+        <Ionicons
+          color="white"
+          size={50}
+          name="md-arrow-round-back"
+          onPress={() => ControllContainer.getInstance().openButton('Main')}
+        />
+        <Text>BACK</Text>
       </View>
       <View style={styles.gone}>
         <Text></Text>
@@ -46,16 +82,22 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
   },
-  cell: {
-    width: 100,
-    height: 100,
-    margin: 5,
-    backgroundColor: '#2ecc71',
+  cell_odd: {
+    width: 105,
+    height: 105,
+    margin: 0,
+    backgroundColor: '#846C4D',
+  },
+  cell_even: {
+    width: 105,
+    height: 105,
+    margin: 0,
+    backgroundColor: '#998668',
   },
   gone: {
-    width: 100,
-    height: 100,
-    margin: 5,
+    width: 105,
+    height: 105,
+    margin: 0,
     opacity: 0.4,
   },
 });
