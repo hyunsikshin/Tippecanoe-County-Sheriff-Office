@@ -7,7 +7,7 @@ const Lafayette = {
   commissary: 'https://deposits.jailatm.com/webdeposits/default.aspx',
   videoVisitationWeb: 'https://tippecanoein.gtlvisitme.com',
   visMobile: 'Null',
-  downloadVismobile: 'Video_Visitaion_Download_Link',
+  downloadVismobile: 'market://details?id=air.com.renovo.vismobile',
   visitationPolicy:
     'https://www.tippecanoe.in.gov/468/Inmate-Visitation-Policy',
   weTip: 'https://wetip.com',

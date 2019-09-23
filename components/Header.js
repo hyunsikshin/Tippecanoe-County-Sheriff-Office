@@ -18,11 +18,11 @@ const weatherCases = {
 function Header({ temp, city, weatherName }) {
   return (
     <View style={styles.container}>
-      <Image style={{ width: 150, height: 60 }} source={tipslogo} />
+      <Image style={{ width: 130, height: 50 }} source={tipslogo} />
       <Text style={styles.temp}>{city}</Text>
       <View style={styles.vertical_con}>
         <MaterialCommunityIcons
-          color="black"
+          color="white"
           size={30}
           name={weatherCases[weatherName]}
         />
@@ -39,16 +39,16 @@ Header.propTypes = {
   temp: PropTypes.number.isRequired,
 };
 
-
 const styles = StyleSheet.create({
   container: {
     display: 'flex',
     flexDirection: 'row',
     alignContent: 'center',
+    justifyContent: 'center',
   },
   temp: {
     fontSize: 20,
-    color: 'black',
+    color: 'white',
   },
   vertical_con: {
     marginLeft: 10,
