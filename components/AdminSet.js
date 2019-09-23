@@ -21,7 +21,7 @@ function AdminSet() {
             getLink.getLink('Lafayette', 'phoneDirectory');
           }}
         />
-        <Text>Phone Directory</Text>
+        <Text style={styles.text}>Phone Directory</Text>
       </View>
       <View style={styles.cell_even}>
         <AntDesign
@@ -32,7 +32,7 @@ function AdminSet() {
             getLink.getLink('Lafayette', 'adminLine');
           }}
         />
-        <Text>Admin Line</Text>
+        <Text style={styles.text}>Admin Line</Text>
       </View>
       <View style={styles.cell_odd}>
         <MaterialIcons
@@ -43,7 +43,7 @@ function AdminSet() {
             getLink.getLink('Lafayette', 'jobApply');
           }}
         />
-        <Text>Job Apply</Text>
+        <Text style={styles.text}>Job Apply</Text>
       </View>
       <View style={styles.cell_even}>
         <Ionicons
@@ -52,7 +52,7 @@ function AdminSet() {
           name="md-arrow-round-back"
           onPress={() => ControllContainer.getInstance().openButton('Main')}
         />
-        <Text>BACK</Text>
+        <Text style={styles.text}>BACK</Text>
       </View>
       <View style={styles.gone}>
         <Text></Text>
@@ -83,12 +83,16 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   cell_odd: {
+    justifyContent: 'center',
+    alignItems: 'center',
     width: 105,
     height: 105,
     margin: 0,
     backgroundColor: '#846C4D',
   },
   cell_even: {
+    justifyContent: 'center',
+    alignItems: 'center',
     width: 105,
     height: 105,
     margin: 0,
@@ -99,5 +103,8 @@ const styles = StyleSheet.create({
     height: 105,
     margin: 0,
     opacity: 0.4,
+  },
+  text: {
+    color: 'white',
   },
 });

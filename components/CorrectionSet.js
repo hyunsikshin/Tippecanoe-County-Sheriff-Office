@@ -14,15 +14,38 @@ function CorrectionSet() {
   return (
     <View style={styles.container}>
       <View style={styles.cell_odd}>
-        <Feather
+        <MaterialCommunityIcons
           color="white"
           size={60}
-          name="video"
+          name="magnify"
           onPress={() => {
             getLink.getLink('Lafayette', 'immateLookup');
           }}
         />
-        <Text>Inmate lookup</Text>
+        <Text style={styles.text}>Inmate lookup</Text>
+      </View>
+      <View style={styles.cell_even}>
+        <MaterialCommunityIcons
+          color="white"
+          size={60}
+          name="store"
+          onPress={() => {
+            getLink.getLink('Lafayette', 'commissary');
+          }}
+        />
+        <Text style={styles.text}>Commissary</Text>
+      </View>
+
+      <View style={styles.cell_odd}>
+        <Feather
+          color="white"
+          size={60}
+          name="video"
+          onPress={() =>
+            ControllContainer.getInstance().openModal('BasicModalB')
+          }
+        />
+        <Text style={styles.text}>Video Visitation</Text>
       </View>
       <View style={styles.cell_even}>
         <FontAwesome
@@ -30,33 +53,10 @@ function CorrectionSet() {
           size={60}
           name="users"
           onPress={() => {
-            getLink.getLink('Lafayette', 'commissary');
-          }}
-        />
-        <Text>Commissary</Text>
-      </View>
-
-      <View style={styles.cell_odd}>
-        <MaterialCommunityIcons
-          color="white"
-          size={60}
-          name="sale"
-          onPress={() =>
-            ControllContainer.getInstance().openModal('BasicModalB')
-          }
-        />
-        <Text>Video Visitation</Text>
-      </View>
-      <View style={styles.cell_even}>
-        <AntDesign
-          color="white"
-          size={60}
-          name="car"
-          onPress={() => {
             getLink.getLink('Lafayette', 'visitationPolicy');
           }}
         />
-        <Text>Visitation Policy</Text>
+        <Text style={styles.text}>Visitation Policy</Text>
       </View>
       <View style={styles.cell_odd}>
         <Ionicons
@@ -65,7 +65,7 @@ function CorrectionSet() {
           name="md-arrow-round-back"
           onPress={() => ControllContainer.getInstance().openButton('Main')}
         />
-        <Text>BACK</Text>
+        <Text style={styles.text}>BACK</Text>
       </View>
       <View style={styles.gone}>
         <Text></Text>
@@ -93,12 +93,16 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   cell_odd: {
+    justifyContent: 'center',
+    alignItems: 'center',
     width: 105,
     height: 105,
     margin: 0,
     backgroundColor: '#846C4D',
   },
   cell_even: {
+    justifyContent: 'center',
+    alignItems: 'center',
     width: 105,
     height: 105,
     margin: 0,
@@ -109,5 +113,8 @@ const styles = StyleSheet.create({
     height: 105,
     margin: 0,
     opacity: 0.4,
+  },
+  text: {
+    color: 'white',
   },
 });

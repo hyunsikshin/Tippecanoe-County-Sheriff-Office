@@ -22,14 +22,18 @@ function ServiceSet() {
             ControllContainer.getInstance().openModal('BasicModalC')
           }
         />
-        <Text>Sheriff's Sale</Text>
+        <Text style={styles.text}>Sheriff's Sale</Text>
       </View>
-      <View
-        style={styles.cell_even}
-        onPress={() => {
-          getLink.getLink('Lafayette', 'gunPermits');
-        }}>
-        <Text>Gun Permits</Text>
+      <View style={styles.cell_even}>
+        <MaterialCommunityIcons
+          color="white"
+          size={50}
+          name="clipboard-account"
+          onPress={() => {
+            getLink.getLink('Lafayette', 'gunPermits');
+          }}
+        />
+        <Text style={styles.text}>Gun Permits</Text>
       </View>
       <View style={styles.cell_odd}>
         <AntDesign
@@ -40,7 +44,7 @@ function ServiceSet() {
             getLink.getLink('Lafayette', 'crashReports');
           }}
         />
-        <Text>Crash Report</Text>
+        <Text style={styles.text}>Crash Report</Text>
       </View>
       <View style={styles.cell_even}>
         <MaterialCommunityIcons
@@ -51,7 +55,7 @@ function ServiceSet() {
             getLink.getLink('Lafayette', 'recordsRequest');
           }}
         />
-        <Text>Records Request</Text>
+        <Text style={styles.text}>Records Request</Text>
       </View>
       <View style={styles.cell_odd}>
         <MaterialCommunityIcons
@@ -62,7 +66,7 @@ function ServiceSet() {
             getLink.getLink('Lafayette', 'animalControl');
           }}
         />
-        <Text>Animal Control</Text>
+        <Text style={styles.text}>Animal Control</Text>
       </View>
 
       <View style={styles.cell_even}>
@@ -74,7 +78,7 @@ function ServiceSet() {
             ControllContainer.getInstance().openModal('BasicModalD')
           }
         />
-        <Text>Security and extra patrol request</Text>
+        <Text style={styles.text}>Security and extra patrol request</Text>
       </View>
       <View style={styles.cell_odd}>
         <MaterialIcons
@@ -85,7 +89,7 @@ function ServiceSet() {
             getLink.getLink('Lafayette', 'taxWarrants');
           }}
         />
-        <Text>Tax Warrants</Text>
+        <Text style={styles.text}>Tax Warrants</Text>
       </View>
 
       <View style={styles.cell_even}>
@@ -95,7 +99,7 @@ function ServiceSet() {
           name="traffic-cone"
           onPress={() => ControllContainer.getInstance().setMailPage()}
         />
-        <Text>Traffic complaints</Text>
+        <Text style={styles.text}>Traffic complaints</Text>
       </View>
       <View style={styles.cell_odd}>
         <Ionicons
@@ -104,7 +108,7 @@ function ServiceSet() {
           name="md-arrow-round-back"
           onPress={() => ControllContainer.getInstance().openButton('Main')}
         />
-        <Text>BACK</Text>
+        <Text style={styles.text}>BACK</Text>
       </View>
     </View>
   );
@@ -120,12 +124,16 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   cell_odd: {
+    justifyContent: 'center',
+    alignItems: 'center',
     width: 105,
     height: 105,
     margin: 0,
     backgroundColor: '#846C4D',
   },
   cell_even: {
+    justifyContent: 'center',
+    alignItems: 'center',
     width: 105,
     height: 105,
     margin: 0,
@@ -136,5 +144,8 @@ const styles = StyleSheet.create({
     height: 105,
     margin: 0,
     opacity: 0.4,
+  },
+  text: {
+    color: 'white',
   },
 });

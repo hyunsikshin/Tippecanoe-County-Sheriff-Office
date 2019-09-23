@@ -24,7 +24,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "edu.purdue.sheriff"
+    },
+    "android": {
+      "package": "edu.purdue.sheriff"
     }
   }
 }

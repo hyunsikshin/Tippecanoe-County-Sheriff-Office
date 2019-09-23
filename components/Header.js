@@ -18,7 +18,7 @@ const weatherCases = {
 function Header({ temp, city, weatherName }) {
   return (
     <View style={styles.container}>
-      <Image style={{ width: 150, height: 60 }} source={tipslogo} />
+      <Image style={{ width: 130, height: 50 }} source={tipslogo} />
       <Text style={styles.temp}>{city}</Text>
       <View style={styles.vertical_con}>
         <MaterialCommunityIcons
@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     alignContent: 'center',
+    justifyContent: 'center',
   },
   temp: {
     fontSize: 20,

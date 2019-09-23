@@ -4,12 +4,12 @@ import ButtonSet from '../components/ButtonSet';
 import CorrectionSet from '../components/CorrectionSet';
 import ServiceSet from '../components/ServiceSet';
 import SnsSet from '../components/SnsSet';
-import BaiscModal from '../BasicModal';
-import BaiscModalA from '../BasicModalA';
+import BaiscModal from '../dialog/BasicModal';
+import BaiscModalA from '../dialog/BasicModalA';
 import MailPage from '../pages/MailPage';
-import BasicModalB from '../BasicModalB';
-import BasicModalC from '../BasicModalC';
-import BasicModalD from '../BasicModalD';
+import BasicModalB from '../dialog/BasicModalB';
+import BasicModalC from '../dialog/BasicModalC';
+import BasicModalD from '../dialog/BasicModalD';
 
 export default class ControllContainer {
   //#region Singleton

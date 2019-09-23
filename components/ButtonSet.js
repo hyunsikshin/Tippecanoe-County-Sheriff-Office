@@ -19,7 +19,7 @@ const ButtonSet = () => {
           name="building-o"
           onPress={() => ControllContainer.getInstance().openButton('Admin')}
         />
-        <Text>Admin</Text>
+        <Text style={styles.text}>Admin</Text>
       </View>
       <View style={styles.cell_even}>
         <FontAwesome
@@ -30,7 +30,7 @@ const ButtonSet = () => {
             getLink.getLink('Lafayette', 'sexOffenders');
           }}
         />
-        <Text>Sex Offenders</Text>
+        <Text style={styles.text}>Sex Offenders</Text>
       </View>
       <View style={styles.cell_odd}>
         <Feather
@@ -41,7 +41,7 @@ const ButtonSet = () => {
             ControllContainer.getInstance().openButton('Corrections')
           }
         />
-        <Text>Corrections</Text>
+        <Text style={styles.text}>Corrections</Text>
       </View>
       <View style={styles.cell_even}>
         <Entypo
@@ -52,7 +52,7 @@ const ButtonSet = () => {
             getLink.getLink('Lafayette', 'weTip');
           }}
         />
-        <Text>We-Tip</Text>
+        <Text style={styles.text}>We-Tip</Text>
       </View>
       <View style={styles.cell_odd}>
         <SimpleLineIcons
@@ -63,7 +63,7 @@ const ButtonSet = () => {
             ControllContainer.getInstance().openModal('BasicModalA')
           }
         />
-        <Text>Contacts</Text>
+        <Text style={styles.text}>Contacts</Text>
       </View>
       <View style={styles.cell_even}>
         <Entypo
@@ -72,7 +72,7 @@ const ButtonSet = () => {
           name="hand"
           onPress={() => ControllContainer.getInstance().openButton('Service')}
         />
-        <Text>Services</Text>
+        <Text style={styles.text}>Services</Text>
       </View>
       <View style={styles.cell_odd}>
         <Feather
@@ -83,7 +83,7 @@ const ButtonSet = () => {
             ControllContainer.getInstance().openButton('SocialMedia')
           }
         />
-        <Text>Social Media</Text>
+        <Text style={styles.text}>Social Media</Text>
       </View>
       <View style={styles.cell_even}>
         <Feather
@@ -94,7 +94,7 @@ const ButtonSet = () => {
             getLink.getLink('Lafayette', 'privacyPolicy');
           }}
         />
-        <Text>Privacy Policy</Text>
+        <Text style={styles.text}>Privacy Policy</Text>
       </View>
       <View style={styles.gone}>
         <Text></Text>
@@ -113,12 +113,16 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   cell_odd: {
+    justifyContent: 'center',
+    alignItems: 'center',
     width: 105,
     height: 105,
     margin: 0,
     backgroundColor: '#846C4D',
   },
   cell_even: {
+    justifyContent: 'center',
+    alignItems: 'center',
     width: 105,
     height: 105,
     margin: 0,
@@ -129,5 +133,8 @@ const styles = StyleSheet.create({
     height: 105,
     margin: 0,
     opacity: 0.4,
+  },
+  text: {
+    color: 'white',
   },
 });

@@ -16,7 +16,7 @@ function SnsSet() {
             getLink.getLink('Lafayette', 'faceBook');
           }}
         />
-        <Text>Facebook</Text>
+        <Text style={styles.text}>Facebook</Text>
       </View>
       <View style={styles.cell_even}>
         <FontAwesome
@@ -27,7 +27,7 @@ function SnsSet() {
             getLink.getLink('Lafayette', 'twitter');
           }}
         />
-        <Text>Twitter</Text>
+        <Text style={styles.text}>Twitter</Text>
       </View>
       <View style={styles.cell_odd}>
         <AntDesign
@@ -38,7 +38,7 @@ function SnsSet() {
             getLink.getLink('Lafayette', 'instargram');
           }}
         />
-        <Text>Instagram</Text>
+        <Text style={styles.text}>Instagram</Text>
       </View>
       <View style={styles.cell_even}>
         <Ionicons
@@ -47,7 +47,7 @@ function SnsSet() {
           name="md-arrow-round-back"
           onPress={() => ControllContainer.getInstance().openButton('Main')}
         />
-        <Text>BACK</Text>
+        <Text style={styles.text}>BACK</Text>
       </View>
       <View style={styles.gone}>
         <Text></Text>
@@ -78,12 +78,16 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   cell_odd: {
+    justifyContent: 'center',
+    alignItems: 'center',
     width: 105,
     height: 105,
     margin: 0,
     backgroundColor: '#846C4D',
   },
   cell_even: {
+    justifyContent: 'center',
+    alignItems: 'center',
     width: 105,
     height: 105,
     margin: 0,
@@ -94,5 +98,8 @@ const styles = StyleSheet.create({
     height: 105,
     margin: 0,
     opacity: 0.4,
+  },
+  text: {
+    color: 'white',
   },
 });

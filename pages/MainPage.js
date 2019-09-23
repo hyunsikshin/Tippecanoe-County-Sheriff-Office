@@ -45,7 +45,7 @@ class MainPage extends Component {
     title: 'Main Page',
     //Sets Header text of Status Bar
     headerStyle: {
-      backgroundColor: '#f4511e',
+      backgroundColor: '#5A4E40',
       //Sets Header color
     },
     headerTintColor: '#fff',
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   logo: {
-    width: 370,
+    width: 350,
     height: 200,
   },
   gone: {
