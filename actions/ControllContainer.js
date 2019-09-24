@@ -6,7 +6,7 @@ import CorrectionSet from '../components/CorrectionSet';
 import ServiceSet from '../components/ServiceSet';
 import SnsSet from '../components/SnsSet';
 import BasicModal from '../dialog/BasicModal';
-import BaiscModalA from '../dialog/BasicModalA';
+import BasicModalA from '../dialog/BasicModalA';
 import BasicModalB from '../dialog/BasicModalB';
 import BasicModalC from '../dialog/BasicModalC';
 import BasicModalD from '../dialog/BasicModalD';
@@ -38,7 +38,7 @@ export default class ControllContainer{
 
     modallist = [
         { name: "BasicModal", isShow: false , list :<BasicModal></BasicModal>},
-        { name: "BasicModalA", isShow: false , list :<BaiscModalA></BaiscModalA>},
+        { name: "BasicModalA", isShow: false , list :<BasicModalA></BasicModalA>},
         { name: "BasicModalB", isShow: false , list :<BasicModalB></BasicModalB>},
         { name: "BasicModalC", isShow: false , list :<BasicModalC></BasicModalC>},
         { name: "BasicModalD", isShow: false , list :<BasicModalD></BasicModalD>}

@@ -33,9 +33,7 @@ class MainPage extends Component {
   }
 
   handleBackButtonClick() {
-    if (ControllContainer.getInstance().isCheckMailPage())
-      ControllContainer.getInstance().setMailPage();
-    else if (ControllContainer.getInstance().isModalOn())
+     if (ControllContainer.getInstance().isModalOn())
       ControllContainer.getInstance().closeModal();
     else if (ControllContainer.getInstance().isMainScreen()) return false;
     else ControllContainer.getInstance().openButton('Main');
