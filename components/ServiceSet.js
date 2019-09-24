@@ -97,7 +97,7 @@ function ServiceSet() {
           color="white"
           size={50}
           name="traffic-cone"
-          onPress={() => ControllContainer.getInstance().setMailPage()}
+          onPress={() =>ControllContainer.getInstance().openEmailActivity()}
         />
         <Text style={styles.text}>Traffic complaints</Text>
       </View>

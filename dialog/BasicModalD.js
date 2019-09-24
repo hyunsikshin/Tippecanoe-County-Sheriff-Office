@@ -31,7 +31,7 @@ export default class BasicModalD extends Component {
           <View style={{ alignItems: 'center' }}>
             <TouchableOpacity
               style={styles.InnerText}
-              onPress={() => ControllContainer.getInstance().setMailPage()}>
+              onPress={() => ControllContainer.getInstance().openEmailActivity()}>
               <Text style={styles.InnerText_SECURITYREQUEST}>
                 SECURITY REQUEST
               </Text>
@@ -39,7 +39,7 @@ export default class BasicModalD extends Component {
 
             <TouchableOpacity
               style={styles.InnerText}
-              onPress={() => ControllContainer.getInstance().setMailPage()}>
+              onPress={() =>ControllContainer.getInstance().openEmailActivity()}>
               <Text style={styles.InnerText}>EXTRA PATROL REQUEST</Text>
             </TouchableOpacity>
 

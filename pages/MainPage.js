@@ -10,12 +10,13 @@ import MailPage from './MailPage';
 const API_KEY = 'e02b7ad151e0ceafbbe427b2ac4dbc2f'; //날씨 api key
 
 class MainPage extends Component {
-  constructor() {
-    super();
+  constructor(props){
+    super(props);
     ControllContainer.getInstance().initModalControl(this);
     console.disableYellowBox = true;
     this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
   }
+
 
   componentWillMount() {
     BackHandler.addEventListener(
@@ -97,7 +98,6 @@ class MainPage extends Component {
   render() {
     const { isLoaded, error, tempertature, name, city } = this.state;
     const { navigate } = this.props.navigation;
-    if (!ControllContainer.getInstance().isCheckMailPage()) {
       return (
         <View style={styles.container}>
           <Header
@@ -113,9 +113,6 @@ class MainPage extends Component {
           {ControllContainer.getInstance().checkItems('Modal')}
         </View>
       );
-    } else {
-      return <MailPage></MailPage>;
-    }
   }
 }
 
