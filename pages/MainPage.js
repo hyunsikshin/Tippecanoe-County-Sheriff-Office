@@ -106,7 +106,9 @@ class MainPage extends Component {
             city={city}
             weatherName={name}
           />
-          <Image style={styles.logo} source={background} />
+          <Image source={{uri: 'https://www.tippecanoe.in.gov/ImageRepository/Document?documentID=22983'}}
+                  style={styles.logo} 
+                  resizeMode='contain'/>
           <ButtonScreen />
           {ControllContainer.getInstance().checkItems('Modal')}
         </View>
