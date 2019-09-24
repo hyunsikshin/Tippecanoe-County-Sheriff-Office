@@ -15,7 +15,7 @@ export default class BasicModal extends Component {
       <Modal
         open={true}
         style={{ modalBackgroundStyle, alignItems: 'center' }}
-        modalDidClose={() => ControllContainer.getInstance().closeModal()}>
+        modalDidClose={() => ControllContainer.getInstance().openViewName("ModalView","close")}>
         <View style={{ alignItems: 'center' }}>
           <Text style={{ fontSize: 20, marginBottom: 10 }}>Contact</Text>
           <TouchableOpacity
@@ -25,7 +25,7 @@ export default class BasicModal extends Component {
           </TouchableOpacity>
           <TouchableOpacity
             style={{ margin: 10, alignItems: 'center' }}
-            onPress={() => ControllContainer.getInstance().closeModal()}>
+            onPress={() => ControllContainer.getInstance().openViewName("ModalView","close")}>
             <Text>Close</Text>
           </TouchableOpacity>
         </View>

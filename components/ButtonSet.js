@@ -17,7 +17,7 @@ const ButtonSet = () => {
           color="white"
           size={50}
           name="building-o"
-          onPress={() => ControllContainer.getInstance().openButton('Admin')}
+          onPress={() => ControllContainer.getInstance().openViewName('ButtonView','Admin')}
         />
         <Text style={styles.text}>Admin</Text>
       </View>
@@ -38,7 +38,7 @@ const ButtonSet = () => {
           size={50}
           name="star"
           onPress={() =>
-            ControllContainer.getInstance().openButton('Corrections')
+            ControllContainer.getInstance().openViewName('ButtonView','Corrections')
           }
         />
         <Text style={styles.text}>Corrections</Text>
@@ -60,7 +60,7 @@ const ButtonSet = () => {
           size={50}
           name="people"
           onPress={() =>
-            ControllContainer.getInstance().openModal('BasicModalA')
+            ControllContainer.getInstance().openViewName('ModalView','BasicModalA')
           }
         />
         <Text style={styles.text}>Contacts</Text>
@@ -70,7 +70,8 @@ const ButtonSet = () => {
           color="white"
           size={50}
           name="hand"
-          onPress={() => ControllContainer.getInstance().openButton('Service')}
+          onPress={() =>
+            ControllContainer.getInstance().openViewName('ButtonView','Service')}
         />
         <Text style={styles.text}>Services</Text>
       </View>
@@ -80,7 +81,7 @@ const ButtonSet = () => {
           size={50}
           name="globe"
           onPress={() =>
-            ControllContainer.getInstance().openButton('SocialMedia')
+            ControllContainer.getInstance().openViewName('ButtonView','SocialMedia')
           }
         />
         <Text style={styles.text}>Social Media</Text>

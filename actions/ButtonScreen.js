@@ -5,10 +5,10 @@ import ControllContainer from './ControllContainer';
 export default class ButtonScreen extends Component {
   constructor() {
     super();
-    ControllContainer.getInstance().initButtonControl(this);
+    ControllContainer.getInstance().intitObject("ButtonView",this);
   }
 
   render() {
-    return <View>{ControllContainer.getInstance().checkItems('Button')}</View>;
+    return <View>{ControllContainer.getInstance().checkView()}</View>;
   }
 }

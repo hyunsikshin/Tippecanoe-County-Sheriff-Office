@@ -20,7 +20,7 @@ export default class BasicModalB extends Component {
         open={true}
         transparent={true}
         animationType="slide"
-        modalDidClose={() => ControllContainer.getInstance().closeModal()}>
+        modalDidClose={() => ControllContainer.getInstance().openViewName("ModalView","close")}>
         <View style={[styles.container, styles.modalBackgroundStyle]}>
           <View style={styles.Cell_Title}>
             <Text style={styles.TitleText}>Video Visitation</Text>
@@ -55,7 +55,7 @@ export default class BasicModalB extends Component {
             <View style={styles.Cell_Close}>
               <TouchableOpacity
                 style={{ alignItems: 'center' }}
-                onPress={() => ControllContainer.getInstance().closeModal()}>
+                onPress={() => ControllContainer.getInstance().openViewName("ModalView","close")}>
                 <Text style={{ fontSize: 30 }}>CLOSE</Text>
               </TouchableOpacity>
             </View>

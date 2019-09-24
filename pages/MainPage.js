@@ -12,7 +12,7 @@ const API_KEY = 'e02b7ad151e0ceafbbe427b2ac4dbc2f'; //날씨 api key
 class MainPage extends Component {
   constructor(props){
     super(props);
-    ControllContainer.getInstance().initModalControl(this);
+    ControllContainer.getInstance().intitObject("",this);
     console.disableYellowBox = true;
     this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
   }
@@ -33,11 +33,13 @@ class MainPage extends Component {
   }
 
   handleBackButtonClick() {
-     if (ControllContainer.getInstance().isModalOn())
-      ControllContainer.getInstance().closeModal();
-    else if (ControllContainer.getInstance().isMainScreen()) return false;
-    else ControllContainer.getInstance().openButton('Main');
-    return true;
+     if (ControllContainer.getInstance().getViewName("Modal") == "")
+       ControllContainer.getInstance().openViewName("ModalView","close");
+     else if (ControllContainer.getInstance().getViewName("ButtonView") == 'Main') 
+       return false;
+     else
+        ControllContainer.getInstance().openViewName("ButtonView","Main");
+      return true;
   }
 
   static navigationOptions = {
@@ -108,7 +110,7 @@ class MainPage extends Component {
                   style={styles.logo} 
                   resizeMode='contain'/>
           <ButtonScreen />
-          {ControllContainer.getInstance().checkItems('Modal')}
+          {ControllContainer.getInstance().checkModal()}
         </View>
       );
   }

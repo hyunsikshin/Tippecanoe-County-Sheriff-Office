@@ -42,7 +42,7 @@ function CorrectionSet() {
           size={60}
           name="video"
           onPress={() =>
-            ControllContainer.getInstance().openModal('BasicModalB')
+            ControllContainer.getInstance().openViewName('ModalView','BasicModalB')
           }
         />
         <Text style={styles.text}>Video Visitation</Text>
@@ -63,7 +63,7 @@ function CorrectionSet() {
           color="white"
           size={50}
           name="md-arrow-round-back"
-          onPress={() => ControllContainer.getInstance().openButton('Main')}
+          onPress={() => ControllContainer.getInstance().openViewName('ButtonView','Main')}
         />
         <Text style={styles.text}>BACK</Text>
       </View>

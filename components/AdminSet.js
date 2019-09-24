@@ -50,7 +50,8 @@ function AdminSet() {
           color="white"
           size={50}
           name="md-arrow-round-back"
-          onPress={() => ControllContainer.getInstance().openButton('Main')}
+          onPress={() => 
+            ControllContainer.getInstance().openViewName('ButtonView','Main')}
         />
         <Text style={styles.text}>BACK</Text>
       </View>
