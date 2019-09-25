@@ -20,7 +20,7 @@ export default class BasicModalD extends Component {
         open={true}
         transparent={true}
         animationType="slide"
-        modalDidClose={() => ControllContainer.getInstance().closeModal()}>
+        modalDidClose={() => ControllContainer.getInstance().openViewName("ModalView","close")}>
         <View style={[styles.container, styles.modalBackgroundStyle]}>
           <View style={styles.Cell_Title}>
             <Text style={styles.TitleText}>
@@ -31,7 +31,7 @@ export default class BasicModalD extends Component {
           <View style={{ alignItems: 'center' }}>
             <TouchableOpacity
               style={styles.InnerText}
-              onPress={() => ControllContainer.getInstance().setMailPage()}>
+              onPress={() => ControllContainer.getInstance().openViewName("Email","")}>
               <Text style={styles.InnerText_SECURITYREQUEST}>
                 SECURITY REQUEST
               </Text>
@@ -39,14 +39,14 @@ export default class BasicModalD extends Component {
 
             <TouchableOpacity
               style={styles.InnerText}
-              onPress={() => ControllContainer.getInstance().setMailPage()}>
+              onPress={() =>ControllContainer.getInstance().openViewName("Email","")}>
               <Text style={styles.InnerText}>EXTRA PATROL REQUEST</Text>
             </TouchableOpacity>
 
             <View style={styles.Cell_Close}>
               <TouchableOpacity
                 style={{ alignItems: 'center' }}
-                onPress={() => ControllContainer.getInstance().closeModal()}>
+                onPress={() => ControllContainer.getInstance().openViewName("ModalView","close")}>
                 <Text style={{ fontSize: 30 }}>CLOSE</Text>
               </TouchableOpacity>
             </View>

@@ -19,7 +19,7 @@ function ServiceSet() {
           size={50}
           name="sale"
           onPress={() =>
-            ControllContainer.getInstance().openModal('BasicModalC')
+            ControllContainer.getInstance().openViewName('ModalView','BasicModalC')
           }
         />
         <Text style={styles.text}>Sheriff's Sale</Text>
@@ -75,7 +75,7 @@ function ServiceSet() {
           size={50}
           name="security"
           onPress={() =>
-            ControllContainer.getInstance().openModal('BasicModalD')
+            ControllContainer.getInstance().openViewName('ModalView','BasicModalD')
           }
         />
         <Text style={styles.text}>Security and extra patrol request</Text>
@@ -97,7 +97,7 @@ function ServiceSet() {
           color="white"
           size={50}
           name="traffic-cone"
-          onPress={() => ControllContainer.getInstance().setMailPage()}
+          onPress={() => ControllContainer.getInstance().openViewName("Email","")}
         />
         <Text style={styles.text}>Traffic complaints</Text>
       </View>
@@ -106,7 +106,7 @@ function ServiceSet() {
           color="white"
           size={50}
           name="md-arrow-round-back"
-          onPress={() => ControllContainer.getInstance().openButton('Main')}
+          onPress={() => ControllContainer.getInstance().openViewName('ButtonView','Main')}
         />
         <Text style={styles.text}>BACK</Text>
       </View>

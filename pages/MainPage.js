@@ -10,12 +10,13 @@ import MailPage from './MailPage';
 const API_KEY = 'e02b7ad151e0ceafbbe427b2ac4dbc2f'; //날씨 api key
 
 class MainPage extends Component {
-  constructor() {
-    super();
-    ControllContainer.getInstance().initModalControl(this);
+  constructor(props){
+    super(props);
+    ControllContainer.getInstance().intitObject("",this);
     console.disableYellowBox = true;
     this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
   }
+
 
   componentWillMount() {
     BackHandler.addEventListener(
@@ -32,13 +33,13 @@ class MainPage extends Component {
   }
 
   handleBackButtonClick() {
-    if (ControllContainer.getInstance().isCheckMailPage())
-      ControllContainer.getInstance().setMailPage();
-    else if (ControllContainer.getInstance().isModalOn())
-      ControllContainer.getInstance().closeModal();
-    else if (ControllContainer.getInstance().isMainScreen()) return false;
-    else ControllContainer.getInstance().openButton('Main');
-    return true;
+     if (ControllContainer.getInstance().getViewName("Modal") == "")
+       ControllContainer.getInstance().openViewName("ModalView","close");
+     else if (ControllContainer.getInstance().getViewName("ButtonView") == 'Main') 
+       return false;
+     else
+        ControllContainer.getInstance().openViewName("ButtonView","Main");
+      return true;
   }
 
   static navigationOptions = {
@@ -97,7 +98,6 @@ class MainPage extends Component {
   render() {
     const { isLoaded, error, tempertature, name, city } = this.state;
     const { navigate } = this.props.navigation;
-    if (!ControllContainer.getInstance().isCheckMailPage()) {
       return (
         <View style={styles.container}>
           <Header
@@ -110,12 +110,9 @@ class MainPage extends Component {
                   style={styles.logo} 
                   resizeMode='contain'/>
           <ButtonScreen />
-          {ControllContainer.getInstance().checkItems('Modal')}
+          {ControllContainer.getInstance().checkModal()}
         </View>
       );
-    } else {
-      return <MailPage></MailPage>;
-    }
   }
 }
 
