@@ -6,6 +6,7 @@ import background from '../assets/background.jpg';
 import ControllContainer from '../actions/ControllContainer';
 import { BackHandler } from 'react-native';
 import MailPage from './MailPage';
+import Logo from "../assets/gun.svg";
 
 const API_KEY = 'e02b7ad151e0ceafbbe427b2ac4dbc2f'; //날씨 api key
 
@@ -109,6 +110,7 @@ class MainPage extends Component {
           <Image source={{uri: 'https://www.tippecanoe.in.gov/ImageRepository/Document?documentID=22983'}}
                   style={styles.logo} 
                   resizeMode='contain'/>
+          <Logo width={120} height={40}/>
           <ButtonScreen />
           {ControllContainer.getInstance().checkModal()}
         </View>
