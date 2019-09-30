@@ -109,6 +109,7 @@ class MainPage extends Component {
     return (
       <ScrollView style={{ backgroundColor: '#5A4E40' }}>
         <View style={styles.container}>
+          <Button title="Go to Search" onPress={() => navigate('SearchPage')} />
           <Weather
             style={styles.header}
             temp={Math.ceil(((tempertature - 273.15) * 9) / 5 + 32)}
