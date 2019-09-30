@@ -11,6 +11,7 @@ import {
 import { Linking } from 'expo';
 import ControllContainer from '../actions/ControllContainer';
 import getLink from '../actions/getLink';
+import { Dimensions } from "react-native";
 
 export default class BasicModalD extends Component {
   render() {
@@ -23,7 +24,7 @@ export default class BasicModalD extends Component {
         modalDidClose={() => ControllContainer.getInstance().openViewName("ModalView","close")}>
         <View style={[styles.container, styles.modalBackgroundStyle]}>
           <View style={styles.Cell_Title}>
-            <Text style={styles.TitleText}>
+            <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.TitleText}>
               Security and Extra Patrol Request
             </Text>
           </View>
@@ -32,7 +33,7 @@ export default class BasicModalD extends Component {
             <TouchableOpacity
               style={styles.InnerText}
               onPress={() => ControllContainer.getInstance().openViewName("Email","")}>
-              <Text style={styles.InnerText_SECURITYREQUEST}>
+              <Text   adjustsFontSizeToFit  numberOfLines={1}   style={styles.InnerText_SECURITYREQUEST}>
                 SECURITY REQUEST
               </Text>
             </TouchableOpacity>
@@ -40,14 +41,14 @@ export default class BasicModalD extends Component {
             <TouchableOpacity
               style={styles.InnerText}
               onPress={() =>ControllContainer.getInstance().openViewName("Email","")}>
-              <Text style={styles.InnerText}>EXTRA PATROL REQUEST</Text>
+              <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.InnerText}>EXTRA PATROL REQUEST</Text>
             </TouchableOpacity>
 
             <View style={styles.Cell_Close}>
               <TouchableOpacity
                 style={{ alignItems: 'center' }}
                 onPress={() => ControllContainer.getInstance().openViewName("ModalView","close")}>
-                <Text style={{ fontSize: 30 }}>CLOSE</Text>
+                <Text adjustsFontSizeToFit  numberOfLines={1} style={{ fontSize: 30 }}>CLOSE</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -57,23 +58,31 @@ export default class BasicModalD extends Component {
   }
 }
 
+var width = Dimensions.get('window').width
+
 const styles = StyleSheet.create({
   TitleText: {
+    textAlignVertical: "center",
+    textAlign: "center",
     color: 'white',
     alignItems: 'center',
-    fontSize: 25,
+    fontSize:0.05*width,
     margin: 5,
   },
 
-  InnerText: {
-    fontSize: 30,
+  InnerText: {    
+    textAlignVertical: "center",
+    textAlign: "center",
+    fontSize:0.05*width,
     color: 'white',
     fontWeight: 'bold',
     marginBottom: 10,
     textDecorationLine: 'underline',
   },
   InnerText_SECURITYREQUEST: {
-    fontSize: 38,
+    textAlignVertical: "center",
+    textAlign: "center",
+    fontSize:0.05*width,
     color: 'white',
     fontWeight: 'bold',
     marginBottom: 10,
