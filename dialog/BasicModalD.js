@@ -33,7 +33,7 @@ export default class BasicModalD extends Component {
             <TouchableOpacity
               style={styles.InnerText}
               onPress={() => ControllContainer.getInstance().openViewName("Email","")}>
-              <Text   adjustsFontSizeToFit  numberOfLines={1}   style={styles.InnerText_SECURITYREQUEST}>
+              <Text   adjustsFontSizeToFit  numberOfLines={1}   style={styles.InnerText}>
                 SECURITY REQUEST
               </Text>
             </TouchableOpacity>
@@ -59,6 +59,7 @@ export default class BasicModalD extends Component {
 }
 
 var width = Dimensions.get('window').width
+var height = Dimensions.get('window').height
 
 const styles = StyleSheet.create({
   TitleText: {
@@ -67,33 +68,24 @@ const styles = StyleSheet.create({
     color: 'white',
     alignItems: 'center',
     fontSize:0.05*width,
-    margin: 5,
+    padding: 5,
   },
 
-  InnerText: {    
+  InnerText: {
     textAlignVertical: "center",
     textAlign: "center",
     fontSize:0.05*width,
     color: 'white',
     fontWeight: 'bold',
-    marginBottom: 10,
-    textDecorationLine: 'underline',
-  },
-  InnerText_SECURITYREQUEST: {
-    textAlignVertical: "center",
-    textAlign: "center",
-    fontSize:0.05*width,
-    color: 'white',
-    fontWeight: 'bold',
+    marginTop: 5,
     marginBottom: 10,
     textDecorationLine: 'underline',
   },
 
   Cell_Title: {
     width: 0.8*width,
-    height: 52,
+    height: 0.05*height,
     margin: 5,
-    paddingTop: 5,
     backgroundColor: '#55330E',
     alignItems: 'center',
     marginBottom: 5,

@@ -58,6 +58,8 @@ export default class BasicModalC extends Component {
   }
 }
 var width = Dimensions.get('window').width
+var height = Dimensions.get('window').height
+
 const styles = StyleSheet.create({
   TitleText: {
     textAlignVertical: "center",
@@ -81,7 +83,7 @@ const styles = StyleSheet.create({
 
   Cell_Title: {
     width: 0.8*width,
-    height: 52,
+    height: 0.05*height,
     margin: 5,
     backgroundColor: '#55330E',
     alignItems: 'center',

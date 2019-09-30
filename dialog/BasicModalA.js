@@ -53,6 +53,8 @@ export default class BasicModalA extends Component {
   }
 }
 var width = Dimensions.get('window').width
+var height = Dimensions.get('window').height
+
 const styles = StyleSheet.create({
   TitleText: {
     textAlignVertical: "center",
@@ -69,20 +71,22 @@ const styles = StyleSheet.create({
     fontSize:0.05*width,
     color: 'white',
     fontWeight: 'bold',
-    marginBottom: 5,
+    marginTop: 5,
+    marginBottom: 10,
     textDecorationLine: 'underline',
   },
 
   Cell_Title: {
-    width: 330,
-    height: 52,
+    width: 0.8*width,
+    height: 0.05*height,
     margin: 5,
     backgroundColor: '#55330E',
     alignItems: 'center',
+    marginBottom: 5,
   },
 
   Cell_Close: {
-    width: 300,
+    width: 0.8*width,
     height: 45,
     marginVertical: 10,
     padding: 5,
