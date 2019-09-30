@@ -11,6 +11,7 @@ import {
 import { Linking } from 'expo';
 import ControllContainer from '../actions/ControllContainer';
 import getLink from '../actions/getLink';
+import { Dimensions } from "react-native";
 
 export default class BasicModalB extends Component {
   render() {
@@ -23,7 +24,7 @@ export default class BasicModalB extends Component {
         modalDidClose={() => ControllContainer.getInstance().openViewName("ModalView","close")}>
         <View style={[styles.container, styles.modalBackgroundStyle]}>
           <View style={styles.Cell_Title}>
-            <Text style={styles.TitleText}>Video Visitation</Text>
+            <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.TitleText}>Video Visitation</Text>
           </View>
 
           <View style={{ alignItems: 'center' }}>
@@ -32,7 +33,10 @@ export default class BasicModalB extends Component {
               onPress={() =>
                 getLink.getLink('Lafayette', 'videoVisitationWeb')
               }>
-              <Text style={styles.InnerText}>GTL VIDEO VISITATION WEB</Text>
+              <Text  
+              adjustsFontSizeToFit  numberOfLines={1}
+              style={styles.InnerText}
+              >GTL VIDEO VISITATION WEB</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
@@ -43,20 +47,20 @@ export default class BasicModalB extends Component {
                   ToastAndroid.SHORT
                 )
               }>
-              <Text style={styles.InnerText}>OPEN THE VISMOBILE APP</Text>
+              <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.InnerText}>OPEN THE VISMOBILE APP</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               style={styles.InnerText}
               onPress={() => getLink.getLink('Lafayette', 'downloadVismobile')}>
-              <Text style={styles.InnerText}>DOWNLOAD VISMOBILE APP</Text>
+              <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.InnerText}>DOWNLOAD VISMOBILE APP</Text>
             </TouchableOpacity>
 
             <View style={styles.Cell_Close}>
               <TouchableOpacity
                 style={{ alignItems: 'center' }}
                 onPress={() => ControllContainer.getInstance().openViewName("ModalView","close")}>
-                <Text style={{ fontSize: 30 }}>CLOSE</Text>
+                <Text adjustsFontSizeToFit  numberOfLines={1} style={{ fontSize: 30 }}>CLOSE</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -65,17 +69,21 @@ export default class BasicModalB extends Component {
     );
   }
 }
-
+var width = Dimensions.get('window').width
 const styles = StyleSheet.create({
   TitleText: {
+    textAlignVertical: "center",
+    textAlign: "center",
     color: 'white',
     alignItems: 'center',
-    fontSize: 35,
+    fontSize:0.05*width,
     padding: 5,
   },
 
   InnerText: {
-    fontSize: 25,
+    textAlignVertical: "center",
+    textAlign: "center",
+    fontSize:0.05*width,
     color: 'white',
     fontWeight: 'bold',
     marginBottom: 10,

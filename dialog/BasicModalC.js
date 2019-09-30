@@ -11,6 +11,7 @@ import {
 import { Linking } from 'expo';
 import ControllContainer from '../actions/ControllContainer';
 import getLink from '../actions/getLink';
+import { Dimensions } from "react-native";
 
 export default class BasicModalC extends Component {
   render() {
@@ -23,7 +24,7 @@ export default class BasicModalC extends Component {
         modalDidClose={() => ControllContainer.getInstance().openViewName("ModalView","close")}>
         <View style={[styles.container, styles.modalBackgroundStyle]}>
           <View style={styles.Cell_Title}>
-            <Text style={styles.TitleText}>Sheriff's Slae</Text>
+            <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.TitleText}>Sheriff's Slae</Text>
           </View>
 
           <View style={{ alignItems: 'center' }}>
@@ -32,7 +33,7 @@ export default class BasicModalC extends Component {
               onPress={() =>
                 getLink.getLink('Lafayette', 'sheriffsSaleGuideline')
               }>
-              <Text style={styles.InnerText}>SHERIFF'S SALE GUIDELINE</Text>
+              <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.InnerText}>SHERIFF'S SALE GUIDELINE</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
@@ -40,14 +41,14 @@ export default class BasicModalC extends Component {
               onPress={() =>
                 getLink.getLink('Lafayette', 'sheriffsSaleListing')
               }>
-              <Text style={styles.InnerText}>SHERIFF'S SALE LISTING</Text>
+              <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.InnerText}>SHERIFF'S SALE LISTING</Text>
             </TouchableOpacity>
 
             <View style={styles.Cell_Close}>
               <TouchableOpacity
                 style={{ alignItems: 'center' }}
                 onPress={() => ControllContainer.getInstance().openViewName("ModalView","close")}>
-                <Text style={{ fontSize: 30 }}>CLOSE</Text>
+                <Text adjustsFontSizeToFit  numberOfLines={1} style={{ fontSize: 30 }}>CLOSE</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -56,17 +57,21 @@ export default class BasicModalC extends Component {
     );
   }
 }
-
+var width = Dimensions.get('window').width
 const styles = StyleSheet.create({
   TitleText: {
+    textAlignVertical: "center",
+    textAlign: "center",
     color: 'white',
     alignItems: 'center',
-    fontSize: 40,
+    fontSize:0.05*width,
     padding: 5,
   },
 
   InnerText: {
-    fontSize: 30,
+    textAlignVertical: "center",
+    textAlign: "center",
+    fontSize:0.05*width,
     color: 'white',
     fontWeight: 'bold',
     marginTop: 5,
