@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   },
 
   Cell_Title: {
-    width: 330,
+    width: 0.8*width,
     height: 52,
     margin: 5,
     backgroundColor: '#55330E',
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   },
 
   Cell_Close: {
-    width: 300,
+    width: 0.8*width,
     height: 45,
     marginVertical: 10,
     padding: 5,
