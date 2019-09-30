@@ -1,23 +1,29 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image, Button } from 'react-native';
-import Header from '../components/Header';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Button,
+  ScrollView,
+} from 'react-native';
+import Weather from '../components/Weather';
 import ButtonScreen from '../actions/ButtonScreen';
-import background from '../assets/background.jpg';
 import ControllContainer from '../actions/ControllContainer';
 import { BackHandler } from 'react-native';
 import MailPage from './MailPage';
-import Logo from "../assets/gun.svg";
+import Logo from '../assets/logo.svg';
+import ButtonSet from '../components/ButtonSet';
 
 const API_KEY = 'e02b7ad151e0ceafbbe427b2ac4dbc2f'; //날씨 api key
 
 class MainPage extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    ControllContainer.getInstance().intitObject("",this);
+    ControllContainer.getInstance().intitObject('', this);
     console.disableYellowBox = true;
     this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
   }
-
 
   componentWillMount() {
     BackHandler.addEventListener(
@@ -34,13 +40,14 @@ class MainPage extends Component {
   }
 
   handleBackButtonClick() {
-     if (ControllContainer.getInstance().getViewName("Modal") == "")
-       ControllContainer.getInstance().openViewName("ModalView","close");
-     else if (ControllContainer.getInstance().getViewName("ButtonView") == 'Main') 
-       return false;
-     else
-        ControllContainer.getInstance().openViewName("ButtonView","Main");
-      return true;
+    if (ControllContainer.getInstance().getViewName('Modal') == '')
+      ControllContainer.getInstance().openViewName('ModalView', 'close');
+    else if (
+      ControllContainer.getInstance().getViewName('ButtonView') == 'Main'
+    )
+      return false;
+    else ControllContainer.getInstance().openViewName('ButtonView', 'Main');
+    return true;
   }
 
   static navigationOptions = {
@@ -99,22 +106,22 @@ class MainPage extends Component {
   render() {
     const { isLoaded, error, tempertature, name, city } = this.state;
     const { navigate } = this.props.navigation;
-      return (
+    return (
+      <ScrollView style={{ backgroundColor: '#5A4E40' }}>
         <View style={styles.container}>
-          <Header
+          <Button title="Go to Search" onPress={() => navigate('SearchPage')} />
+          <Weather
             style={styles.header}
             temp={Math.ceil(((tempertature - 273.15) * 9) / 5 + 32)}
             city={city}
             weatherName={name}
           />
-          <Image source={{uri: 'https://www.tippecanoe.in.gov/ImageRepository/Document?documentID=22983'}}
-                  style={styles.logo} 
-                  resizeMode='contain'/>
-          <Logo width={120} height={40}/>
-          <ButtonScreen />
+          <Logo width={380} height={200} />
+          <ButtonSet />
           {ControllContainer.getInstance().checkModal()}
         </View>
-      );
+      </ScrollView>
+    );
   }
 }
 
@@ -130,10 +137,7 @@ const styles = StyleSheet.create({
   header: {
     flex: 1,
   },
-  logo: {
-    width: 350,
-    height: 200,
-  },
+
   gone: {
     display: 'none',
   },

@@ -15,25 +15,22 @@ const weatherCases = {
   Mist: 'weather-fog',
 };
 
-function Header({ temp, city, weatherName }) {
+function Weather({ temp, city, weatherName }) {
   return (
     <View style={styles.container}>
-      <Image style={{ width: 130, height: 50 }} source={tipslogo} />
+      <MaterialCommunityIcons
+        color="white"
+        size={30}
+        name={weatherCases[weatherName]}
+      />
       <Text style={styles.temp}>{city}</Text>
-      <View style={styles.vertical_con}>
-        <MaterialCommunityIcons
-          color="white"
-          size={30}
-          name={weatherCases[weatherName]}
-        />
-        <Text style={styles.temp}>{temp}°F</Text>
-      </View>
+      <Text style={styles.temp}>{temp}°F</Text>
     </View>
   );
 }
-export default Header;
+export default Weather;
 
-Header.propTypes = {
+Weather.propTypes = {
   city: PropTypes.string.isRequired,
   weatherName: PropTypes.string.isRequired,
   temp: PropTypes.number.isRequired,
