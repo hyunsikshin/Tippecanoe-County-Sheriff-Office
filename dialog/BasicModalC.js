@@ -24,7 +24,7 @@ export default class BasicModalC extends Component {
         modalDidClose={() => ControllContainer.getInstance().openViewName("ModalView","close")}>
         <View style={[styles.container, styles.modalBackgroundStyle]}>
           <View style={styles.Cell_Title}>
-            <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.TitleText}>Sheriff's Slae</Text>
+            <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.TitleText}>Sheriff's Sale</Text>
           </View>
 
           <View style={{ alignItems: 'center' }}>
@@ -58,6 +58,8 @@ export default class BasicModalC extends Component {
   }
 }
 var width = Dimensions.get('window').width
+var height = Dimensions.get('window').height
+
 const styles = StyleSheet.create({
   TitleText: {
     textAlignVertical: "center",
@@ -80,8 +82,8 @@ const styles = StyleSheet.create({
   },
 
   Cell_Title: {
-    width: 330,
-    height: 52,
+    width: 0.8*width,
+    height: 0.05*height,
     margin: 5,
     backgroundColor: '#55330E',
     alignItems: 'center',
@@ -89,7 +91,7 @@ const styles = StyleSheet.create({
   },
 
   Cell_Close: {
-    width: 300,
+    width: 0.8*width,
     height: 45,
     marginVertical: 10,
     padding: 5,
