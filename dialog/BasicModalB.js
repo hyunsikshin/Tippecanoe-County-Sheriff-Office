@@ -60,7 +60,7 @@ export default class BasicModalB extends Component {
               <TouchableOpacity
                 style={{ alignItems: 'center' }}
                 onPress={() => ControllContainer.getInstance().openViewName("ModalView","close")}>
-                <Text adjustsFontSizeToFit  numberOfLines={1} style={{ fontSize: 30 }}>CLOSE</Text>
+                <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.InnerText_close}>CLOSE</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -80,6 +80,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     fontSize:0.05*width,
     padding: 5,
+  },
+
+  InnerText_close: {
+    textAlignVertical: "center",
+    textAlign: "center",
+    fontSize:0.05*width,
+    marginBottom: 10,
   },
 
   InnerText: {
@@ -103,8 +110,8 @@ const styles = StyleSheet.create({
   },
 
   Cell_Close: {
-    width: 0.8*width,
-    height: 45,
+    width: 0.3*width,
+    height: 0.05*height,
     marginVertical: 10,
     padding: 5,
     backgroundColor: '#D6D8D7',
