@@ -7,39 +7,25 @@ class SearchPage extends Component {
   };
 
   address = [
-    {
-      Location: 'SonJungmin',
-    },
-    {
-      Location: 'SonByeongjun',
-    },
-    {
-      Location: 'ImByeongjun',
-    },
-    {
-      Location: 'OhMinGyun',
-    },
-    {
-      Location: 'LeeSuGi',
-    },
-    {
-      Location: 'SinHyunsick',
-    },
-    {
-      Location: 'KimMinSu',
-    },
-    {
-      Location: 'MountinDue',
-    },
-    {
-      Location: 'Micky',
-    },
-    {
-      Location: 'Roman',
-    },
-    {
-      Location: 'Jason',
-    },
+    { Location: 'Adams'},
+    { Location: 'Allen'},
+    { Location: 'Bartholomew'},
+    { Location: 'Benton'},
+    { Location: 'Blackford'},
+    { Location: 'Boone' },
+    { Location: 'Brown' },
+    { Location: 'Carroll' },
+    { Location: 'Cass' },
+    { Location: 'Clark'},
+    { Location: 'Clay'},
+    { Location: 'Clinton' },
+    { Location: 'Crawford' },
+    { Location: 'Daviess' },
+    { Location: 'Dearborn'},
+    { Location: 'Decatur'},
+    { Location: 'DeKalb' },
+    { Location: 'Delaware'},
+    { Location: 'Dubois'},
   ];
   ds;
   constructor() {
