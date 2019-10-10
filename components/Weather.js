@@ -24,15 +24,13 @@ function Weather({ temp, city, weatherName }) {
         name={weatherCases[weatherName]}
       />
       <Text style={styles.temp}>{city}</Text>
-      <Text style={styles.temp}>{temp}°F</Text>
+      <Text style={styles.temp}> {temp}°F</Text>
     </View>
   );
 }
 export default Weather;
 
 Weather.propTypes = {
-  city: PropTypes.string.isRequired,
-  weatherName: PropTypes.string.isRequired,
   temp: PropTypes.number.isRequired,
 };
 

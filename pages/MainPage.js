@@ -20,6 +20,14 @@ import getLink from '../actions/getLink';
 const API_KEY = 'e02b7ad151e0ceafbbe427b2ac4dbc2f'; //날씨 api key
 
 class MainPage extends Component {
+  state = {
+    isLoaded: false,
+    error: null,
+    name: null,
+    city: null,
+    tempertature: null,
+  };
+
   constructor(props) {
     super(props);
     ControllContainer.getInstance().intitObject('', this);
@@ -53,25 +61,12 @@ class MainPage extends Component {
   }
 
   static navigationOptions = {
-    // title: 'Main Page',
-    // //Sets Header text of Status Bar
-    // headerStyle: {
-    //   backgroundColor: '#5A4E40',
-    //   //Sets Header color
-    // },
-    // headerTintColor: '#fff',
-    // //Sets Header text color
-    // headerTitleStyle: {
-    //   fontWeight: 'bold',
-    //   //Sets Header text style
-    // },
     header: null,
   };
 
   componentDidMount() {
     navigator.geolocation.getCurrentPosition(
       position => {
-        console.log(position);
         this._getWeather(position.coords.latitude, position.coords.longitude);
       },
       error => {
@@ -88,7 +83,6 @@ class MainPage extends Component {
     )
       .then(response => response.json())
       .then(json => {
-        console.log(json);
         this.setState({
           city: json.name,
           name: json.weather[0].main,
@@ -98,16 +92,9 @@ class MainPage extends Component {
       });
   };
 
-  state = {
-    isLoaded: false,
-    error: null,
-    name: null,
-    city: null,
-    tempertature: null,
-  };
+
 
   render() {
-    const { isLoaded, error, tempertature, name, city } = this.state;
     const { navigate } = this.props.navigation;
     return (
       <ScrollView style={{ backgroundColor: '#5A4E40' }}>
@@ -123,9 +110,9 @@ class MainPage extends Component {
           </View>
           <Weather
             style={styles.header}
-            temp={Math.ceil(((tempertature - 273.15) * 9) / 5 + 32)}
-            city={city}
-            weatherName={name}
+            temp={Math.ceil(((this.state.tempertature - 273.15) * 9) / 5 + 32)}
+            city={this.state.city}
+            weatherName={this.state.name}
           />
           <Logo width={380} height={200} />
           <ButtonSet />
