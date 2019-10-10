@@ -27,6 +27,7 @@ const Lafayette = {
   taxWarrants: 'http://www.tippecanoe.in.gov/480/Tax-Warrants',
   privacyPolicy:
     'https://github.com/canis617/Tippecanoe-County-Sheriff-App/blob/develop2/privacy_policy.md',
+  qna: 'http://www.tippecanoe.in.gov/faq.aspx',
 
     
   faceBook : 'https://www.facebook.com/TCSOIndiana',
