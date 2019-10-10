@@ -193,6 +193,46 @@ const ButtonSet = () => {
         />
         <Text style={styles.text}>Sheriff's Sale</Text>
       </View>
+      <View style={styles.cell_odd}>
+        <MaterialIcons
+          color="white"
+          size={50}
+          name="monetization-on"
+          onPress={() =>
+            ControllContainer.getInstance().openViewName(
+              'ModalView',
+              'BasicModalA'
+            )
+          }
+        />
+        <Text style={styles.text}>Contact</Text>
+      </View>
+
+      <View style={styles.cell_even}>
+        <Entypo
+          color="white"
+          size={50}
+          name="traffic-cone"
+          onPress={() => {
+            getLink.getLink('Lafayette', 'weTip');
+          }}
+        />
+        <Text style={styles.text}>We-tip</Text>
+      </View>
+      <View style={styles.cell_odd}>
+        <MaterialCommunityIcons
+          color="white"
+          size={50}
+          name="sale"
+          onPress={() =>
+            ControllContainer.getInstance().openViewName(
+              'ModalView',
+              'BasicModalC'
+            )
+          }
+        />
+        <Text style={styles.text}>????</Text>
+      </View>
     </View>
   );
 };
