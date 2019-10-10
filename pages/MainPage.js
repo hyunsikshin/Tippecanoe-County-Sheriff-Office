@@ -14,9 +14,8 @@ import { BackHandler } from 'react-native';
 import MailPage from './MailPage';
 import Logo from '../assets/logo.svg';
 import ButtonSet from '../components/ButtonSet';
-import { Dimensions } from "react-native";
+import { Dimensions } from 'react-native';
 import getLink from '../actions/getLink';
-
 
 const API_KEY = 'e02b7ad151e0ceafbbe427b2ac4dbc2f'; //날씨 api key
 
@@ -54,18 +53,19 @@ class MainPage extends Component {
   }
 
   static navigationOptions = {
-    title: 'Main Page',
-    //Sets Header text of Status Bar
-    headerStyle: {
-      backgroundColor: '#5A4E40',
-      //Sets Header color
-    },
-    headerTintColor: '#fff',
-    //Sets Header text color
-    headerTitleStyle: {
-      fontWeight: 'bold',
-      //Sets Header text style
-    },
+    // title: 'Main Page',
+    // //Sets Header text of Status Bar
+    // headerStyle: {
+    //   backgroundColor: '#5A4E40',
+    //   //Sets Header color
+    // },
+    // headerTintColor: '#fff',
+    // //Sets Header text color
+    // headerTitleStyle: {
+    //   fontWeight: 'bold',
+    //   //Sets Header text style
+    // },
+    header: null,
   };
 
   componentDidMount() {
@@ -113,12 +113,13 @@ class MainPage extends Component {
       <ScrollView style={{ backgroundColor: '#5A4E40' }}>
         <View style={styles.container}>
           <Button title="Go to Search" onPress={() => navigate('SearchPage')} />
-          <View style={ styles.qnaContainer}>
+          <View style={styles.qnaContainer}>
             <Text
-            onPress={() => {
-              getLink.getLink('Lafayette', 'qna');
-            }}
-            >Q&A</Text>
+              onPress={() => {
+                getLink.getLink('Lafayette', 'qna');
+              }}>
+              Q&A
+            </Text>
           </View>
           <Weather
             style={styles.header}
@@ -137,10 +138,15 @@ class MainPage extends Component {
 
 export default MainPage;
 
-var width = Dimensions.get('window').width
+var width = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
+  scroll: {
+    padding: 30,
+    backgroundColor: '#5A4E40',
+  },
   container: {
+    marginTop: 30,
     flex: 1,
     backgroundColor: '#5A4E40',
     alignItems: 'center',
@@ -155,5 +161,9 @@ const styles = StyleSheet.create({
     width: width,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  btn: {
+    flex: 1,
+    height: 30,
   },
 });
