@@ -13,24 +13,25 @@ import {
 import ControllContainer from '../actions/ControllContainer';
 import getLink from '../actions/getLink';
 
+//svg files
+import AdminLine from '../assets/buttonIcons/AdminLine.svg';
+import Gun from '../assets/buttonIcons/gun.svg';
+import Jobapply from '../assets/buttonIcons/Jobapply.svg';
+import AnimalControl from '../assets/buttonIcons/AnimalControl.svg';
+import Commissary from '../assets/buttonIcons/Commissary.svg';
+import Contacts from '../assets/buttonIcons/Contacts.svg';
+import CrashReport from '../assets/buttonIcons/CrashReport.svg';
+import Inmatelookup from '../assets/buttonIcons/Inmatelookup.svg';
+import PhoneDirectory from '../assets/buttonIcons/PhoneDirectory.svg';
+
+
 const ButtonSet = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.cell_odd}>
-        <Feather
-          color="white"
-          size={50}
-          name="user-check"
-          onPress={() => {
-            getLink.getLink('Lafayette', 'phoneDirectory');
-          }}
-        />
-        <Text style={styles.text}>Phone Directory</Text>
-      </View>
       <View style={styles.cell_even}>
-        <AntDesign
-          color="white"
-          size={50}
+        <AdminLine
+          height={styles.icon_size.height}
+          width={styles.icon_size.width}
           name="user"
           onPress={() => {
             getLink.getLink('Lafayette', 'adminLine');
@@ -38,21 +39,23 @@ const ButtonSet = () => {
         />
         <Text style={styles.text}>Admin Line</Text>
       </View>
+
       <View style={styles.cell_odd}>
-        <MaterialIcons
-          color="white"
-          size={50}
-          name="store"
+        <AnimalControl
+          height={styles.icon_size.height}
+          width={styles.icon_size.width}
+          name="dog-side"
           onPress={() => {
-            getLink.getLink('Lafayette', 'jobApply');
+            getLink.getLink('Lafayette', 'animalControl');
           }}
         />
-        <Text style={styles.text}>Job Apply</Text>
+        <Text style={styles.text}>Animal Control</Text>
       </View>
+
       <View style={styles.cell_even}>
-        <MaterialCommunityIcons
-          color="white"
-          size={60}
+        <Commissary
+          height={styles.icon_size.height}
+          width={styles.icon_size.width}
           name="store"
           onPress={() => {
             getLink.getLink('Lafayette', 'commissary');
@@ -60,6 +63,89 @@ const ButtonSet = () => {
         />
         <Text style={styles.text}>Commissary</Text>
       </View>
+
+      <View style={styles.cell_odd}>
+        <Contacts
+          height={styles.icon_size.height}
+          width={styles.icon_size.width}
+          name="contact"
+          onPress={() => {
+            getLink.getLink('Lafayette', 'phoneDirectory');
+          }}
+        />
+        <Text style={styles.text}>Contacts</Text>
+      </View>
+
+      <View style={styles.cell_odd}>
+        <CrashReport
+          height={styles.icon_size.height}
+          width={styles.icon_size.width}
+          name="car"
+          onPress={() => {
+            getLink.getLink('Lafayette', 'crashReports');
+          }}
+        />
+        <Text style={styles.text}>Crash Report</Text>
+      </View>
+
+      <View style={styles.cell_even}>
+        <Gun
+          height={styles.icon_size.height}
+          width={styles.icon_size.width}
+          name="clipboard-account"
+          onPress={() => {
+            getLink.getLink('Lafayette', 'gunPermits');
+          }}
+        />
+        <Text style={styles.text}>Gun Permits</Text>
+      </View>
+
+      <View style={styles.cell_odd}>
+        <Inmatelookup
+          height={styles.icon_size.height}
+          width={styles.icon_size.width}
+          name="magnify"
+          onPress={() => {
+            getLink.getLink('Lafayette', 'immateLookup');
+          }}
+        />
+        <Text style={styles.text}>Inmate lookup</Text>
+      </View>
+
+      <View style={styles.cell_odd}>
+        <Jobapply
+          height={styles.icon_size.height}
+          width={styles.icon_size.width}
+          name="store"
+          onPress={() => {
+            getLink.getLink('Lafayette', 'jobApply');
+          }}
+        />
+        <Text style={styles.text}>Job Apply</Text>
+      </View>
+
+      <View style={styles.cell_odd}>
+        <PhoneDirectory
+          height={styles.icon_size.height}
+          width={styles.icon_size.width}
+          name="user-check"
+          onPress={() => {
+            getLink.getLink('Lafayette', 'phoneDirectory');
+          }}
+        />
+        <Text style={styles.text}>Phone Directory</Text>
+      </View>
+
+
+
+
+
+
+
+
+
+
+
 
       <View style={styles.cell_odd}>
         <Feather
@@ -86,39 +172,9 @@ const ButtonSet = () => {
         />
         <Text style={styles.text}>Visitation Policy</Text>
       </View>
-      <View style={styles.cell_odd}>
-        <MaterialCommunityIcons
-          color="white"
-          size={60}
-          name="magnify"
-          onPress={() => {
-            getLink.getLink('Lafayette', 'immateLookup');
-          }}
-        />
-        <Text style={styles.text}>Inmate lookup</Text>
-      </View>
-      <View style={styles.cell_even}>
-        <MaterialCommunityIcons
-          color="white"
-          size={50}
-          name="clipboard-account"
-          onPress={() => {
-            getLink.getLink('Lafayette', 'gunPermits');
-          }}
-        />
-        <Text style={styles.text}>Gun Permits</Text>
-      </View>
-      <View style={styles.cell_odd}>
-        <AntDesign
-          color="white"
-          size={50}
-          name="car"
-          onPress={() => {
-            getLink.getLink('Lafayette', 'crashReports');
-          }}
-        />
-        <Text style={styles.text}>Crash Report</Text>
-      </View>
+
+
+
       <View style={styles.cell_even}>
         <MaterialCommunityIcons
           color="white"
@@ -130,17 +186,7 @@ const ButtonSet = () => {
         />
         <Text style={styles.text}>Records Request</Text>
       </View>
-      <View style={styles.cell_odd}>
-        <MaterialCommunityIcons
-          color="white"
-          size={50}
-          name="dog-side"
-          onPress={() => {
-            getLink.getLink('Lafayette', 'animalControl');
-          }}
-        />
-        <Text style={styles.text}>Animal Control</Text>
-      </View>
+
 
       <View style={styles.cell_even}>
         <MaterialCommunityIcons
@@ -232,5 +278,9 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white',
+  },
+  icon_size: {
+    width: 70,
+    height: 70,
   },
 });
