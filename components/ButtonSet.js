@@ -28,7 +28,7 @@ import PhoneDirectory from '../assets/buttonIcons/PhoneDirectory.svg';
 const ButtonSet = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.cell_even}>
+      <View style={styles.cell}>
         <AdminLine
           height={styles.icon_size.height}
           width={styles.icon_size.width}
@@ -40,7 +40,7 @@ const ButtonSet = () => {
         <Text style={styles.text}>Admin Line</Text>
       </View>
 
-      <View style={styles.cell_odd}>
+      <View style={styles.cell}>
         <AnimalControl
           height={styles.icon_size.height}
           width={styles.icon_size.width}
@@ -52,7 +52,7 @@ const ButtonSet = () => {
         <Text style={styles.text}>Animal Control</Text>
       </View>
 
-      <View style={styles.cell_even}>
+      <View style={styles.cell}>
         <Commissary
           height={styles.icon_size.height}
           width={styles.icon_size.width}
@@ -64,7 +64,7 @@ const ButtonSet = () => {
         <Text style={styles.text}>Commissary</Text>
       </View>
 
-      <View style={styles.cell_odd}>
+      <View style={styles.cell}>
         <Contacts
           height={styles.icon_size.height}
           width={styles.icon_size.width}
@@ -76,7 +76,7 @@ const ButtonSet = () => {
         <Text style={styles.text}>Contacts</Text>
       </View>
 
-      <View style={styles.cell_odd}>
+      <View style={styles.cell}>
         <CrashReport
           height={styles.icon_size.height}
           width={styles.icon_size.width}
@@ -88,7 +88,7 @@ const ButtonSet = () => {
         <Text style={styles.text}>Crash Report</Text>
       </View>
 
-      <View style={styles.cell_even}>
+      <View style={styles.cell}>
         <Gun
           height={styles.icon_size.height}
           width={styles.icon_size.width}
@@ -100,7 +100,7 @@ const ButtonSet = () => {
         <Text style={styles.text}>Gun Permits</Text>
       </View>
 
-      <View style={styles.cell_odd}>
+      <View style={styles.cell}>
         <Inmatelookup
           height={styles.icon_size.height}
           width={styles.icon_size.width}
@@ -112,7 +112,7 @@ const ButtonSet = () => {
         <Text style={styles.text}>Inmate lookup</Text>
       </View>
 
-      <View style={styles.cell_odd}>
+      <View style={styles.cell}>
         <Jobapply
           height={styles.icon_size.height}
           width={styles.icon_size.width}
@@ -124,7 +124,7 @@ const ButtonSet = () => {
         <Text style={styles.text}>Job Apply</Text>
       </View>
 
-      <View style={styles.cell_odd}>
+      <View style={styles.cell}>
         <PhoneDirectory
           height={styles.icon_size.height}
           width={styles.icon_size.width}
@@ -147,7 +147,7 @@ const ButtonSet = () => {
 
 
 
-      <View style={styles.cell_odd}>
+      <View style={styles.cell}>
         <Feather
           color="white"
           size={60}
@@ -161,7 +161,7 @@ const ButtonSet = () => {
         />
         <Text style={styles.text}>Video Visitation</Text>
       </View>
-      <View style={styles.cell_even}>
+      <View style={styles.cell}>
         <FontAwesome
           color="white"
           size={60}
@@ -175,7 +175,7 @@ const ButtonSet = () => {
 
 
 
-      <View style={styles.cell_even}>
+      <View style={styles.cell}>
         <MaterialCommunityIcons
           color="white"
           size={50}
@@ -188,7 +188,7 @@ const ButtonSet = () => {
       </View>
 
 
-      <View style={styles.cell_even}>
+      <View style={styles.cell}>
         <MaterialCommunityIcons
           color="white"
           size={50}
@@ -202,7 +202,7 @@ const ButtonSet = () => {
         />
         <Text style={styles.text}>Security and extra patrol request</Text>
       </View>
-      <View style={styles.cell_odd}>
+      <View style={styles.cell}>
         <MaterialIcons
           color="white"
           size={50}
@@ -214,7 +214,7 @@ const ButtonSet = () => {
         <Text style={styles.text}>Tax Warrants</Text>
       </View>
 
-      <View style={styles.cell_even}>
+      <View style={styles.cell}>
         <Entypo
           color="white"
           size={50}
@@ -225,7 +225,7 @@ const ButtonSet = () => {
         />
         <Text style={styles.text}>Traffic complaints</Text>
       </View>
-      <View style={styles.cell_odd}>
+      <View style={styles.cell}>
         <MaterialCommunityIcons
           color="white"
           size={50}
@@ -239,7 +239,7 @@ const ButtonSet = () => {
         />
         <Text style={styles.text}>Sheriff's Sale</Text>
       </View>
-      <View style={styles.cell_odd}>
+      <View style={styles.cell}>
         <MaterialIcons
           color="white"
           size={50}
@@ -254,7 +254,7 @@ const ButtonSet = () => {
         <Text style={styles.text}>Contact</Text>
       </View>
 
-      <View style={styles.cell_even}>
+      <View style={styles.cell}>
         <Entypo
           color="white"
           size={50}
@@ -265,7 +265,7 @@ const ButtonSet = () => {
         />
         <Text style={styles.text}>We-tip</Text>
       </View>
-      <View style={styles.cell_odd}>
+      <View style={styles.cell}>
         <MaterialCommunityIcons
           color="white"
           size={50}
@@ -292,23 +292,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     backgroundColor: '#ced6e0',
-    padding: 30,
+    padding: 10,
   },
-  cell_odd: {
+  cell: {
     justifyContent: 'center',
     alignItems: 'center',
     width: 105,
     height: 105,
     margin: 0,
-    backgroundColor: '#846C4D',
-  },
-  cell_even: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: 105,
-    height: 105,
-    margin: 0,
-    backgroundColor: '#998668',
+    backgroundColor: 'white',
   },
   gone: {
     width: 105,
@@ -317,7 +309,7 @@ const styles = StyleSheet.create({
     opacity: 0.4,
   },
   text: {
-    color: 'white',
+    color: 'black',
   },
   icon_size: {
     width: 70,
