@@ -205,6 +205,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'row',
     flexWrap: 'wrap',
+    backgroundColor: '#ced6e0',
+    padding: 30,
   },
   cell_odd: {
     justifyContent: 'center',
