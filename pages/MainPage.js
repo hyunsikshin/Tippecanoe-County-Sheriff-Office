@@ -6,15 +6,16 @@ import {
   Image,
   Button,
   ScrollView,
+  Dimensions,
+  BackHandler,
 } from 'react-native';
 import Weather from '../components/Weather';
 import ButtonScreen from '../actions/ButtonScreen';
 import ControllContainer from '../actions/ControllContainer';
-import { BackHandler } from 'react-native';
 import MailPage from './MailPage';
 import Logo from '../assets/logo.svg';
 import ButtonSet from '../components/ButtonSet';
-import { Dimensions } from 'react-native';
+import Footer from '../components/Footer';
 import getLink from '../actions/getLink';
 
 const API_KEY = 'e02b7ad151e0ceafbbe427b2ac4dbc2f'; //날씨 api key
@@ -97,7 +98,7 @@ class MainPage extends Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <ScrollView style={{ backgroundColor: '#5A4E40' }}>
+      <ScrollView style={{ backgroundColor: '#f1f2f6' }}>
         <View style={styles.container}>
           <Button title="Go to Search" onPress={() => navigate('SearchPage')} />
           <View style={styles.qnaContainer}>
@@ -116,6 +117,7 @@ class MainPage extends Component {
           />
           <Logo width={380} height={200} />
           <ButtonSet />
+          <Footer />
           {ControllContainer.getInstance().checkModal()}
         </View>
       </ScrollView>
@@ -125,17 +127,13 @@ class MainPage extends Component {
 
 export default MainPage;
 
-var width = Dimensions.get('window').width;
+const width = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
-  scroll: {
-    padding: 30,
-    backgroundColor: '#5A4E40',
-  },
   container: {
     marginTop: 30,
     flex: 1,
-    backgroundColor: '#5A4E40',
+    backgroundColor: '#f1f2f6',
     alignItems: 'center',
     justifyContent: 'center',
   },

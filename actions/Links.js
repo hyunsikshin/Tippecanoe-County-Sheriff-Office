@@ -29,10 +29,9 @@ const Lafayette = {
     'https://github.com/canis617/Tippecanoe-County-Sheriff-App/blob/develop2/privacy_policy.md',
   qna: 'http://www.tippecanoe.in.gov/faq.aspx',
 
-    
-  faceBook : 'https://www.facebook.com/TCSOIndiana',
-  instargram : 'https://www.instagram.com/tcso79/',
-  twitter : 'https://twitter.com/tippecanoecosh1',
+  facebook: 'https://www.facebook.com/TCSOIndiana',
+  instargram: 'https://www.instagram.com/tcso79/',
+  twitter: 'https://twitter.com/tippecanoecosh1',
 };
 
 export default {
