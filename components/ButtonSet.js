@@ -15,14 +15,24 @@ import getLink from '../actions/getLink';
 
 //svg files
 import AdminLine from '../assets/buttonIcons/AdminLine.svg';
-import Gun from '../assets/buttonIcons/gun.svg';
-import Jobapply from '../assets/buttonIcons/Jobapply.svg';
 import AnimalControl from '../assets/buttonIcons/AnimalControl.svg';
 import Commissary from '../assets/buttonIcons/Commissary.svg';
 import Contacts from '../assets/buttonIcons/Contacts.svg';
 import CrashReport from '../assets/buttonIcons/CrashReport.svg';
+import Gun from '../assets/buttonIcons/Gun.svg';
 import Inmatelookup from '../assets/buttonIcons/Inmatelookup.svg';
+import Jobapply from '../assets/buttonIcons/Jobapply.svg';
 import PhoneDirectory from '../assets/buttonIcons/PhoneDirectory.svg';
+import RecordRequest from '../assets/buttonIcons/RecordRequest.svg';
+import SecurityAndExtraPatrolRequest from '../assets/buttonIcons/SecurityAndExtraPatrolRequest.svg';
+import SexOffender from '../assets/buttonIcons/SexOffender.svg';
+import VideoVisitation from '../assets/buttonIcons/VideoVisitation.svg';
+import VisitationPolicy from '../assets/buttonIcons/VisitationPolicy.svg';
+import Wetip from '../assets/buttonIcons/Wetip.svg';
+import SheriffSale from '../assets/buttonIcons/SheriffSale.svg';
+import TaxWarrants from '../assets/buttonIcons/TaxWarrants.svg';
+import TrafficComplaints from '../assets/buttonIcons/TrafficComplaints.svg';
+
 
 
 const ButtonSet = () => {
@@ -32,7 +42,6 @@ const ButtonSet = () => {
         <AdminLine
           height={styles.icon_size.height}
           width={styles.icon_size.width}
-          name="user"
           onPress={() => {
             getLink.getLink('Lafayette', 'adminLine');
           }}
@@ -44,7 +53,6 @@ const ButtonSet = () => {
         <AnimalControl
           height={styles.icon_size.height}
           width={styles.icon_size.width}
-          name="dog-side"
           onPress={() => {
             getLink.getLink('Lafayette', 'animalControl');
           }}
@@ -56,7 +64,6 @@ const ButtonSet = () => {
         <Commissary
           height={styles.icon_size.height}
           width={styles.icon_size.width}
-          name="store"
           onPress={() => {
             getLink.getLink('Lafayette', 'commissary');
           }}
@@ -68,7 +75,6 @@ const ButtonSet = () => {
         <Contacts
           height={styles.icon_size.height}
           width={styles.icon_size.width}
-          name="contact"
           onPress={() => {
             getLink.getLink('Lafayette', 'phoneDirectory');
           }}
@@ -80,7 +86,6 @@ const ButtonSet = () => {
         <CrashReport
           height={styles.icon_size.height}
           width={styles.icon_size.width}
-          name="car"
           onPress={() => {
             getLink.getLink('Lafayette', 'crashReports');
           }}
@@ -92,7 +97,6 @@ const ButtonSet = () => {
         <Gun
           height={styles.icon_size.height}
           width={styles.icon_size.width}
-          name="clipboard-account"
           onPress={() => {
             getLink.getLink('Lafayette', 'gunPermits');
           }}
@@ -104,7 +108,6 @@ const ButtonSet = () => {
         <Inmatelookup
           height={styles.icon_size.height}
           width={styles.icon_size.width}
-          name="magnify"
           onPress={() => {
             getLink.getLink('Lafayette', 'immateLookup');
           }}
@@ -116,7 +119,6 @@ const ButtonSet = () => {
         <Jobapply
           height={styles.icon_size.height}
           width={styles.icon_size.width}
-          name="store"
           onPress={() => {
             getLink.getLink('Lafayette', 'jobApply');
           }}
@@ -128,7 +130,6 @@ const ButtonSet = () => {
         <PhoneDirectory
           height={styles.icon_size.height}
           width={styles.icon_size.width}
-          name="user-check"
           onPress={() => {
             getLink.getLink('Lafayette', 'phoneDirectory');
           }}
@@ -136,50 +137,10 @@ const ButtonSet = () => {
         <Text style={styles.text}>Phone Directory</Text>
       </View>
 
-
-
-
-
-
-
-
-
-
-
-
       <View style={styles.cell}>
-        <Feather
-          color="white"
-          size={60}
-          name="video"
-          onPress={() =>
-            ControllContainer.getInstance().openViewName(
-              'ModalView',
-              'BasicModalB'
-            )
-          }
-        />
-        <Text style={styles.text}>Video Visitation</Text>
-      </View>
-      <View style={styles.cell}>
-        <FontAwesome
-          color="white"
-          size={60}
-          name="users"
-          onPress={() => {
-            getLink.getLink('Lafayette', 'visitationPolicy');
-          }}
-        />
-        <Text style={styles.text}>Visitation Policy</Text>
-      </View>
-
-
-
-      <View style={styles.cell}>
-        <MaterialCommunityIcons
-          color="white"
-          size={50}
-          name="account-search"
+        <RecordRequest
+          height={styles.icon_size.height}
+          width={styles.icon_size.width}
           onPress={() => {
             getLink.getLink('Lafayette', 'recordsRequest');
           }}
@@ -187,12 +148,10 @@ const ButtonSet = () => {
         <Text style={styles.text}>Records Request</Text>
       </View>
 
-
       <View style={styles.cell}>
-        <MaterialCommunityIcons
-          color="white"
-          size={50}
-          name="security"
+        <SecurityAndExtraPatrolRequest
+          height={styles.icon_size.height}
+          width={styles.icon_size.width}
           onPress={() =>
             ControllContainer.getInstance().openViewName(
               'ModalView',
@@ -202,34 +161,23 @@ const ButtonSet = () => {
         />
         <Text style={styles.text}>Security and extra patrol request</Text>
       </View>
+
       <View style={styles.cell}>
-        <MaterialIcons
-          color="white"
-          size={50}
-          name="monetization-on"
+        <SexOffender
+          height={styles.icon_size.height}
+          width={styles.icon_size.width}
           onPress={() => {
-            getLink.getLink('Lafayette', 'taxWarrants');
+            // we need to check this function
+            getLink.getLink('Lafayette', 'sexOffenders');
           }}
         />
-        <Text style={styles.text}>Tax Warrants</Text>
+        <Text style={styles.text}>Sex Offenders</Text>
       </View>
 
       <View style={styles.cell}>
-        <Entypo
-          color="white"
-          size={50}
-          name="traffic-cone"
-          onPress={() =>
-            ControllContainer.getInstance().openViewName('Email', '')
-          }
-        />
-        <Text style={styles.text}>Traffic complaints</Text>
-      </View>
-      <View style={styles.cell}>
-        <MaterialCommunityIcons
-          color="white"
-          size={50}
-          name="sale"
+        <SheriffSale
+          height={styles.icon_size.height}
+          width={styles.icon_size.width}
           onPress={() =>
             ControllContainer.getInstance().openViewName(
               'ModalView',
@@ -239,46 +187,65 @@ const ButtonSet = () => {
         />
         <Text style={styles.text}>Sheriff's Sale</Text>
       </View>
+
       <View style={styles.cell}>
-        <MaterialIcons
-          color="white"
-          size={50}
-          name="monetization-on"
-          onPress={() =>
-            ControllContainer.getInstance().openViewName(
-              'ModalView',
-              'BasicModalA'
-            )
-          }
+        <TaxWarrants
+          height={styles.icon_size.height}
+          width={styles.icon_size.width}
+          onPress={() => {
+            getLink.getLink('Lafayette', 'taxWarrants');
+          }}
         />
-        <Text style={styles.text}>Contact</Text>
+        <Text style={styles.text}>Tax Warrants</Text>
       </View>
 
       <View style={styles.cell}>
-        <Entypo
-          color="white"
-          size={50}
-          name="traffic-cone"
+        <TrafficComplaints
+          height={styles.icon_size.height}
+          width={styles.icon_size.width}
+          onPress={() =>
+            ControllContainer.getInstance().openViewName('Email', '')
+          }
+        />
+        <Text style={styles.text}>Traffic complaints</Text>
+      </View>
+
+      <View style={styles.cell}>
+        <VideoVisitation
+          height={styles.icon_size.height}
+          width={styles.icon_size.width}
+          onPress={() =>
+            ControllContainer.getInstance().openViewName(
+              'ModalView',
+              'BasicModalB'
+            )
+          }
+        />
+        <Text style={styles.text}>Video Visitation</Text>
+      </View>
+
+      <View style={styles.cell}>
+        <VisitationPolicy
+          height={styles.icon_size.height}
+          width={styles.icon_size.width}
+          onPress={() => {
+            getLink.getLink('Lafayette', 'visitationPolicy');
+          }}
+        />
+        <Text style={styles.text}>Visitation Policy</Text>
+      </View>
+
+      <View style={styles.cell}>
+        <Wetip
+          height={styles.icon_size.height}
+          width={styles.icon_size.width}
           onPress={() => {
             getLink.getLink('Lafayette', 'weTip');
           }}
         />
         <Text style={styles.text}>We-tip</Text>
       </View>
-      <View style={styles.cell}>
-        <MaterialCommunityIcons
-          color="white"
-          size={50}
-          name="sale"
-          onPress={() =>
-            ControllContainer.getInstance().openViewName(
-              'ModalView',
-              'BasicModalC'
-            )
-          }
-        />
-        <Text style={styles.text}>????</Text>
-      </View>
+
     </View>
   );
 };

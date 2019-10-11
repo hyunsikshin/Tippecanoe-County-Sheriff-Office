@@ -1,6 +1,5 @@
 import React from 'react';
 
-import AdminSet from '../components/AdminSet';
 import ButtonSet from '../components/ButtonSet';
 import CorrectionSet from '../components/CorrectionSet';
 import ServiceSet from '../components/ServiceSet';
@@ -15,7 +14,6 @@ import BasicModalD from '../dialog/BasicModalD';
 
 const buttonList = {
       Main :<ButtonSet></ButtonSet>,
-      Admin :<AdminSet></AdminSet>,
       Corrections :<CorrectionSet></CorrectionSet>,
       Service :<ServiceSet></ServiceSet>,
       SocialMedia :<SnsSet></SnsSet>,
