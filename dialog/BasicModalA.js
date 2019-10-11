@@ -14,8 +14,10 @@ export default class BasicModalA extends Component {
         style={styles.container}
         open={true}
         transparent={true}
-        animationType="slide"
-        modalDidClose={() => ControllContainer.getInstance().openViewName("ModalView","close")}>
+        animationType="slide"        
+        closeOnTouchOutside = {false}
+        disableOnBackPress = {true}
+        >
         <View style={[styles.container, styles.modalBackgroundStyle]}>
           <View style={styles.Cell_Title}>
             <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.TitleText}>Contact</Text>
@@ -24,26 +26,26 @@ export default class BasicModalA extends Component {
           <View style={{ alignItems: 'center' }}>
             <TouchableOpacity
               style={styles.InnerText}
-              onPress={() => getLink.getLink('Lafayette', 'administration')}>
+              onPress={() => getLink.getLink('administration')}>
               <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.InnerText}>ADMINISTRATION</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               style={styles.InnerText}
-              onPress={() => getLink.getLink('Lafayette', 'dispatch')}>
+              onPress={() => getLink.getLink('dispatch')}>
               <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.InnerText}>DISPATCH</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               style={styles.InnerText}
-              onPress={() => getLink.getLink('Lafayette', 'jail')}>
+              onPress={() => getLink.getLink('jail')}>
               <Text adjustsFontSizeToFit  numberOfLines={1}  style={styles.InnerText}>JAIL</Text>
             </TouchableOpacity>
 
             <View style={styles.Cell_Close}>
               <TouchableOpacity
                 style={{ alignItems: 'center' }}
-                onPress={() => ControllContainer.getInstance().openViewName("ModalView","close")}>
+                onPress={() => getLink.openView("ModalView","close")}>
                 <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.InnerText_close}>CLOSE</Text>
               </TouchableOpacity>
             </View>

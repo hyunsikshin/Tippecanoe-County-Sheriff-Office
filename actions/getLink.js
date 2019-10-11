@@ -1,16 +1,18 @@
 import constants from './Links';
 import { Linking } from 'react-native';
-import { String } from 'core-js';
-
+import ControllContainer from '../actions/ControllContainer';
 //  호출부에서
 //  import getLink from './getLink';
 //  import {Linking} from 'react-native'
 //  onPress={ ()=> Linking.openURL(getLink.getLink('Lafayette','phoneDirectory'))}
 
 const getLink = {
-  getLink: function(location, event) {
+  openView: function(Type, event) {
+    ControllContainer.getInstance().openViewName(Type,event);
+  },
+  getLink: function(event) {
     let str = '';
-    switch (location) {
+    switch (ControllContainer.getInstance().getLocation()) {
       case 'Lafayette':
         str = constants.Lafayette[event];
     }
@@ -20,3 +22,4 @@ const getLink = {
 };
 
 export default getLink;
+

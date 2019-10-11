@@ -51,13 +51,6 @@ class MainPage extends Component {
   }
 
   handleBackButtonClick() {
-    if (ControllContainer.getInstance().getViewName('Modal') == '')
-      ControllContainer.getInstance().openViewName('ModalView', 'close');
-    else if (
-      ControllContainer.getInstance().getViewName('ButtonView') == 'Main'
-    )
-      return false;
-    else ControllContainer.getInstance().openViewName('ButtonView', 'Main');
     return true;
   }
 
