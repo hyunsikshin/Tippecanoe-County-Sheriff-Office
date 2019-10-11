@@ -3,16 +3,12 @@ import {
   StyleSheet,
   Text,
   View,
-  Image,
-  Button,
   ScrollView,
   Dimensions,
   BackHandler,
 } from 'react-native';
 import Weather from '../components/Weather';
-import ButtonScreen from '../actions/ButtonScreen';
 import ControllContainer from '../actions/ControllContainer';
-import MailPage from './MailPage';
 import Logo from '../assets/logo.svg';
 import ButtonSet from '../components/ButtonSet';
 import Footer from '../components/Footer';

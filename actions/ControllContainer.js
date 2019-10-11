@@ -1,8 +1,6 @@
 import constants from './ViewContainer';
 
 export default class ControllContainer{
-
-
     //Singleton
     myinstance = null;
     modalControl = null;

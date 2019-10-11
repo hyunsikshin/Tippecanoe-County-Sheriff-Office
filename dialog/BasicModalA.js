@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import Modal from 'react-native-simple-modal';
-import { Text, TouchableOpacity, View, StyleSheet, Button } from 'react-native';
-import { Linking } from 'expo';
-import ControllContainer from '../actions/ControllContainer';
+import { Text, TouchableOpacity, View } from 'react-native';
 import getLink from '../actions/getLink';
-import { Dimensions } from "react-native";
 import styles from "./Styles";
 
 export default class BasicModalA extends Component {
