@@ -17,6 +17,7 @@ import Logo from '../assets/logo.svg';
 import ButtonSet from '../components/ButtonSet';
 import Footer from '../components/Footer';
 import getLink from '../actions/getLink';
+import Down from '../assets/buttonIcons/Down.svg';
 
 const API_KEY = 'e02b7ad151e0ceafbbe427b2ac4dbc2f'; //날씨 api key
 
@@ -93,30 +94,36 @@ class MainPage extends Component {
       });
   };
 
-
-
   render() {
     const { navigate } = this.props.navigation;
     return (
       <ScrollView style={{ backgroundColor: '#f1f2f6' }}>
         <View style={styles.container}>
-          <Button title="Go to Search" onPress={() => navigate('SearchPage')} />
-          <View style={styles.qnaContainer}>
-            <Text
-              onPress={() => {
-                getLink.getLink('Lafayette', 'qna');
-              }}>
-              Q&A
-            </Text>
+          <View style={styles.horizontal}>
+            <Weather
+              temp={Math.ceil(
+                ((this.state.tempertature - 273.15) * 9) / 5 + 32
+              )}
+              city={this.state.city}
+              weatherName={this.state.name}
+            />
+            <Down
+              style={styles.btn}
+              height="30"
+              width="30"
+              name="down"
+              onPress={() => navigate('SearchPage')}
+            />
           </View>
-          <Weather
-            style={styles.header}
-            temp={Math.ceil(((this.state.tempertature - 273.15) * 9) / 5 + 32)}
-            city={this.state.city}
-            weatherName={this.state.name}
-          />
           <Logo width={380} height={200} />
           <ButtonSet />
+          <Text
+            style={styles.qnaContainer}
+            onPress={() => {
+              getLink.getLink('Lafayette', 'qna');
+            }}>
+            Q&A
+          </Text>
           <Footer />
           {ControllContainer.getInstance().checkModal()}
         </View>
@@ -131,24 +138,24 @@ const width = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 30,
+    marginTop: 50,
     flex: 1,
     backgroundColor: '#f1f2f6',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  header: {
-    flex: 1,
-  },
-
   qnaContainer: {
-    backgroundColor: '#228B22',
+    backgroundColor: '#95a4b7',
     width: width,
     alignItems: 'center',
     justifyContent: 'center',
   },
   btn: {
-    flex: 1,
-    height: 30,
+    marginLeft: 10,
+  },
+  horizontal: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
 });
