@@ -23,7 +23,7 @@ import Jobapply from '../assets/buttonIcons/Jobapply.svg';
 import PhoneDirectory from '../assets/buttonIcons/PhoneDirectory.svg';
 import RecordRequest from '../assets/buttonIcons/RecordRequest.svg';
 import SecurityAndExtraPatrolRequest from '../assets/buttonIcons/SecurityAndExtraPatrolRequest.svg';
-import SexOffender from '../assets/buttonIcons/SexOffender.svg';
+import SexOffender from '../assets/buttonIcons/Card.svg';
 import VideoVisitation from '../assets/buttonIcons/VideoVisitation.svg';
 import VisitationPolicy from '../assets/buttonIcons/VisitationPolicy.svg';
 import Wetip from '../assets/buttonIcons/Wetip.svg';
