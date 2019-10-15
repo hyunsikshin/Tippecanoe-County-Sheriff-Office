@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Modal from 'react-native-simple-modal';
-import { Text, TouchableOpacity, View, StyleSheet, Button } from 'react-native';
+import { Text, TouchableOpacity, View, StyleSheet } from 'react-native';
 import { Linking } from 'expo';
-import ControllContainer from '../actions/ControllContainer';
 import getLink from '../actions/getLink';
 
 export default class BasicModal extends Component {
@@ -15,7 +14,7 @@ export default class BasicModal extends Component {
       <Modal
         open={true}
         style={{ modalBackgroundStyle, alignItems: 'center' }}
-        modalDidClose={() => ControllContainer.getInstance().openViewName("ModalView","close")}>
+        modalDidClose={() => getLink.openViewName("ModalView","close")}>
         <View style={{ alignItems: 'center' }}>
           <Text style={{ fontSize: 20, marginBottom: 10 }}>Contact</Text>
           <TouchableOpacity
@@ -25,7 +24,7 @@ export default class BasicModal extends Component {
           </TouchableOpacity>
           <TouchableOpacity
             style={{ margin: 10, alignItems: 'center' }}
-            onPress={() => ControllContainer.getInstance().openViewName("ModalView","close")}>
+            onPress={() =>  getLink.openViewName("ModalView","close")}>
             <Text>Close</Text>
           </TouchableOpacity>
         </View>

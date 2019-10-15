@@ -1,15 +1,12 @@
 import constants from './ViewContainer';
 
 export default class ControllContainer{
-
-
     //Singleton
     myinstance = null;
-    ButtonControl = null;
-    ModalControl = null;
+    modalControl = null;
     
     modalName= "close";
-    viewName = "";
+    location = "Lafayette";
 
     static getInstance() {
         if (ControllContainer.myinstance == null) {
@@ -18,49 +15,35 @@ export default class ControllContainer{
         return this.myinstance;
     }
 
+    setLocation(loc,navigate){
+        this.location = loc;
+        navigate("MainPage");
+    }
+
+    getLocation(){
+        return this.location;
+    }
+
     intitObject(type,object){
-      if(type == "ButtonView")
-        this.ButtonControl = object;
-      else
-        this.ModalControl = object;
+        this.modalControl = object;
     }
 
     openViewName(type,name)
     {
-       if(type == "ButtonView"){
-          this.viewName = name;
-          this.ButtonControl.forceUpdate();
-       }
-       else if(type == "ModalView"){
+       if(type == "ModalView"){
           this.modalName = name;
-          this.ModalControl.forceUpdate();
+          this.modalControl.forceUpdate();
        }
-       else if("Email"){
-          this.ModalControl.props.navigation.navigate('MailPage');
-       }
+       else if("Email")
+          this.modalControl.props.navigation.navigate('MailPage');
     }
 
-    checkView()
-    {
-       if(this.viewName =="")
-          return constants.buttonList["Main"];  
-       else
-          return constants.buttonList[this.viewName];  
-    }
     
-    checkModal()
-    {
-      if(this.modalName =="")
+    checkModal(){
+      if(this.modalName ==""||this.modalName == "close")
           return null;
       else
           return constants.modallist[this.modalName]; 
     }
 
-    getViewName(type)
-    {
-      if(type == "ButtonView")
-         return this.viewName;
-      else
-         return this.modalName;
-    }
 }

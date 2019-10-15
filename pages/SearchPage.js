@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, TextInput, StyleSheet, ListView, Text } from 'react-native';
 
+import ControllContainer from '../actions/ControllContainer';
 class SearchPage extends Component {
   static navigationOptions = {
     title: 'Search Page',
@@ -26,10 +27,13 @@ class SearchPage extends Component {
     { Location: 'DeKalb' },
     { Location: 'Delaware'},
     { Location: 'Dubois'},
+    { Location: 'Lafayette'},
   ];
+  
   ds;
   constructor() {
     super();
+
     this.ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
     this.state = {
       dataSource: this.ds.cloneWithRows(['Mdwqd', 'dqwdwq']),
@@ -39,7 +43,8 @@ class SearchPage extends Component {
 
   changelistView(aa) {
     list = [];
-    for (i = 0; i < aa.length; i++) list.push(aa[i].Location);
+    for (i = 0; i < aa.length; i++) 
+        list.push(aa[i].Location);
     this.setState((this.state.dataSource = this.ds.cloneWithRows(list)));
   }
 
@@ -56,12 +61,16 @@ class SearchPage extends Component {
         return addresslist.Location.toLowerCase().indexOf(searchedText) > -1;
       });
 
-    if (aa != null) this.changelistView(aa);
-    else this.printAll();
+    if (aa != null) 
+      this.changelistView(aa);
+    else 
+      this.printAll();
+
     this.forceUpdate();
   };
 
   render() {
+    const { navigate } = this.props.navigation;
     return (
       <View>
         <TextInput
@@ -70,10 +79,9 @@ class SearchPage extends Component {
           onChangeText={text => this.onChangeText(text.toLowerCase())}
         />
         <ListView
-          // style={styles.container}
           dataSource={this.state.dataSource}
           renderRow={rowData => (
-            <Text style={styles.rowViewContainer}>{rowData}</Text>
+            <Text onPress={()=> ControllContainer.getInstance().setLocation(rowData,navigate)} style={styles.rowViewContainer} >{rowData}</Text>
           )}
         />
       </View>

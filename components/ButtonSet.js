@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Linking, Button } from 'react-native';
+import { StyleSheet, Text, View} from 'react-native';
 import {
   FontAwesome,
   Feather,
@@ -10,9 +10,7 @@ import {
   Ionicons,
   MaterialCommunityIcons,
 } from '@expo/vector-icons';
-import ControllContainer from '../actions/ControllContainer';
 import getLink from '../actions/getLink';
-
 //svg files
 import AdminLine from '../assets/buttonIcons/AdminLine.svg';
 import AnimalControl from '../assets/buttonIcons/AnimalControl.svg';
@@ -25,17 +23,31 @@ import Jobapply from '../assets/buttonIcons/Jobapply.svg';
 import PhoneDirectory from '../assets/buttonIcons/PhoneDirectory.svg';
 import RecordRequest from '../assets/buttonIcons/RecordRequest.svg';
 import SecurityAndExtraPatrolRequest from '../assets/buttonIcons/SecurityAndExtraPatrolRequest.svg';
-import SexOffender from '../assets/buttonIcons/SexOffender.svg';
+import SexOffender from '../assets/buttonIcons/Card.svg';
 import VideoVisitation from '../assets/buttonIcons/VideoVisitation.svg';
 import VisitationPolicy from '../assets/buttonIcons/VisitationPolicy.svg';
 import Wetip from '../assets/buttonIcons/Wetip.svg';
 import SheriffSale from '../assets/buttonIcons/SheriffSale.svg';
 import TaxWarrants from '../assets/buttonIcons/TaxWarrants.svg';
 import TrafficComplaints from '../assets/buttonIcons/TrafficComplaints.svg';
+import * as Font from 'expo-font';
 
 
+class ButtonSet extends React.Component {
 
-const ButtonSet = () => {
+  state = {
+    fontLoaded: false,
+  };
+
+  async componentDidMount() {
+    await Font.loadAsync({
+      'CustomFont': require('../assets/fonts/Product_Sans_Bold_Italic.ttf'),
+    });
+
+    this.setState({ fontLoaded: true });
+  }
+
+  render(){
   return (
     <View style={styles.container}>
       <View style={styles.cell}>
@@ -43,10 +55,15 @@ const ButtonSet = () => {
           height={styles.icon_size.height}
           width={styles.icon_size.width}
           onPress={() => {
-            getLink.getLink('Lafayette', 'adminLine');
+            getLink.getLink('adminLine');
           }}
         />
-        <Text style={styles.text}>Admin Line</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Admin Line
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -54,10 +71,15 @@ const ButtonSet = () => {
           height={styles.icon_size.height}
           width={styles.icon_size.width}
           onPress={() => {
-            getLink.getLink('Lafayette', 'animalControl');
+            getLink.getLink('animalControl');
           }}
         />
-        <Text style={styles.text}>Animal Control</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Animal Control
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -65,10 +87,15 @@ const ButtonSet = () => {
           height={styles.icon_size.height}
           width={styles.icon_size.width}
           onPress={() => {
-            getLink.getLink('Lafayette', 'commissary');
+            getLink.getLink('commissary');
           }}
         />
-        <Text style={styles.text}>Commissary</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Commissary
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -76,10 +103,15 @@ const ButtonSet = () => {
           height={styles.icon_size.height}
           width={styles.icon_size.width}
           onPress={() => {
-            getLink.getLink('Lafayette', 'phoneDirectory');
+            getLink.getLink('phoneDirectory');
           }}
         />
-        <Text style={styles.text}>Contacts</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Contacts
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -87,10 +119,15 @@ const ButtonSet = () => {
           height={styles.icon_size.height}
           width={styles.icon_size.width}
           onPress={() => {
-            getLink.getLink('Lafayette', 'crashReports');
+            getLink.getLink('crashReports');
           }}
         />
-        <Text style={styles.text}>Crash Report</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Crash Report
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -98,10 +135,15 @@ const ButtonSet = () => {
           height={styles.icon_size.height}
           width={styles.icon_size.width}
           onPress={() => {
-            getLink.getLink('Lafayette', 'gunPermits');
+            getLink.getLink('gunPermits');
           }}
         />
-        <Text style={styles.text}>Gun Permits</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Gun Permits
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -109,10 +151,15 @@ const ButtonSet = () => {
           height={styles.icon_size.height}
           width={styles.icon_size.width}
           onPress={() => {
-            getLink.getLink('Lafayette', 'immateLookup');
+            getLink.getLink('immateLookup');
           }}
         />
-        <Text style={styles.text}>Inmate lookup</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Inmate Lookup
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -120,10 +167,15 @@ const ButtonSet = () => {
           height={styles.icon_size.height}
           width={styles.icon_size.width}
           onPress={() => {
-            getLink.getLink('Lafayette', 'jobApply');
+            getLink.getLink('jobApply');
           }}
         />
-        <Text style={styles.text}>Job Apply</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Job Apply
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -131,10 +183,15 @@ const ButtonSet = () => {
           height={styles.icon_size.height}
           width={styles.icon_size.width}
           onPress={() => {
-            getLink.getLink('Lafayette', 'phoneDirectory');
+            getLink.getLink('phoneDirectory');
           }}
         />
-        <Text style={styles.text}>Phone Directory</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Phone Directory
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -142,10 +199,15 @@ const ButtonSet = () => {
           height={styles.icon_size.height}
           width={styles.icon_size.width}
           onPress={() => {
-            getLink.getLink('Lafayette', 'recordsRequest');
+            getLink.getLink('recordsRequest');
           }}
         />
-        <Text style={styles.text}>Records Request</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Records Request
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -153,13 +215,15 @@ const ButtonSet = () => {
           height={styles.icon_size.height}
           width={styles.icon_size.width}
           onPress={() =>
-            ControllContainer.getInstance().openViewName(
-              'ModalView',
-              'BasicModalD'
-            )
+            getLink.openView('ModalView','BasicModalD')
           }
         />
-        <Text style={styles.text}>Security and extra patrol request</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Request
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -167,11 +231,15 @@ const ButtonSet = () => {
           height={styles.icon_size.height}
           width={styles.icon_size.width}
           onPress={() => {
-            // we need to check this function
-            getLink.getLink('Lafayette', 'sexOffenders');
+            getLink.getLink('sexOffenders');
           }}
         />
-        <Text style={styles.text}>Sex Offenders</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Sex Offenders
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -179,13 +247,15 @@ const ButtonSet = () => {
           height={styles.icon_size.height}
           width={styles.icon_size.width}
           onPress={() =>
-            ControllContainer.getInstance().openViewName(
-              'ModalView',
-              'BasicModalC'
-            )
+            getLink.openView('ModalView','BasicModalC')
           }
         />
-        <Text style={styles.text}>Sheriff's Sale</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Sheriff Sale
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -193,10 +263,15 @@ const ButtonSet = () => {
           height={styles.icon_size.height}
           width={styles.icon_size.width}
           onPress={() => {
-            getLink.getLink('Lafayette', 'taxWarrants');
+            getLink.getLink('taxWarrants');
           }}
         />
-        <Text style={styles.text}>Tax Warrants</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Tax Warrants
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -204,10 +279,15 @@ const ButtonSet = () => {
           height={styles.icon_size.height}
           width={styles.icon_size.width}
           onPress={() =>
-            ControllContainer.getInstance().openViewName('Email', '')
+            getLink.openView('Email', '')
           }
         />
-        <Text style={styles.text}>Traffic complaints</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Traffic Complaints
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -215,13 +295,15 @@ const ButtonSet = () => {
           height={styles.icon_size.height}
           width={styles.icon_size.width}
           onPress={() =>
-            ControllContainer.getInstance().openViewName(
-              'ModalView',
-              'BasicModalB'
-            )
+            getLink.openView('ModalView','BasicModalB')
           }
         />
-        <Text style={styles.text}>Video Visitation</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Video Visitation
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -229,10 +311,15 @@ const ButtonSet = () => {
           height={styles.icon_size.height}
           width={styles.icon_size.width}
           onPress={() => {
-            getLink.getLink('Lafayette', 'visitationPolicy');
+            getLink.getLink('visitationPolicy');
           }}
         />
-        <Text style={styles.text}>Visitation Policy</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Visitation Policy
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -240,14 +327,20 @@ const ButtonSet = () => {
           height={styles.icon_size.height}
           width={styles.icon_size.width}
           onPress={() => {
-            getLink.getLink('Lafayette', 'weTip');
+            getLink.getLink('weTip');
           }}
         />
-        <Text style={styles.text}>We-tip</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        We-tip
+      </Text>
+      
+    ) : null }
       </View>
 
     </View>
   );
+        }
 };
 
 export default ButtonSet;
@@ -275,8 +368,12 @@ const styles = StyleSheet.create({
     margin: 0,
     opacity: 0.4,
   },
+  
   text: {
     color: 'black',
+    fontFamily: 'CustomFont',
+    textAlign:'center'
+    
   },
   icon_size: {
     width: 70,
