@@ -106,13 +106,15 @@ class MainPage extends Component {
           </View>
           <Logo width={380} height={200} />
           <ButtonSet />
-          <Text
-            style={styles.qnaContainer}
-            onPress={() => {
-              getLink.getLink('qna');
-            }}>
-            Q&A
-          </Text>
+          <View style={styles.qnaContainer}>
+            <Text
+              style={{ backgroundColor: '#bdc3c7' }}
+              onPress={() => {
+                getLink.getLink('qna');
+              }}>
+              Frequently Top 5 Q&A
+            </Text>
+          </View>
           <Footer />
           {ControllContainer.getInstance().checkModal()}
         </View>
@@ -134,8 +136,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   qnaContainer: {
-    backgroundColor: '#95a4b7',
+    height: 23,
     width: width,
+    backgroundColor: '#bdc3c7',
     alignItems: 'center',
     justifyContent: 'center',
   },
