@@ -30,10 +30,24 @@ import Wetip from '../assets/buttonIcons/Wetip.svg';
 import SheriffSale from '../assets/buttonIcons/SheriffSale.svg';
 import TaxWarrants from '../assets/buttonIcons/TaxWarrants.svg';
 import TrafficComplaints from '../assets/buttonIcons/TrafficComplaints.svg';
+import * as Font from 'expo-font';
 
 
+class ButtonSet extends React.Component {
 
-const ButtonSet = () => {
+  state = {
+    fontLoaded: false,
+  };
+
+  async componentDidMount() {
+    await Font.loadAsync({
+      'CustomFont': require('../assets/fonts/Product_Sans_Bold_Italic.ttf'),
+    });
+
+    this.setState({ fontLoaded: true });
+  }
+
+  render(){
   return (
     <View style={styles.container}>
       <View style={styles.cell}>
@@ -44,7 +58,12 @@ const ButtonSet = () => {
             getLink.getLink('adminLine');
           }}
         />
-        <Text style={styles.text}>Admin Line</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Admin Line
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -55,7 +74,12 @@ const ButtonSet = () => {
             getLink.getLink('animalControl');
           }}
         />
-        <Text style={styles.text}>Animal Control</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Animal Control
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -66,7 +90,12 @@ const ButtonSet = () => {
             getLink.getLink('commissary');
           }}
         />
-        <Text style={styles.text}>Commissary</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Commissary
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -77,7 +106,12 @@ const ButtonSet = () => {
             getLink.getLink('phoneDirectory');
           }}
         />
-        <Text style={styles.text}>Contacts</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Contacts
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -88,7 +122,12 @@ const ButtonSet = () => {
             getLink.getLink('crashReports');
           }}
         />
-        <Text style={styles.text}>Crash Report</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Crash Report
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -99,7 +138,12 @@ const ButtonSet = () => {
             getLink.getLink('gunPermits');
           }}
         />
-        <Text style={styles.text}>Gun Permits</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Gun Permits
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -110,7 +154,12 @@ const ButtonSet = () => {
             getLink.getLink('immateLookup');
           }}
         />
-        <Text style={styles.text}>Inmate lookup</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Inmate Lookup
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -121,7 +170,12 @@ const ButtonSet = () => {
             getLink.getLink('jobApply');
           }}
         />
-        <Text style={styles.text}>Job Apply</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Job Apply
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -132,7 +186,12 @@ const ButtonSet = () => {
             getLink.getLink('phoneDirectory');
           }}
         />
-        <Text style={styles.text}>Phone Directory</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Phone Directory
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -143,7 +202,12 @@ const ButtonSet = () => {
             getLink.getLink('recordsRequest');
           }}
         />
-        <Text style={styles.text}>Records Request</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Records Request
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -154,7 +218,12 @@ const ButtonSet = () => {
             getLink.openView('ModalView','BasicModalD')
           }
         />
-        <Text style={styles.text}>Security and extra patrol request</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Request
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -165,7 +234,12 @@ const ButtonSet = () => {
             getLink.getLink('sexOffenders');
           }}
         />
-        <Text style={styles.text}>Sex Offenders</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Sex Offenders
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -176,7 +250,12 @@ const ButtonSet = () => {
             getLink.openView('ModalView','BasicModalC')
           }
         />
-        <Text style={styles.text}>Sheriff's Sale</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Sheriff Sale
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -187,7 +266,12 @@ const ButtonSet = () => {
             getLink.getLink('taxWarrants');
           }}
         />
-        <Text style={styles.text}>Tax Warrants</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Tax Warrants
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -198,7 +282,12 @@ const ButtonSet = () => {
             getLink.openView('Email', '')
           }
         />
-        <Text style={styles.text}>Traffic complaints</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Traffic Complaints
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -209,7 +298,12 @@ const ButtonSet = () => {
             getLink.openView('ModalView','BasicModalB')
           }
         />
-        <Text style={styles.text}>Video Visitation</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Video Visitation
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -220,7 +314,12 @@ const ButtonSet = () => {
             getLink.getLink('visitationPolicy');
           }}
         />
-        <Text style={styles.text}>Visitation Policy</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        Visitation Policy
+      </Text>
+      
+    ) : null }
       </View>
 
       <View style={styles.cell}>
@@ -231,11 +330,17 @@ const ButtonSet = () => {
             getLink.getLink('weTip');
           }}
         />
-        <Text style={styles.text}>We-tip</Text>
+        { this.state.fontLoaded ? (
+      <Text style={styles.text}>
+        We-tip
+      </Text>
+      
+    ) : null }
       </View>
 
     </View>
   );
+        }
 };
 
 export default ButtonSet;
@@ -263,8 +368,12 @@ const styles = StyleSheet.create({
     margin: 0,
     opacity: 0.4,
   },
+  
   text: {
     color: 'black',
+    fontFamily: 'CustomFont',
+    textAlign:'center'
+    
   },
   icon_size: {
     width: 70,
