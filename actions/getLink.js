@@ -10,6 +10,7 @@ const getLink = {
   openView: function(Type, event) {
     ControllContainer.getInstance().openViewName(Type,event);
   },
+  
   getLink: function(event) {
     let str = '';
     switch (ControllContainer.getInstance().getLocation()) {
