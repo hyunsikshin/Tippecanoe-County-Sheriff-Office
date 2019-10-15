@@ -28,7 +28,6 @@ class SearchPage extends Component {
     { Location: 'Delaware'},
     { Location: 'Dubois'},
     { Location: 'Lafayette'},
-    
   ];
   
   ds;

@@ -109,7 +109,7 @@ class MainPage extends Component {
           <Text
             style={styles.qnaContainer}
             onPress={() => {
-              getLink.getLink('Lafayette', 'qna');
+              getLink.getLink('qna');
             }}>
             Q&A
           </Text>
