@@ -13,7 +13,7 @@ import Logo from '../assets/logo.svg';
 import ButtonSet from '../components/ButtonSet';
 import Footer from '../components/Footer';
 import getLink from '../actions/getLink';
-import Down from '../assets/buttonIcons/Down.svg';
+import Down from '../assets/buttonIcons/List.svg';
 
 const API_KEY = 'e02b7ad151e0ceafbbe427b2ac4dbc2f'; //날씨 api key
 
