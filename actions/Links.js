@@ -36,7 +36,7 @@ const Lafayette = {
   qna: 'http://www.tippecanoe.in.gov/faq.aspx',
 
   facebook: 'https://www.facebook.com/TCSOIndiana',
-  instargram: 'https://www.instagram.com/tcso79/',
+  instagram: 'https://www.instagram.com/tcso79/',
   twitter: 'https://twitter.com/tippecanoecosh1',
 };
 

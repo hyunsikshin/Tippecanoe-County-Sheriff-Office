@@ -250,9 +250,7 @@ class ButtonSet extends React.Component {
           <PhoneDirectory
             height={styles.icon_size.height}
             width={styles.icon_size.width}
-            onPress={() => {
-              getLink.getLink('phoneDirectory');
-            }}
+            onPress={() => getLink.openView('ModalView', 'BasicModalE')}
           />
           {this.state.fontLoaded ? (
             <Text style={styles.text}>Social Media</Text>
