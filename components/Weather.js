@@ -82,8 +82,7 @@ function Weather({ temp, city, weatherName }) {
     default:
       return (
         <View style={styles.container}>
-          <Text style={styles.temp}>{city}</Text>
-          <Text style={styles.temp}> {temp}°F</Text>
+          <Text>Update Weather..</Text>
         </View>
       );
   }
@@ -100,6 +99,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignContent: 'center',
     justifyContent: 'center',
+    fontSize : 20
   },
   temp: {
     marginLeft: 5,
