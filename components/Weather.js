@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import tipslogo from '../assets/tipslogo.png';
 import PropTypes from 'prop-types';
 import Clouds from '../assets/weather/weather-cloudy.svg';
 import Rain from '../assets/weather/weather-pouring.svg';
@@ -10,8 +9,6 @@ import Thunderstorm from '../assets/weather/weather-lightning.svg';
 import Snow from '../assets/weather/weather-snowy';
 import Drizzle from '../assets/weather/weather-hail';
 import Mist from '../assets/weather/weather-fog';
-
-
 
 function Weather({ temp, city, weatherName }) {
   switch (weatherName) {
@@ -101,7 +98,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignContent: 'center',
     justifyContent: 'center',
-    fontSize : 20
+    fontSize: 20,
   },
   temp: {
     marginLeft: 5,

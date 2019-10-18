@@ -1956,6 +1956,11 @@ dom-walk@^0.1.0:
   resolved "https://registry.yarnpkg.com/dom-walk/-/dom-walk-0.1.1.tgz#672226dc74c8f799ad35307df936aba11acd6018"
   integrity sha1-ZyIm3HTI95mtNTB9+TaroRrNYBg=
 
+dooboolab-welcome@^1.0.5:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/dooboolab-welcome/-/dooboolab-welcome-1.1.1.tgz#ca2184f6e1f568865d707a6ce3bda7e003550f54"
+  integrity sha512-tQ/9NBCGnalHwKOBjDqTD4t4wQpDfSSbxQGctzkzaLHR3AhN0wCBkIs05JciVtvl/jfLZ+DgAndktAMk3Bu7Vw==
+
 ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
@@ -4327,6 +4332,13 @@ react-native-branch@~3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/react-native-branch/-/react-native-branch-3.0.1.tgz#5b07b61cbd290168cd3c3662e017ebe0f356d2ca"
   integrity sha512-vbcYxPZlpF5f39GAEUF8kuGQqCNeD3E6zEdvtOq8oCGZunHXlWlKgAS6dgBKCvsHvXgHuMtpvs39VgOp8DaKig==
+
+react-native-drop-down-item@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-native-drop-down-item/-/react-native-drop-down-item-1.0.5.tgz#7548965ef91a198f1c62f22f22d4d93026baf82d"
+  integrity sha512-GaR8zUA5xUj5aoaMFgo6GPrYf2Kksdgkag9dCixkRGGxuGM9RvUsNVFIyAreVRSr8W2p9Pi6cgfw+tSdtlfCZw==
+  dependencies:
+    dooboolab-welcome "^1.0.5"
 
 react-native-gesture-handler@~1.3.0:
   version "1.3.0"

@@ -12,6 +12,7 @@ import ControllContainer from '../actions/ControllContainer';
 import Logo from '../assets/logo.svg';
 import ButtonSet from '../components/ButtonSet';
 import Footer from '../components/Footer';
+import QnA from '../components/QnA';
 import getLink from '../actions/getLink';
 import Down from '../assets/buttonIcons/List.svg';
 
@@ -104,18 +105,9 @@ class MainPage extends Component {
               onPress={() => navigate('SearchPage')}
             />
           </View>
+          <QnA />
           <Logo width={380} height={200} />
           <ButtonSet />
-          <View style={styles.qnaContainer}>
-            <Text
-              style={{ backgroundColor: '#bdc3c7' }}
-              onPress={() => {
-                getLink.getLink('qna');
-              }}>
-              Frequently Top 5 Q&A
-            </Text>
-          </View>
-          <Footer />
           {ControllContainer.getInstance().checkModal()}
         </View>
       </ScrollView>
