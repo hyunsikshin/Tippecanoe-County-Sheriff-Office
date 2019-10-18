@@ -11,9 +11,12 @@ const Lafayette = {
   visitationPolicy:
     'https://www.tippecanoe.in.gov/468/Inmate-Visitation-Policy',
   weTip: 'https://wetip.com',
+
   administration: 'tel:7654239388',
   dispatch: 'tel:7654239321',
   jail: 'tel:7654231655',
+  juvenile : 'tel:7652694025',
+
   sheriffsSaleGuideline:
     'https://www.tippecanoe.in.gov/DocumentCenter/View/740/Sheriff-Sale-Guidelines-PDF?bidId=',
   sheriffsSaleListing:
@@ -22,8 +25,11 @@ const Lafayette = {
   crashReports: 'http://www.tippecanoe.in.gov/486/Crash-Reports',
   recordsRequest: 'http://www.tippecanoe.in.gov/524/Public-Record-Requests',
   animalControl: 'http://www.tippecanoe.in.gov/473/Animal-Control',
+
   securityRequest: 'rwhainje@tippecanoe.in.gov',
-  extraPatrolRequest: 'rwhainje@tippecanoe.in.gov',
+  extraPatrolRequest: 'tcsodispatch@tippecanoe.in.gov',
+
+
   taxWarrants: 'http://www.tippecanoe.in.gov/480/Tax-Warrants',
   privacyPolicy:
     'https://github.com/canis617/Tippecanoe-County-Sheriff-App/blob/develop2/privacy_policy.md',
