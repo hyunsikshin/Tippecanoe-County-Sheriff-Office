@@ -49,28 +49,39 @@ class ButtonSet extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.cell}>
-          <AdminLine
+          <Inmatelookup
             height={styles.icon_size.height}
             width={styles.icon_size.width}
             onPress={() => {
-              getLink.getLink('adminLine');
+              getLink.getLink('immateLookup');
             }}
           />
           {this.state.fontLoaded ? (
-            <Text style={styles.text}>Admin Line</Text>
+            <Text style={styles.text}>Inmate Lookup</Text>
           ) : null}
         </View>
 
         <View style={styles.cell}>
-          <AnimalControl
+          <VideoVisitation
+            height={styles.icon_size.height}
+            width={styles.icon_size.width}
+            onPress={() => getLink.openView('ModalView', 'BasicModalB')}
+          />
+          {this.state.fontLoaded ? (
+            <Text style={styles.text}>Video Visitation</Text>
+          ) : null}
+        </View>
+        
+        <View style={styles.cell}>
+          <VisitationPolicy
             height={styles.icon_size.height}
             width={styles.icon_size.width}
             onPress={() => {
-              getLink.getLink('animalControl');
+              getLink.getLink('visitationPolicy');
             }}
           />
           {this.state.fontLoaded ? (
-            <Text style={styles.text}>Animal Control</Text>
+            <Text style={styles.text}>Visitation Policy</Text>
           ) : null}
         </View>
 
@@ -88,19 +99,6 @@ class ButtonSet extends React.Component {
         </View>
 
         <View style={styles.cell}>
-          <Contacts
-            height={styles.icon_size.height}
-            width={styles.icon_size.width}
-            onPress={() => {
-              getLink.getLink('phoneDirectory');
-            }}
-          />
-          {this.state.fontLoaded ? (
-            <Text style={styles.text}>Contacts</Text>
-          ) : null}
-        </View>
-
-        <View style={styles.cell}>
           <CrashReport
             height={styles.icon_size.height}
             width={styles.icon_size.width}
@@ -110,58 +108,6 @@ class ButtonSet extends React.Component {
           />
           {this.state.fontLoaded ? (
             <Text style={styles.text}>Crash Report</Text>
-          ) : null}
-        </View>
-
-        <View style={styles.cell}>
-          <Gun
-            height={styles.icon_size.height}
-            width={styles.icon_size.width}
-            onPress={() => {
-              getLink.getLink('gunPermits');
-            }}
-          />
-          {this.state.fontLoaded ? (
-            <Text style={styles.text}>Gun Permits</Text>
-          ) : null}
-        </View>
-
-        <View style={styles.cell}>
-          <Inmatelookup
-            height={styles.icon_size.height}
-            width={styles.icon_size.width}
-            onPress={() => {
-              getLink.getLink('immateLookup');
-            }}
-          />
-          {this.state.fontLoaded ? (
-            <Text style={styles.text}>Inmate Lookup</Text>
-          ) : null}
-        </View>
-
-        <View style={styles.cell}>
-          <Jobapply
-            height={styles.icon_size.height}
-            width={styles.icon_size.width}
-            onPress={() => {
-              getLink.getLink('jobApply');
-            }}
-          />
-          {this.state.fontLoaded ? (
-            <Text style={styles.text}>Job Apply</Text>
-          ) : null}
-        </View>
-
-        <View style={styles.cell}>
-          <PhoneDirectory
-            height={styles.icon_size.height}
-            width={styles.icon_size.width}
-            onPress={() => {
-              getLink.getLink('phoneDirectory');
-            }}
-          />
-          {this.state.fontLoaded ? (
-            <Text style={styles.text}>Phone Directory</Text>
           ) : null}
         </View>
 
@@ -179,16 +125,29 @@ class ButtonSet extends React.Component {
         </View>
 
         <View style={styles.cell}>
-          <SecurityAndExtraPatrolRequest
+          <TrafficComplaints
             height={styles.icon_size.height}
             width={styles.icon_size.width}
-            onPress={() => getLink.openView('ModalView', 'BasicModalD')}
+            onPress={() => getLink.openView('Email', '')}
           />
           {this.state.fontLoaded ? (
-            <Text style={styles.text}>Request</Text>
+            <Text style={styles.text}>Traffic Complaints</Text>
           ) : null}
         </View>
 
+        <View style={styles.cell}>
+          <Wetip
+            height={styles.icon_size.height}
+            width={styles.icon_size.width}
+            onPress={() => {
+              getLink.getLink('weTip');
+            }}
+          />
+          {this.state.fontLoaded ? (
+            <Text style={styles.text}>We-tip</Text>
+          ) : null}
+        </View>
+        
         <View style={styles.cell}>
           <SexOffender
             height={styles.icon_size.height}
@@ -225,52 +184,93 @@ class ButtonSet extends React.Component {
             <Text style={styles.text}>Tax Warrants</Text>
           ) : null}
         </View>
-
+        
         <View style={styles.cell}>
-          <TrafficComplaints
-            height={styles.icon_size.height}
-            width={styles.icon_size.width}
-            onPress={() => getLink.openView('Email', '')}
-          />
-          {this.state.fontLoaded ? (
-            <Text style={styles.text}>Traffic Complaints</Text>
-          ) : null}
-        </View>
-
-        <View style={styles.cell}>
-          <VideoVisitation
-            height={styles.icon_size.height}
-            width={styles.icon_size.width}
-            onPress={() => getLink.openView('ModalView', 'BasicModalB')}
-          />
-          {this.state.fontLoaded ? (
-            <Text style={styles.text}>Video Visitation</Text>
-          ) : null}
-        </View>
-
-        <View style={styles.cell}>
-          <VisitationPolicy
+          <Gun
             height={styles.icon_size.height}
             width={styles.icon_size.width}
             onPress={() => {
-              getLink.getLink('visitationPolicy');
+              getLink.getLink('gunPermits');
             }}
           />
           {this.state.fontLoaded ? (
-            <Text style={styles.text}>Visitation Policy</Text>
+            <Text style={styles.text}>Gun Permits</Text>
           ) : null}
         </View>
 
         <View style={styles.cell}>
-          <Wetip
+          <Contacts
             height={styles.icon_size.height}
             width={styles.icon_size.width}
             onPress={() => {
-              getLink.getLink('weTip');
+              getLink.getLink('phoneDirectory');
             }}
           />
           {this.state.fontLoaded ? (
-            <Text style={styles.text}>We-tip</Text>
+            <Text style={styles.text}>Contacts Us</Text>
+          ) : null}
+        </View>
+
+        <View style={styles.cell}>
+          <Jobapply
+            height={styles.icon_size.height}
+            width={styles.icon_size.width}
+            onPress={() => {
+              getLink.getLink('jobApply');
+            }}
+          />
+          {this.state.fontLoaded ? (
+            <Text style={styles.text}>Career</Text>
+          ) : null}
+        </View>
+
+        <View style={styles.cell}>
+          <AnimalControl
+            height={styles.icon_size.height}
+            width={styles.icon_size.width}
+            onPress={() => {
+              getLink.getLink('animalControl');
+            }}
+          />
+          {this.state.fontLoaded ? (
+            <Text style={styles.text}>Animal Control</Text>
+          ) : null}
+        </View>
+
+        <View style={styles.cell}>
+          <SecurityAndExtraPatrolRequest
+            height={styles.icon_size.height}
+            width={styles.icon_size.width}
+            onPress={() => getLink.openView('ModalView', 'BasicModalD')}
+          />
+          {this.state.fontLoaded ? (
+            <Text style={styles.text}>Extra Patrol Request</Text>
+          ) : null}
+        </View>
+
+        <View style={styles.cell}>
+          <PhoneDirectory
+            height={styles.icon_size.height}
+            width={styles.icon_size.width}
+            onPress={() => {
+              getLink.getLink('phoneDirectory');
+            }}
+          />
+          {this.state.fontLoaded ? (
+            <Text style={styles.text}>Social Media</Text>
+          ) : null}
+        </View>
+
+        <View style={styles.cell}>
+          <AdminLine
+            height={styles.icon_size.height}
+            width={styles.icon_size.width}
+            onPress={() => {
+              getLink.getLink('adminLine');
+            }}
+          />
+          {this.state.fontLoaded ? (
+            <Text style={styles.text}>Event Security</Text>
           ) : null}
         </View>
       </View>
@@ -292,8 +292,8 @@ const styles = StyleSheet.create({
   cell: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: 115,
-    height: 115,
+    width: 110,
+    height: 110,
     margin: 0,
     backgroundColor: 'white',
   },
