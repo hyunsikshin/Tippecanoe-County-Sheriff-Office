@@ -65,7 +65,7 @@ class ButtonSet extends React.Component {
           <VideoVisitation
             height={styles.icon_size.height}
             width={styles.icon_size.width}
-            onPress={() => getLink.openView('ModalView', 'BasicModalB')}
+            onPress={() => getLink.openView('ModalView', 'ModalVideoVisitation')}
           />
           {this.state.fontLoaded ? (
             <Text style={styles.text}>Video Visitation</Text>
@@ -165,7 +165,7 @@ class ButtonSet extends React.Component {
           <SheriffSale
             height={styles.icon_size.height}
             width={styles.icon_size.width}
-            onPress={() => getLink.openView('ModalView', 'BasicModalC')}
+            onPress={() => getLink.openView('ModalView', 'ModalSheriffSale')}
           />
           {this.state.fontLoaded ? (
             <Text style={styles.text}>Sheriff Sale</Text>
@@ -202,7 +202,7 @@ class ButtonSet extends React.Component {
           <Contacts
             height={styles.icon_size.height}
             width={styles.icon_size.width}
-            onPress={() => getLink.openView('ModalView', 'BasicModalA')}
+            onPress={() => getLink.openView('ModalView', 'ModalContackUs')}
           />
           {this.state.fontLoaded ? (
             <Text style={styles.text}>Contacts Us</Text>
@@ -239,7 +239,7 @@ class ButtonSet extends React.Component {
           <SecurityAndExtraPatrolRequest
             height={styles.icon_size.height}
             width={styles.icon_size.width}
-            onPress={() => getLink.openView('ModalView', 'BasicModalD')}
+            onPress={() =>getLink.openView('Email', '')}
           />
           {this.state.fontLoaded ? (
             <Text style={styles.text}>Extra Patrol Request</Text>
@@ -250,7 +250,7 @@ class ButtonSet extends React.Component {
           <PhoneDirectory
             height={styles.icon_size.height}
             width={styles.icon_size.width}
-            onPress={() => getLink.openView('ModalView', 'BasicModalE')}
+            onPress={() => getLink.openView('ModalView', 'ModalSocialMdeida')}
           />
           {this.state.fontLoaded ? (
             <Text style={styles.text}>Social Media</Text>
@@ -262,7 +262,7 @@ class ButtonSet extends React.Component {
             height={styles.icon_size.height}
             width={styles.icon_size.width}
             onPress={() => {
-              getLink.getLink('adminLine');
+              getLink.openView('Email', '')
             }}
           />
           {this.state.fontLoaded ? (
