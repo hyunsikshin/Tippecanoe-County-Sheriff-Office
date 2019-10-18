@@ -28,7 +28,7 @@ export default StyleSheet.create({
         color: 'white',
         fontWeight: 'bold',
         marginTop: 5,
-        marginBottom: 10,
+        marginBottom: 5,
         textDecorationLine: 'underline',
       },
     

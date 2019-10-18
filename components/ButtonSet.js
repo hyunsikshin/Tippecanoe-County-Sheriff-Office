@@ -39,7 +39,7 @@ class ButtonSet extends React.Component {
 
   async componentDidMount() {
     await Font.loadAsync({
-      CustomFont: require('../assets/fonts/Product_Sans_Bold_Italic.ttf'),
+      'CustomFont': require('../assets/fonts/한나체.ttf'),
     });
 
     this.setState({ fontLoaded: true });
@@ -202,9 +202,7 @@ class ButtonSet extends React.Component {
           <Contacts
             height={styles.icon_size.height}
             width={styles.icon_size.width}
-            onPress={() => {
-              getLink.getLink('phoneDirectory');
-            }}
+            onPress={() => getLink.openView('ModalView', 'BasicModalA')}
           />
           {this.state.fontLoaded ? (
             <Text style={styles.text}>Contacts Us</Text>
@@ -306,8 +304,9 @@ const styles = StyleSheet.create({
 
   text: {
     color: 'black',
-    fontFamily: 'CustomFont',
-    textAlign: 'center',
+    textAlign:'center',
+    fontFamily:'CustomFont'
+    
   },
   icon_size: {
     width: 70,

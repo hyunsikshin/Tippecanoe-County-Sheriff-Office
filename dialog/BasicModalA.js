@@ -17,7 +17,7 @@ export default class BasicModalA extends Component {
         >
         <View style={[styles.container, styles.modalBackgroundStyle]}>
           <View style={styles.Cell_Title}>
-            <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.TitleText}>Contact</Text>
+            <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.TitleText}>Contact Us</Text>
           </View>
 
           <View style={{ alignItems: 'center' }}>
@@ -37,6 +37,12 @@ export default class BasicModalA extends Component {
               style={styles.InnerText}
               onPress={() => getLink.getLink('jail')}>
               <Text adjustsFontSizeToFit  numberOfLines={1}  style={styles.InnerText}>JAIL</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.InnerText}
+              onPress={() => getLink.getLink('juvenile')}>
+              <Text adjustsFontSizeToFit  numberOfLines={1}  style={styles.InnerText}>JUVENILE</Text>
             </TouchableOpacity>
 
             <View style={styles.Cell_Close}>
