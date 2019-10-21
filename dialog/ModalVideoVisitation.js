@@ -4,41 +4,54 @@ import {
   Text,
   TouchableOpacity,
   View,
+  ToastAndroid,
 } from 'react-native';
 import getLink from '../actions/getLink';
 import styles from "./Styles";
 
-export default class BasicModalC extends Component {
+export default class BasicModalB extends Component {
   render() {
     return (
       <Modal
         style={styles.container}
         open={true}
         transparent={true}
-        animationType="slide"
+        animationType="slide"   
         closeOnTouchOutside = {false}
         disableOnBackPress = {true}
         >
         <View style={[styles.container, styles.modalBackgroundStyle]}>
           <View style={styles.Cell_Title}>
-            <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.TitleText}>Sheriff's Sale</Text>
+            <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.TitleText}>Video Visitation</Text>
           </View>
 
           <View style={{ alignItems: 'center' }}>
             <TouchableOpacity
               style={styles.InnerText}
               onPress={() =>
-                getLink.getLink('sheriffsSaleGuideline')
+                getLink.getLink('videoVisitationWeb')
               }>
-              <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.InnerText}>SHERIFF'S SALE GUIDELINE</Text>
+              <Text  
+              adjustsFontSizeToFit  numberOfLines={1}
+              style={styles.InnerText}
+              >GTL VIDEO VISITATION WEB</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               style={styles.InnerText}
               onPress={() =>
-                getLink.getLink('sheriffsSaleListing')
+                ToastAndroid.show(
+                  'There is no App on your device',
+                  ToastAndroid.SHORT
+                )
               }>
-              <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.InnerText}>SHERIFF'S SALE LISTING</Text>
+              <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.InnerText}>OPEN THE VISMOBILE APP</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.InnerText}
+              onPress={() => getLink.getLink('downloadVismobile')}>
+              <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.InnerText}>DOWNLOAD VISMOBILE APP</Text>
             </TouchableOpacity>
 
             <View style={styles.Cell_Close}>

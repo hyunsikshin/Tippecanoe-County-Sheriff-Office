@@ -1,18 +1,16 @@
 import React from 'react';
-
-import BasicModal from '../dialog/BasicModal';
-import BasicModalA from '../dialog/BasicModalA';
-import BasicModalB from '../dialog/BasicModalB';
-import BasicModalC from '../dialog/BasicModalC';
-import BasicModalD from '../dialog/BasicModalD';
+import ModalContackUs from '../dialog/ModalContackUs';
+import ModalVideoVisitation from '../dialog/ModalVideoVisitation';
+import ModalSheriffSale from '../dialog/ModalSheriffSale';
+import ModalSocialMdeida from '../dialog/ModalSocialMdeida';
 
 
 const modallist = {
-    BasicModal :<BasicModal></BasicModal>,
-    BasicModalA :<BasicModalA></BasicModalA>,
-    BasicModalB :<BasicModalB></BasicModalB>,
-    BasicModalC :<BasicModalC></BasicModalC>,
-    BasicModalD :<BasicModalD></BasicModalD>,
+    ModalContackUs :<ModalContackUs></ModalContackUs>,
+    ModalVideoVisitation :<ModalVideoVisitation></ModalVideoVisitation>,
+    ModalSheriffSale :<ModalSheriffSale></ModalSheriffSale>,
+    ModalSocialMdeida :<ModalSocialMdeida></ModalSocialMdeida>,
+
 };
   
  export default {
