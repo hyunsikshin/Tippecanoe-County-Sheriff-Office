@@ -12,7 +12,7 @@ import {
 } from '@expo/vector-icons';
 import getLink from '../actions/getLink';
 //svg files
-import AdminLine from '../assets/buttonIcons/AdminLine.svg';
+import EventSecurity from '../assets/buttonIcons/EventSecurity.svg';
 import AnimalControl from '../assets/buttonIcons/AnimalControl.svg';
 import Commissary from '../assets/buttonIcons/Commissary.svg';
 import Contacts from '../assets/buttonIcons/Contacts.svg';
@@ -20,9 +20,9 @@ import CrashReport from '../assets/buttonIcons/CrashReport.svg';
 import Gun from '../assets/buttonIcons/Gun.svg';
 import Inmatelookup from '../assets/buttonIcons/Inmatelookup.svg';
 import Jobapply from '../assets/buttonIcons/Jobapply.svg';
-import PhoneDirectory from '../assets/buttonIcons/PhoneDirectory.svg';
+import SocialMedia from '../assets/buttonIcons/SocialMedia.svg';
 import RecordRequest from '../assets/buttonIcons/RecordRequest.svg';
-import SecurityAndExtraPatrolRequest from '../assets/buttonIcons/SecurityAndExtraPatrolRequest.svg';
+import ExtraPatrolRequest from '../assets/buttonIcons/ExtraPatrolRequest.svg';
 import SexOffender from '../assets/buttonIcons/Card.svg';
 import VideoVisitation from '../assets/buttonIcons/VideoVisitation.svg';
 import VisitationPolicy from '../assets/buttonIcons/VisitationPolicy.svg';
@@ -236,7 +236,7 @@ class ButtonSet extends React.Component {
         </View>
 
         <View style={styles.cell}>
-          <SecurityAndExtraPatrolRequest
+          <ExtraPatrolRequest
             height={styles.icon_size.height}
             width={styles.icon_size.width}
             onPress={() =>getLink.openView('Email', '')}
@@ -247,7 +247,7 @@ class ButtonSet extends React.Component {
         </View>
 
         <View style={styles.cell}>
-          <PhoneDirectory
+          <SocialMedia
             height={styles.icon_size.height}
             width={styles.icon_size.width}
             onPress={() => getLink.openView('ModalView', 'ModalSocialMdeida')}
@@ -258,7 +258,7 @@ class ButtonSet extends React.Component {
         </View>
 
         <View style={styles.cell}>
-          <AdminLine
+          <EventSecurity
             height={styles.icon_size.height}
             width={styles.icon_size.width}
             onPress={() => {
