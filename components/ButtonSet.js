@@ -39,7 +39,7 @@ class ButtonSet extends React.Component {
 
   async componentDidMount() {
     await Font.loadAsync({
-      'CustomFont': require('../assets/fonts/한나체.ttf'),
+      'CustomFont': require('../assets/fonts/PublicSans-Bold.otf'),
     });
 
     this.setState({ fontLoaded: true });
@@ -303,7 +303,8 @@ const styles = StyleSheet.create({
   text: {
     color: 'black',
     textAlign:'center',
-    fontFamily:'CustomFont'
+    fontFamily:'CustomFont',
+    fontSize:13
     
   },
   icon_size: {
