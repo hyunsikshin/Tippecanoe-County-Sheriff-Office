@@ -116,7 +116,7 @@ class MainPage extends Component {
             />
           </View>
           <QnA />
-          <Logo width={380} height={200} />
+          <Logo width={width * 0.95} height={height * 0.25} />
           <ButtonSet />
           {ControllContainer.getInstance().checkModal()}
           <Button
@@ -132,6 +132,7 @@ class MainPage extends Component {
 export default MainPage;
 
 const width = Dimensions.get('window').width;
+const height = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
   container: {
