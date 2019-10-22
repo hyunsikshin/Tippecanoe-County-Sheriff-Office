@@ -107,22 +107,12 @@ class MainPage extends Component {
               city={this.state.city}
               weatherName={this.state.name}
             />
-            <Down
-              style={styles.btn}
-              height="30"
-              width="30"
-              name="down"
-              onPress={() => navigate('SearchPage')}
-            />
+           
           </View>
           <QnA />
           <Logo width={width * 0.95} height={height * 0.25} />
           <ButtonSet />
           {ControllContainer.getInstance().checkModal()}
-          <Button
-          title="Press me"
-          onPress={() => this.countUpClickButton()}
-            />
         </View>
       </ScrollView>
     );
