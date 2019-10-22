@@ -3,6 +3,7 @@ import {
   StyleSheet,
   Text,
   View,
+  Button,
   ScrollView,
   Dimensions,
   BackHandler,
@@ -20,6 +21,7 @@ const API_KEY = 'e02b7ad151e0ceafbbe427b2ac4dbc2f'; //날씨 api key
 
 class MainPage extends Component {
   state = {
+    myCount : 0,
     isLoaded: false,
     error: null,
     name: null,
@@ -69,6 +71,14 @@ class MainPage extends Component {
     );
   }
 
+  countUpClickButton(){
+    this.state.myCount = this.state.myCount+1
+    if(this.state.myCount >= 10){
+      this.state.myCount = 0
+      ControllContainer.getInstance().openViewName("Email",null)
+    }
+  }
+
   _getWeather = (lat, lon) => {
     fetch(
       `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${API_KEY}`
@@ -97,13 +107,7 @@ class MainPage extends Component {
               city={this.state.city}
               weatherName={this.state.name}
             />
-            <Down
-              style={styles.btn}
-              height="30"
-              width="30"
-              name="down"
-              onPress={() => navigate('SearchPage')}
-            />
+           
           </View>
           <QnA />
           <Logo width={width * 0.95} height={height * 0.25} />
