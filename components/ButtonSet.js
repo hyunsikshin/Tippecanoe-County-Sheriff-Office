@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {
   FontAwesome,
@@ -32,14 +32,14 @@ import TaxWarrants from '../assets/buttonIcons/TaxWarrants.svg';
 import TrafficComplaints from '../assets/buttonIcons/TrafficComplaints.svg';
 import * as Font from 'expo-font';
 
-class ButtonSet extends React.Component {
+class ButtonSet extends Component {
   state = {
     fontLoaded: false,
   };
 
   async componentDidMount() {
     await Font.loadAsync({
-      'CustomFont': require('../assets/fonts/PublicSans-Bold.otf'),
+      CustomFont: require('../assets/fonts/PublicSans-Bold.otf'),
     });
 
     this.setState({ fontLoaded: true });
@@ -65,13 +65,15 @@ class ButtonSet extends React.Component {
           <VideoVisitation
             height={styles.icon_size.height}
             width={styles.icon_size.width}
-            onPress={() => getLink.openView('ModalView', 'ModalVideoVisitation')}
+            onPress={() =>
+              getLink.openView('ModalView', 'ModalVideoVisitation')
+            }
           />
           {this.state.fontLoaded ? (
             <Text style={styles.text}>Video Visitation</Text>
           ) : null}
         </View>
-        
+
         <View style={styles.cell}>
           <VisitationPolicy
             height={styles.icon_size.height}
@@ -128,7 +130,7 @@ class ButtonSet extends React.Component {
           <TrafficComplaints
             height={styles.icon_size.height}
             width={styles.icon_size.width}
-            onPress={() => getLink.openView('Email', '')}
+            onPress={() => getLink.openView('Traffic', '')}
           />
           {this.state.fontLoaded ? (
             <Text style={styles.text}>Traffic Complaints</Text>
@@ -147,7 +149,7 @@ class ButtonSet extends React.Component {
             <Text style={styles.text}>We-tip</Text>
           ) : null}
         </View>
-        
+
         <View style={styles.cell}>
           <SexOffender
             height={styles.icon_size.height}
@@ -184,7 +186,7 @@ class ButtonSet extends React.Component {
             <Text style={styles.text}>Tax Warrants</Text>
           ) : null}
         </View>
-        
+
         <View style={styles.cell}>
           <Gun
             height={styles.icon_size.height}
@@ -239,7 +241,7 @@ class ButtonSet extends React.Component {
           <ExtraPatrolRequest
             height={styles.icon_size.height}
             width={styles.icon_size.width}
-            onPress={() =>getLink.openView('Email', '')}
+            onPress={() => getLink.openView('Extra', '')}
           />
           {this.state.fontLoaded ? (
             <Text style={styles.text}>Extra Patrol Request</Text>
@@ -262,7 +264,7 @@ class ButtonSet extends React.Component {
             height={styles.icon_size.height}
             width={styles.icon_size.width}
             onPress={() => {
-              getLink.openView('Email', '')
+              getLink.openView('Event', '');
             }}
           />
           {this.state.fontLoaded ? (
@@ -302,10 +304,9 @@ const styles = StyleSheet.create({
 
   text: {
     color: 'black',
-    textAlign:'center',
-    fontFamily:'CustomFont',
-    fontSize:13
-    
+    textAlign: 'center',
+    fontFamily: 'CustomFont',
+    fontSize: 13,
   },
   icon_size: {
     width: 70,
