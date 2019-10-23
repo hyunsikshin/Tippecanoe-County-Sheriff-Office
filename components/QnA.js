@@ -8,7 +8,7 @@ class QnA extends Component {
   state = {
     contents: [
       {
-        title: 'Top 5 Frequently Ask Questions',
+        title: '     Top 5 Frequently Ask Questions',
         body:
           'What about very long text? What about very long text? What about very long text? What about very long text? What about very long text? What about very long text? What about very long text? What about very long text? What about very long text? What about very long text? What about very long text? What about very long text?',
       },

@@ -115,8 +115,11 @@ class MainPage extends Component {
               onPress={() => navigate('SearchPage')}
             /> */}
           </View>
-          <QnA />
+          <View style ={styles.space}></View>
           <Logo width={width * 0.95} height={height * 0.25} />
+          <View style ={styles.space}></View>
+          <QnA />
+          <View style ={styles.space}></View>
           <ButtonSet />
           {ControllContainer.getInstance().checkModal()}
         </View>
@@ -153,4 +156,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
   },
+  space: {
+     height : 10
+  }
 });
