@@ -31,10 +31,22 @@ import SheriffSale from '../assets/buttonIcons/SheriffSale.svg';
 import TaxWarrants from '../assets/buttonIcons/TaxWarrants.svg';
 import TrafficComplaints from '../assets/buttonIcons/TrafficComplaints.svg';
 import * as Font from 'expo-font';
+import { sendEmail } from '../actions/SendEmail';
 
 class ButtonSet extends Component {
   state = {
     fontLoaded: false,
+  };
+  
+  //sendEmail(e-mail address, title, content)
+  // Contents and e-mail address will be changed
+  extraPatrolRequestEmail = () => {
+    sendEmail('bj.max.lim@gmail.com', "Extra Patrol Request", "Name : \nData : \nAddress : \nZip code : \nPhone number : \n");
+  };
+
+  // Contents and e-mail address will be changed
+  eventSecurityEmail = () => {
+    sendEmail('bj.max.lim@gmail.com', "EventSecurity", "Name : \nData : \nAddress : \nZip code : \nPhone number : \n");
   };
 
   async componentDidMount() {
@@ -241,7 +253,7 @@ class ButtonSet extends Component {
           <ExtraPatrolRequest
             height={styles.icon_size.height}
             width={styles.icon_size.width}
-            onPress={() => getLink.openView('Extra', '')}
+            onPress={() => this.extraPatrolRequestEmail()}
           />
           {this.state.fontLoaded ? (
             <Text style={styles.text}>Extra Patrol Request</Text>
@@ -263,9 +275,7 @@ class ButtonSet extends Component {
           <EventSecurity
             height={styles.icon_size.height}
             width={styles.icon_size.width}
-            onPress={() => {
-              getLink.openView('Event', '');
-            }}
+            onPress={() => this.eventSecurityEmail ()}
           />
           {this.state.fontLoaded ? (
             <Text style={styles.text}>Event Security</Text>
