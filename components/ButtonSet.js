@@ -39,14 +39,19 @@ class ButtonSet extends Component {
   };
   
   //sendEmail(e-mail address, title, content)
-  // Contents and e-mail address will be changed
+  // e-mail address will be changed
   extraPatrolRequestEmail = () => {
-    sendEmail('bj.max.lim@gmail.com', "Extra Patrol Request", "Name : \nData : \nAddress : \nZip code : \nPhone number : \n");
+    sendEmail('bj.max.lim@gmail.com', "Extra Patrol Request", "Name of requestor : \nAddress of request : \nRequestor phone number : \n\nDescription of problem : \nLocation of problem : \nTimes occurring : \nRequest start date : \nRequest end date : \n\nAny additional details of request : \n");
   };
 
   // Contents and e-mail address will be changed
   eventSecurityEmail = () => {
-    sendEmail('bj.max.lim@gmail.com', "EventSecurity", "Name : \nData : \nAddress : \nZip code : \nPhone number : \n");
+    sendEmail('bj.max.lim@gmail.com', "Event Security", "Name : \nData : \nAddress : \nZip code : \nPhone number : \n");
+  };
+
+  // Contents and e-mail address will be changed
+  trafficComplaintsEmail = () => {
+    sendEmail('bj.max.lim@gmail.com', "Traffic Complaints", "Name : \nData : \nAddress : \nZip code : \nPhone number : \n");
   };
 
   async componentDidMount() {
