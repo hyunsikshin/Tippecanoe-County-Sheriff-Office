@@ -104,9 +104,10 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     fontSize: 20,
     color: 'black',
+    
   },
   vertical_con: {
-    marginLeft: 10,
+    marginLeft: 5,
     display: 'flex',
     flexDirection: 'column',
   },
