@@ -25,7 +25,7 @@ import RecordRequest from '../assets/buttonIcons/RecordRequest.svg';
 import ExtraPatrolRequest from '../assets/buttonIcons/ExtraPatrolRequest.svg';
 import SexOffender from '../assets/buttonIcons/Card.svg';
 import VideoVisitation from '../assets/buttonIcons/VideoVisitation.svg';
-import VisitationPolicy from '../assets/buttonIcons/VisitationPolicy.svg';
+import VisitationPolicy from '../assets/buttonIcons/policy.svg';
 import Wetip from '../assets/buttonIcons/Wetip.svg';
 import SheriffSale from '../assets/buttonIcons/SheriffSale.svg';
 import TaxWarrants from '../assets/buttonIcons/TaxWarrants.svg';
