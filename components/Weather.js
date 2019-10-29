@@ -10,6 +10,8 @@ import Snow from '../assets/weather/weather-snowy';
 import Drizzle from '../assets/weather/weather-hail';
 import Mist from '../assets/weather/weather-fog';
 
+
+
 function Weather({ temp, city, weatherName }) {
   switch (weatherName) {
     case 'Rain':
@@ -88,9 +90,12 @@ function Weather({ temp, city, weatherName }) {
 }
 export default Weather;
 
+
+
 Weather.propTypes = {
   temp: PropTypes.number.isRequired,
 };
+
 
 const styles = StyleSheet.create({
   container: {
