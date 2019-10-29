@@ -6,6 +6,7 @@ import TrafficPage from './pages/TrafficPage';
 import EventPage from './pages/EventPage';
 import ExtraPage from './pages/ExtraPage';
 import SearchPage from './pages/SearchPage';
+import CopyRightPage from './pages/CopyRightPage';
 
 const App = createStackNavigator(
   {
@@ -14,6 +15,7 @@ const App = createStackNavigator(
     EventPage: { screen: EventPage },
     ExtraPage: { screen: ExtraPage },
     SearchPage: { screen: SearchPage },
+    CopyRightPage : {screen: CopyRightPage},
   },
   {
     initialRouteName: 'MainPage',

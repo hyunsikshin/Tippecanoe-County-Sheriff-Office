@@ -30,6 +30,7 @@ import Wetip from '../assets/buttonIcons/Wetip.svg';
 import SheriffSale from '../assets/buttonIcons/SheriffSale.svg';
 import TaxWarrants from '../assets/buttonIcons/TaxWarrants.svg';
 import TrafficComplaints from '../assets/buttonIcons/TrafficComplaints.svg';
+
 import * as Font from 'expo-font';
 import { sendEmail } from '../actions/SendEmail';
 

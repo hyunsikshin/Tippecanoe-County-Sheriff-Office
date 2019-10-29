@@ -1,6 +1,6 @@
 const Lafayette = {
   phoneDirectory: 'https://www.tippecanoe.in.gov/Directory.aspx?did=43',
-  adminLine: 'tel:7654239388',
+  
   jobApply: 'https://www.tippecanoe.in.gov/470/Employment',
   sexOffenders: 'http://www.icrimewatch.net/index.php?AgencyID=54758',
   immateLookup: 'http://www3.tippecanoe.in.gov/InmateListing/InmateSearch.aspx',
@@ -11,7 +11,7 @@ const Lafayette = {
   visitationPolicy:
     'https://www.tippecanoe.in.gov/468/Inmate-Visitation-Policy',
   weTip: 'https://wetip.com',
-
+  adminLine: 'tel:7654239388',
   administration: 'tel:7654239388',
   dispatch: 'tel:7654239321',
   jail: 'tel:7654231655',

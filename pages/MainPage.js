@@ -122,6 +122,9 @@ class MainPage extends Component {
           <View style ={styles.space}></View>
           <ButtonSet />
           {ControllContainer.getInstance().checkModal()}
+          <Button title="저작권" onPress={() =>
+              navigate('CopyRightPage')
+            }></Button>
         </View>
       </ScrollView>
     );
