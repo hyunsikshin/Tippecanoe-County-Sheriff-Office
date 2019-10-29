@@ -10,6 +10,8 @@ import Snow from '../assets/weather/weather-snowy';
 import Drizzle from '../assets/weather/weather-hail';
 import Mist from '../assets/weather/weather-fog';
 
+
+
 function Weather({ temp, city, weatherName }) {
   switch (weatherName) {
     case 'Rain':
