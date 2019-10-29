@@ -51,7 +51,7 @@ class ButtonSet extends Component {
 
   async componentDidMount() {
     await Font.loadAsync({
-      CustomFont: require('../assets/fonts/PublicSans-Bold.otf'),
+      CustomFont: require('../assets/fonts/SCDream6.otf'),
     });
 
     this.setState({ fontLoaded: true });

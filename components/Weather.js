@@ -88,9 +88,12 @@ function Weather({ temp, city, weatherName }) {
 }
 export default Weather;
 
+
+
 Weather.propTypes = {
   temp: PropTypes.number.isRequired,
 };
+
 
 const styles = StyleSheet.create({
   container: {
