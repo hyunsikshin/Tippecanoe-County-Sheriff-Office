@@ -12,7 +12,6 @@ import Weather from '../components/Weather';
 import ControllContainer from '../actions/ControllContainer';
 import Logo from '../assets/logo.svg';
 import ButtonSet from '../components/ButtonSet';
-import Footer from '../components/Footer';
 import QnA from '../components/QnA';
 import getLink from '../actions/getLink';
 import Down from '../assets/buttonIcons/List.svg';
@@ -115,16 +114,16 @@ class MainPage extends Component {
               onPress={() => navigate('SearchPage')}
             /> */}
           </View>
-          <View style ={styles.space}></View>
+          <View style={styles.space}></View>
           <Logo width={width * 0.95} height={height * 0.25} />
-          <View style ={styles.space}></View>
+          <View style={styles.space}></View>
           <QnA />
-          <View style ={styles.space}></View>
+          <View style={styles.space}></View>
           <ButtonSet />
           {ControllContainer.getInstance().checkModal()}
-          <Button title="저작권" onPress={() =>
-              navigate('CopyRightPage')
-            }></Button>
+          <Button
+            title="저작권"
+            onPress={() => navigate('CopyRightPage')}></Button>
         </View>
       </ScrollView>
     );
@@ -160,6 +159,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   space: {
-     height : 10
-  }
+    height: 10,
+  },
 });
