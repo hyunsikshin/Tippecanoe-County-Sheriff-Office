@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View, Dimensions } from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
 import {
   FontAwesome,
   Feather,
@@ -38,21 +39,33 @@ class ButtonSet extends Component {
   state = {
     fontLoaded: false,
   };
-  
+
   //sendEmail(e-mail address, title, content)
   // e-mail address will be changed
   extraPatrolRequestEmail = () => {
-    sendEmail('bj.max.lim@gmail.com', "Extra Patrol Request", "Name of requestor : \nAddress of request : \nRequestor phone number : \n\nDescription of problem : \nLocation of problem : \nTimes occurring : \nRequest start date : \nRequest end date : \n\nAny additional details of request : \n");
+    sendEmail(
+      'bj.max.lim@gmail.com',
+      'Extra Patrol Request',
+      'Name of requestor : \nAddress of request : \nRequestor phone number : \n\nDescription of problem : \nLocation of problem : \nTimes occurring : \nRequest start date : \nRequest end date : \n\nAny additional details of request : \n'
+    );
   };
 
   // Contents and e-mail address will be changed
   eventSecurityEmail = () => {
-    sendEmail('bj.max.lim@gmail.com', "Event Security", "Name : \nData : \nAddress : \nZip code : \nPhone number : \n");
+    sendEmail(
+      'bj.max.lim@gmail.com',
+      'Event Security',
+      'Name : \nData : \nAddress : \nZip code : \nPhone number : \n'
+    );
   };
 
   // Contents and e-mail address will be changed
   trafficComplaintsEmail = () => {
-    sendEmail('bj.max.lim@gmail.com', "Traffic Complaints", "Name : \nData : \nAddress : \nZip code : \nPhone number : \n");
+    sendEmail(
+      'bj.max.lim@gmail.com',
+      'Traffic Complaints',
+      'Name : \nData : \nAddress : \nZip code : \nPhone number : \n'
+    );
   };
 
   async componentDidMount() {
@@ -281,7 +294,7 @@ class ButtonSet extends Component {
           <EventSecurity
             height={styles.icon_size.height}
             width={styles.icon_size.width}
-            onPress={() => this.eventSecurityEmail ()}
+            onPress={() => this.eventSecurityEmail()}
           />
           {this.state.fontLoaded ? (
             <Text style={styles.text}>Event Security</Text>
@@ -294,7 +307,10 @@ class ButtonSet extends Component {
 
 export default ButtonSet;
 
-const styles = StyleSheet.create({
+const entireScreenWidth = Dimensions.get('window').width;
+EStyleSheet.build({ $rem: entireScreenWidth / 380 });
+
+const styles = EStyleSheet.create({
   container: {
     display: 'flex',
     justifyContent: 'center',
@@ -306,18 +322,11 @@ const styles = StyleSheet.create({
   cell: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: 110,
-    height: 110,
+    width: '100rem',
+    height: '100rem',
     margin: 0,
     backgroundColor: 'white',
   },
-  gone: {
-    width: 115,
-    height: 115,
-    margin: 0,
-    opacity: 0.4,
-  },
-
   text: {
     color: 'black',
     textAlign: 'center',
@@ -325,7 +334,7 @@ const styles = StyleSheet.create({
     fontSize: 13,
   },
   icon_size: {
-    width: 70,
-    height: 70,
+    width: '60rem',
+    height: '60rem',
   },
 });
