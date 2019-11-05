@@ -123,7 +123,7 @@ class MainPage extends Component {
           <ButtonSet />
           {ControllContainer.getInstance().checkModal()}
           <Button
-            title="저작권"
+            title="Credits"
             onPress={() => navigate('CopyRightPage')}></Button>
         </View>
       </ScrollView>

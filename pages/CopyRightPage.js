@@ -21,8 +21,75 @@ class CopyRightPage extends Component {
     return (
         <View>
             <Text>
-                수지 바보
+            Icon made by Freepik from www.flaticon.com   
             </Text>
+            <Text>
+            Icon made by Phatplus from www.flaticon.com   
+            </Text>
+            <Text>
+            Icon made by Linector from www.flaticon.com 
+            </Text>
+            <Text>
+            Icon made by Payunkeed from www.flaticon.com
+            </Text>
+            <Text>
+            Icon made by itim2101 from www.flaticon.com
+            </Text>
+            <Text>
+            Icon made by icongeek26 from www.flaticon.com
+            </Text>
+            <Text>
+            Icon made by Freepik from www.flaticon.com 
+            </Text>
+            <Text>
+            Icon made by DariusDan from www.flaticon.com
+            </Text>
+            <Text>
+            Icon made by photo3idea_studio from www.flaticon.com
+            </Text>
+            <Text>
+            Icon made by Euclayp from www.flaticon.com
+            </Text>
+            <Text>
+            Icon made by Eucalyp from www.flaticon.com
+            </Text>
+            <Text>
+            Icon made by Freepik from www.flaticon.com
+            </Text>
+            <Text>
+            Icon made by surang from www.flaticon.com
+            </Text>
+            <Text>
+            Icon made by itim2101 from www.flaticon.com
+            </Text>
+            <Text>
+            Icon made by Freepik from www.flaticon.com
+            </Text>
+            <Text>
+            Icon made by Becris from www.flaticon.com
+            </Text>
+            <Text>
+             Icon made by dDara from www.flaticon.com
+            </Text>
+            <Text>
+             Icon made by Freepik from www.flaticon.com
+            </Text>
+
+
+
+
+
+
+            
+                
+
+
+
+
+
+
+
+            
         </View>
     );
   }
