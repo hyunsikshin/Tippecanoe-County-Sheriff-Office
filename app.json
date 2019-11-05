@@ -9,7 +9,7 @@
       "android",
       "web"
     ],
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -28,7 +28,12 @@
       "bundleIdentifier": "edu.purdue.sheriff"
     },
     "android": {
-      "package": "edu.purdue.sheriff"
+      "package": "com.tippsranger.tippecanoe_county_sheriff_app",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "INTERNET"
+      ]
     },
     "packagerOpts": {
       "config": "metro.config.js",

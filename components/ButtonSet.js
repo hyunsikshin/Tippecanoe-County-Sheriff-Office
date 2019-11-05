@@ -161,7 +161,7 @@ class ButtonSet extends Component {
           <TrafficComplaints
             height={styles.icon_size.height}
             width={styles.icon_size.width}
-            onPress={() => getLink.openView('Traffic', '')}
+            onPress={() => this.trafficComplaintsEmail()}
           />
           {this.state.fontLoaded ? (
             <Text style={styles.text}>Traffic Complaints</Text>
