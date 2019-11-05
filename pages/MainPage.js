@@ -7,6 +7,7 @@ import {
   ScrollView,
   Dimensions,
   BackHandler,
+  Platform
 } from 'react-native';
 import Weather from '../components/Weather';
 import ControllContainer from '../actions/ControllContainer';
