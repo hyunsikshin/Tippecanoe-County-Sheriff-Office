@@ -38,8 +38,9 @@ class CopyRightPage extends Component {
           >
           www.flaticon.com
            </Text>
-
           </Text>
+          <View style={styles.SpaceText}></View>
+
 
           <Text style ={{fontWeight: 'bold'}}>[Video Visitation]</Text>
           <Text>Icon made by 
@@ -57,6 +58,7 @@ class CopyRightPage extends Component {
           www.flaticon.com
             </Text>
           </Text>
+          <View style={styles.SpaceText}></View>
 
           <Text style ={{fontWeight: 'bold'}}>[VisitationPolicy]</Text>
           <Text>Icon made by 
@@ -74,6 +76,8 @@ class CopyRightPage extends Component {
           www.flaticon.com
             </Text>
           </Text>
+          <View style={styles.SpaceText}></View>
+
 
           <Text style ={{fontWeight: 'bold'}}>[Commissary]</Text>
           <Text>Icon made by 
@@ -91,6 +95,8 @@ class CopyRightPage extends Component {
           www.flaticon.com
             </Text>
           </Text>
+          <View style={styles.SpaceText}></View>
+
 
           <Text style ={{fontWeight: 'bold'}}>[CrashReport]</Text>
           <Text>Icon made by 
@@ -108,6 +114,8 @@ class CopyRightPage extends Component {
           www.flaticon.com
             </Text>
           </Text>
+          <View style={styles.SpaceText}></View>
+
 
           <Text style ={{fontWeight: 'bold'}}>[RecordsRequest]</Text>
           <Text>Icon made by 
@@ -125,6 +133,8 @@ class CopyRightPage extends Component {
           www.flaticon.com
             </Text>
           </Text>
+          <View style={styles.SpaceText}></View>
+
 
           <Text style ={{fontWeight: 'bold'}}>[TrafficComplaints]</Text>
           <Text>Icon made by 
@@ -142,6 +152,8 @@ class CopyRightPage extends Component {
           www.flaticon.com
             </Text>
           </Text>
+          <View style={styles.SpaceText}></View>
+
 
           <Text style ={{fontWeight: 'bold'}}>[We-tip]</Text>
           <Text>Icon made by 
@@ -159,6 +171,8 @@ class CopyRightPage extends Component {
           www.flaticon.com
             </Text>
           </Text>
+          <View style={styles.SpaceText}></View>
+
 
           <Text style ={{fontWeight: 'bold'}}>[SexOffenders]</Text>
           <Text>Icon made by 
@@ -176,6 +190,8 @@ class CopyRightPage extends Component {
           www.flaticon.com
             </Text>
           </Text>
+          <View style={styles.SpaceText}></View>
+
 
           <Text style ={{fontWeight: 'bold'}}>[Sheriff Sale]</Text>
           <Text>Icon made by 
@@ -193,6 +209,8 @@ class CopyRightPage extends Component {
           www.flaticon.com
             </Text>
           </Text>
+          <View style={styles.SpaceText}></View>
+
 
           <Text style ={{fontWeight: 'bold'}}>[Tax Warrants]</Text>
           <Text>Icon made by 
@@ -210,6 +228,8 @@ class CopyRightPage extends Component {
           www.flaticon.com
             </Text>
           </Text>
+          <View style={styles.SpaceText}></View>
+
 
           <Text style ={{fontWeight: 'bold'}}>[GunPermits]</Text>
           <Text>Icon made by 
@@ -227,6 +247,8 @@ class CopyRightPage extends Component {
           www.flaticon.com
             </Text>
           </Text>
+          <View style={styles.SpaceText}></View>
+
 
           <Text style ={{fontWeight: 'bold'}}>[ContactsUs]</Text>
           <Text>Icon made by 
@@ -244,6 +266,8 @@ class CopyRightPage extends Component {
           www.flaticon.com
             </Text>
           </Text>
+          <View style={styles.SpaceText}></View>
+
 
           <Text style ={{fontWeight: 'bold'}}>[Career]</Text>
           <Text>Icon made by 
@@ -261,6 +285,8 @@ class CopyRightPage extends Component {
           www.flaticon.com
             </Text>
           </Text>
+          <View style={styles.SpaceText}></View>
+
 
           <Text style ={{fontWeight: 'bold'}}>[Animal Control]</Text>
           <Text>Icon made by 
@@ -278,6 +304,8 @@ class CopyRightPage extends Component {
           www.flaticon.com
             </Text>
           </Text>
+          <View style={styles.SpaceText}></View>
+
 
           <Text style ={{fontWeight: 'bold'}}>[ExtraPatrolRequest]</Text>
           <Text>Icon made by 
@@ -295,6 +323,8 @@ class CopyRightPage extends Component {
           www.flaticon.com
             </Text>
           </Text>
+          <View style={styles.SpaceText}></View>
+
            
           <Text style ={{fontWeight: 'bold'}}>[Social Media]</Text>
           <Text>Icon made by 
@@ -312,6 +342,8 @@ class CopyRightPage extends Component {
           www.flaticon.com
             </Text>
           </Text>
+          <View style={styles.SpaceText}></View>
+
 
           <Text style ={{fontWeight: 'bold'}}>[Event Security]</Text>
           <Text>Icon made by 
@@ -329,6 +361,8 @@ class CopyRightPage extends Component {
           www.flaticon.com
             </Text>
           </Text>
+          <View style={styles.SpaceText}></View>
+
 
           <Text style ={{fontWeight: 'bold'}}>[Weather]</Text>
           <Text>Icon made by 
@@ -346,6 +380,8 @@ class CopyRightPage extends Component {
           www.flaticon.com
             </Text>
           </Text>
+          <View style={styles.SpaceText}></View>
+
           
 
 
@@ -395,5 +431,8 @@ const styles = StyleSheet.create({
     textDecorationColor: "#3DB7CC",
     color: "#3DB7CC",
   },
+  SpaceText: {
+    marginBottom:8,
+  }
 
 });
