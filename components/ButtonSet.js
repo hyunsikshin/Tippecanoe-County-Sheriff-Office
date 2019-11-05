@@ -317,14 +317,13 @@ const styles = EStyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     backgroundColor: '#ced6e0',
-    padding: 15,
+    padding: 20,
   },
   cell: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: '100rem',
-    height: '100rem',
-    margin: 0,
+    width: '110rem',
+    height: '110rem',
     backgroundColor: 'white',
   },
   text: {

@@ -125,7 +125,7 @@ class MainPage extends Component {
             /> */}
           </View>
           <View style={styles.space}></View>
-          <Logo width={width * 0.95} height={height * 0.25} />
+          <Logo width={width} height={height * 0.25} />
           <View style={styles.space}></View>
           <QnA />
           <View style={styles.space}></View>
