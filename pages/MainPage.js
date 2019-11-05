@@ -15,6 +15,7 @@ import ButtonSet from '../components/ButtonSet';
 import QnA from '../components/QnA';
 import getLink from '../actions/getLink';
 import Down from '../assets/buttonIcons/List.svg';
+import { sendEmail } from '../actions/SendEmail';
 
 const API_KEY = 'e02b7ad151e0ceafbbe427b2ac4dbc2f'; //날씨 api key
 
@@ -26,6 +27,15 @@ class MainPage extends Component {
     name: null,
     city: null,
     tempertature: null,
+  };
+
+  //sendEmail(e-mail address, title, content)
+  contactUsEmail = () => {
+    sendEmail(
+      'hyunsik.dev@gmail.com',
+      'Developement Request',
+      ''
+    );
   };
 
   constructor(props) {
@@ -121,9 +131,16 @@ class MainPage extends Component {
           <View style={styles.space}></View>
           <ButtonSet />
           {ControllContainer.getInstance().checkModal()}
-          <Button
-            title="CopyRight"
-            onPress={() => navigate('CopyRightPage')}></Button>
+          
+          <View style={{marginTop: 10, marginBottom: 10}}>
+          <Text>
+            <Text style={{marginRight : 100}}
+              onPress={() => navigate('CopyRightPage')}>CopyRight</Text>  |{"  "}
+            <Text style={{marginLeft : 100}}
+              onPress={() => this.contactUsEmail()}>Contact Us</Text>
+            </Text>
+          </View>
+
         </View>
       </ScrollView>
     );
