@@ -38,6 +38,30 @@ const Lafayette = {
   facebook: 'https://www.facebook.com/TCSOIndiana',
   instagram: 'https://www.instagram.com/tcso79/',
   twitter: 'https://twitter.com/tippecanoecosh1',
+  
+  FlatIcon: 'https://www.flaticon.com/',
+  inmatelookupIcon: 'https://www.flaticon.com/authors/freepik',
+  videovisitationIcon: 'https://www.flaticon.com/authors/phatplus',
+  visitationpolicyIcon: 'https://www.flaticon.com/authors/linector',
+  commmissaryIcon: 'https://www.flaticon.com/authors/payungkead',
+  crashreportIcon: 'https://www.flaticon.com/authors/itim2101',
+  recordrequestIcon: 'https://www.flaticon.com/authors/icongeek26',
+  trafficcomplaintsIcon: 'https://www.flaticon.com/authors/freepik',
+  wetipIcon: 'https://www.flaticon.com/authors/darius-dan',
+  sexoffenderIcon: 'https://www.flaticon.com/authors/photo3idea-studio',
+  sheriffsaleIcon: 'https://www.flaticon.com/authors/eucalyp',
+  taxwarrantsIcon: 'https://www.flaticon.com/authors/eucalyp',
+  gunpermitsIcon: 'https://www.flaticon.com/authors/freepik',
+  contactsusIcon: 'https://www.flaticon.com/authors/surang',
+  careerIcon: 'https://www.flaticon.com/authors/itim2101',
+  animalcontrolIcon: 'https://www.flaticon.com/authors/freepik',
+  extrapatrolrequestIcon: 'https://www.flaticon.com/authors/icongeek26',
+  socialmediaIcon: 'https://www.flaticon.com/authors/ddara',
+  eventsecurityIcon: 'https://www.flaticon.com/authors/freepik',
+  weatherIcon: 'https://www.flaticon.com/authors/freepik',
+
+
+
 };
 
 export default {
