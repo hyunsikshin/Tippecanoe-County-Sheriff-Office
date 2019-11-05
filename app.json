@@ -28,7 +28,12 @@
       "bundleIdentifier": "edu.purdue.sheriff"
     },
     "android": {
-      "package": "com.tippsranger.tippecanoe_county_sheriff_app"
+      "package": "com.tippsranger.tippecanoe_county_sheriff_app",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "INTERNET"
+      ]
     },
     "packagerOpts": {
       "config": "metro.config.js",
