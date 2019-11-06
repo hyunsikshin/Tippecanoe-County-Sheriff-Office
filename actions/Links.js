@@ -40,6 +40,97 @@ const Lafayette = {
   twitter: 'https://twitter.com/tippecanoecosh1',
 };
 
+const Clinton = {
+  phoneDirectory: 'https://www.clintoncountysheriff.com/contact-us/',
+  
+  jobApply: 'https://www.clintoncountysheriff.com/resources/employment/',
+  sexOffenders: 'http://www.clintoncountysheriff.com/sex-offender-registry/',
+  immateLookup: 'https://www.clintoncountysheriff.com/inmate-lookup/',
+  commissary: 'https://www.clintoncountysheriff.com/jail-divison/commissary/',
+  videoVisitationWeb: 'Null',
+  visMobile: 'Null',
+  downloadVismobile: 'Null',
+  visitationPolicy:
+    'https://www.clintoncountysheriff.com/jail-divison/public-visitation/',
+  weTip: 'https://wetip.com/',
+  adminLine: 'tel:7656596393',
+  administration: 'tel:7656596393',
+  dispatch: 'tel:7656545563',
+  jail: 'tel:7656596333',
+  juvenile : 'Null',
+
+  sheriffsSaleGuideline:
+    'https://www.clintoncountysheriff.com/resources/sheriff-sales/',
+  sheriffsSaleListing:
+    'https://legacy.sri-taxsale.com/Foreclosure/PropertyListing.aspx?county=CLINTON',
+  gunPermits: 'https://www.clintoncountysheriff.com/index.php?s=gun+permit',
+  crashReports: 'http://www.clintoncountysheriff.com/resources/accident-reports/',
+  recordsRequest: 'Null',
+  animalControl: 'Null',
+
+  //이메일 받으면됨
+  securityRequest: 'Null',
+  extraPatrolRequest: 'Null',
+
+  taxWarrants: 'http://www.clintoncountysheriff.com/resources/tax-warrants/',
+  privacyPolicy:
+    'Null',
+  qna: 'Null',
+
+  facebook: 'https://www.facebook.com/ccsheriff/',
+  instagram: 'https://www.instagram.com/explore/locations/1016008225/united-states/frankfort-indiana/clinton-county-sheriffs-office/?hl=tl',
+  twitter: 'https://twitter.com/clintonsheriff',
+};
+
+
+const empty = {
+  phoneDirectory: '',
+  
+  jobApply: '',
+  sexOffenders: '',
+  immateLookup: '',
+  commissary: '',
+  videoVisitationWeb: '',
+  visMobile: 'Null',
+  downloadVismobile: '',
+  visitationPolicy:
+    '',
+  weTip: '',
+
+  //전화번호
+  adminLine: 'tel:',
+  administration: 'tel:',
+  dispatch: 'tel:',
+  jail: 'tel:',
+  juvenile : 'tel:',
+
+  sheriffsSaleGuideline:
+    '',
+  sheriffsSaleListing:
+    '',
+  gunPermits: '',
+  crashReports: '',
+  recordsRequest: '',
+  animalControl: '',
+
+  //이메일
+  securityRequest: '@',
+  extraPatrolRequest: '@',
+
+
+  taxWarrants: '',
+  privacyPolicy:
+    '',
+  qna: '',
+
+  facebook: '',
+  instagram: '',
+  twitter: '',
+};
+
+
 export default {
   Lafayette,
+  Clinton,
+
 };
