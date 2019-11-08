@@ -59,6 +59,7 @@ const Lafayette = {
   socialmediaIcon: 'https://www.flaticon.com/authors/ddara',
   eventsecurityIcon: 'https://www.flaticon.com/authors/freepik',
   weatherIcon: 'https://www.flaticon.com/authors/freepik',
+  FAQ:'https://www.tippecanoe.in.gov/faq.aspx',
 
 
 
