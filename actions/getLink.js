@@ -1,5 +1,5 @@
 import constants from './Links';
-import { Linking } from 'react-native';
+import { Linking ,Alert} from 'react-native';
 import ControllContainer from '../actions/ControllContainer';
 //  호출부에서
 //  import getLink from './getLink';
@@ -16,9 +16,14 @@ const getLink = {
     switch (ControllContainer.getInstance().getLocation()) {
       case 'Lafayette':
         str = constants.Lafayette[event];
+      case 'Clinton':
+        str = constants.Clinton[event];
     }
-    if (str != '')  Linking.openURL(str);
-    else return;
+ 
+    if(str == 'Null')
+      Alert.alert("Not Ready For this Service");
+    else if (str != '')  
+      Linking.openURL(str);
   },
 };
 

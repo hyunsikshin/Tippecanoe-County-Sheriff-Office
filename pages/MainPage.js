@@ -116,16 +116,16 @@ class MainPage extends Component {
               city={this.state.city}
               weatherName={this.state.name}
             />
-            {/* <Down
+            { <Down
               style={styles.btn}
               height="30"
               width="30"
               name="down"
               onPress={() => navigate('SearchPage')}
-            /> */}
+            /> }
           </View>
           <View style={styles.space}></View>
-          <Logo width={width * 0.95} height={height * 0.25} />
+          <Logo width={width} height={height * 0.25} />
           <View style={styles.space}></View>
           <QnA />
           <View style={styles.space}></View>

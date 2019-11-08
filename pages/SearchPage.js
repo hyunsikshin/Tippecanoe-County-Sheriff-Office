@@ -84,6 +84,8 @@ class SearchPage extends Component {
             <Text onPress={()=> ControllContainer.getInstance().setLocation(rowData,navigate)} style={styles.rowViewContainer} >{rowData}</Text>
           )}
         />
+        <View>
+        </View>
       </View>
     );
   }

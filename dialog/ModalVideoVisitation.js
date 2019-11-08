@@ -5,8 +5,7 @@ import {
   TouchableOpacity,
   View,
   Linking,
-  ToastAndroid,
-  Platform
+
 } from 'react-native';
 import getLink from '../actions/getLink';
 import styles from "./Styles";
@@ -38,26 +37,24 @@ export default class BasicModalB extends Component {
               style={styles.InnerText}
               >GTL VIDEO VISITATION WEB</Text>
             </TouchableOpacity>
-
-            {Platform.OS == 'ios' ? null : 
+       
             <TouchableOpacity
               style={styles.InnerText}
               onPress={() =>
-                Linking.openURL('facebook://app')
+                Linking.openURL('FaceBook://app')
                 //ToastAndroid.show(
                 //  'There is no App on your device',
                 //  ToastAndroid.SHORT
               }>
               <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.InnerText}>OPEN THE VISMOBILE APP</Text>
             </TouchableOpacity>
-          }
-           {Platform.OS == 'ios' ? null : 
+
             <TouchableOpacity
               style={styles.InnerText}
               onPress={() => getLink.getLink('downloadVismobile')}>
               <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.InnerText}>DOWNLOAD VISMOBILE APP</Text>
             </TouchableOpacity>
-            }
+            
             <View style={styles.Cell_Close}>
               <TouchableOpacity
                 style={{ alignItems: 'center' }}

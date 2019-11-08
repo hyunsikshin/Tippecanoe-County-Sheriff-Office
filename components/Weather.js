@@ -10,8 +10,6 @@ import Snow from '../assets/weather/weather-snowy';
 import Drizzle from '../assets/weather/weather-hail';
 import Mist from '../assets/weather/weather-fog';
 
-
-
 function Weather({ temp, city, weatherName }) {
   switch (weatherName) {
     case 'Rain':
@@ -90,30 +88,19 @@ function Weather({ temp, city, weatherName }) {
 }
 export default Weather;
 
-
-
 Weather.propTypes = {
   temp: PropTypes.number.isRequired,
 };
-
 
 const styles = StyleSheet.create({
   container: {
     display: 'flex',
     flexDirection: 'row',
-    alignContent: 'center',
     justifyContent: 'center',
-    fontSize: 20,
   },
   temp: {
     marginLeft: 5,
     fontSize: 20,
     color: 'black',
-    
-  },
-  vertical_con: {
-    marginLeft: 5,
-    display: 'flex',
-    flexDirection: 'column',
   },
 });

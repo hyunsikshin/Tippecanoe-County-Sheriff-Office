@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Dimensions } from 'react-native';
+import { Text, View, Dimensions ,Alert , Platform} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import {
   FontAwesome,
@@ -97,14 +97,16 @@ class ButtonSet extends Component {
             height={styles.icon_size.height}
             width={styles.icon_size.width}
             onPress={() =>
-              getLink.openView('ModalView', 'ModalVideoVisitation')
+             
+                Platform.OS == 'ios' ? Alert.alert("Not Service Yet") :
+                  getLink.openView('ModalView', 'ModalVideoVisitation')
             }
           />
           {this.state.fontLoaded ? (
             <Text style={styles.text}>Video Visitation</Text>
           ) : null}
         </View>
-
+        
         <View style={styles.cell}>
           <VisitationPolicy
             height={styles.icon_size.height}
@@ -317,14 +319,13 @@ const styles = EStyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     backgroundColor: '#ced6e0',
-    padding: 15,
+    padding: 20,
   },
   cell: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: '100rem',
-    height: '100rem',
-    margin: 0,
+    width: '110rem',
+    height: '110rem',
     backgroundColor: 'white',
   },
   text: {
