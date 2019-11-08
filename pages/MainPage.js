@@ -56,7 +56,7 @@ class MainPage extends Component {
   }
 
   handleBackButtonClick() {
-    return true;
+    return false;
   }
 
   static navigationOptions = {
@@ -103,6 +103,7 @@ class MainPage extends Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
+      <View>
       <ScrollView style={{ backgroundColor: '#f1f2f6' }}>
         <View style={styles.container}>
           <View style={styles.horizontal}>
@@ -120,7 +121,7 @@ class MainPage extends Component {
           <QnA />
           <View style={styles.space}></View>
           <ButtonSet />
-          {ControllContainer.getInstance().checkModal()}
+          
 
           <View style={{ marginTop: 10, marginBottom: 10 }}>
             <Text>
@@ -139,6 +140,8 @@ class MainPage extends Component {
           </View>
         </View>
       </ScrollView>
+      {ControllContainer.getInstance().checkModal()}
+      </View>
     );
   }
 }

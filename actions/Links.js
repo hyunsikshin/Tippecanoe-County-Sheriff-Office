@@ -1,5 +1,5 @@
 
-  Lafayette = {
+  const  Lafayette = {
   phoneDirectory: 'https://www.tippecanoe.in.gov/Directory.aspx?did=43',
   
   jobApply: 'https://www.tippecanoe.in.gov/470/Employment',
