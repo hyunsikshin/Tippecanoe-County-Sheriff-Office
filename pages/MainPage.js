@@ -31,11 +31,7 @@ class MainPage extends Component {
 
   //sendEmail(e-mail address, title, content)
   contactUsEmail = () => {
-    sendEmail(
-      'hyunsik.dev@gmail.com',
-      'Developement Request',
-      ''
-    );
+    sendEmail('hyunsik.dev@gmail.com', 'Developement Request', '');
   };
 
   constructor(props) {
@@ -90,7 +86,8 @@ class MainPage extends Component {
 
   _getWeather = (lat, lon) => {
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${API_KEY}`
+      //`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${API_KEY}`
+      `http://api.openweathermap.org/data/2.5/weather?lat=40.426056&lon=-86.909653&APPID=${API_KEY}`
     )
       .then(response => response.json())
       .then(json => {
@@ -116,13 +113,6 @@ class MainPage extends Component {
               city={this.state.city}
               weatherName={this.state.name}
             />
-            { <Down
-              style={styles.btn}
-              height="30"
-              width="30"
-              name="down"
-              onPress={() => navigate('SearchPage')}
-            /> }
           </View>
           <View style={styles.space}></View>
           <Logo width={width} height={height * 0.25} />
@@ -131,21 +121,37 @@ class MainPage extends Component {
           <View style={styles.space}></View>
           <ButtonSet />
           {ControllContainer.getInstance().checkModal()}
-          
-          <View style={{marginTop: 10, marginBottom: 10}}>
-          <Text>
-            <Text style={{marginRight : 100}}
-              onPress={() => navigate('CopyRightPage')}>CopyRight</Text>  |{"  "}
-            <Text style={{marginLeft : 100}}
-              onPress={() => this.contactUsEmail()}>Contact Us</Text>
+
+          <View style={{ marginTop: 10, marginBottom: 10 }}>
+            <Text>
+              <Text
+                style={{ marginRight: 100 }}
+                onPress={() => navigate('CopyRightPage')}>
+                CopyRight
+              </Text>{' '}
+              |{'  '}
+              <Text
+                style={{ marginLeft: 100 }}
+                onPress={() => this.contactUsEmail()}>
+                Contact Us
+              </Text>
             </Text>
           </View>
-
         </View>
       </ScrollView>
     );
   }
 }
+
+/*
+  { <Down
+              style={styles.btn}
+              height="30"
+              width="30"
+              name="down"
+              onPress={() => navigate('SearchPage')}
+            /> }
+*/
 
 export default MainPage;
 

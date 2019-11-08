@@ -59,10 +59,14 @@ const Lafayette = {
   socialmediaIcon: 'https://www.flaticon.com/authors/ddara',
   eventsecurityIcon: 'https://www.flaticon.com/authors/freepik',
   weatherIcon: 'https://www.flaticon.com/authors/freepik',
+<<<<<<< HEAD
   FAQ:'https://www.tippecanoe.in.gov/faq.aspx',
 
 
 
+=======
+  
+>>>>>>> df4eedd2d7bd4d0c9fe8bb11cfedf98d8f96769d
 };
 
 const Clinton = {

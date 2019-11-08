@@ -44,7 +44,7 @@ class ButtonSet extends Component {
   // e-mail address will be changed
   extraPatrolRequestEmail = () => {
     sendEmail(
-      'bj.max.lim@gmail.com',
+      'tcsodispatch@tippecanoe.in.gov',
       'Extra Patrol Request',
       'Name of requestor : \nAddress of request : \nRequestor phone number : \n\nDescription of problem : \nLocation of problem : \nTimes occurring : \nRequest start date : \nRequest end date : \n\nAny additional details of request : \n'
     );
@@ -53,18 +53,18 @@ class ButtonSet extends Component {
   // Contents and e-mail address will be changed
   eventSecurityEmail = () => {
     sendEmail(
-      'bj.max.lim@gmail.com',
+      'rwhainje@tippecanoe.in.gov',
       'Event Security',
-      'Name : \nData : \nAddress : \nZip code : \nPhone number : \n'
+      'Name of requestor : \nAddress of request : \nRequestor phone number : \n\nDescription of problem : \nLocation of problem : \nTimes occurring : \nRequest start date : \nRequest end date : \n\nAny additional details of request : \n'
     );
   };
 
   // Contents and e-mail address will be changed
   trafficComplaintsEmail = () => {
     sendEmail(
-      'bj.max.lim@gmail.com',
+      'traffic@tippecanoe.in.gov',
       'Traffic Complaints',
-      'Name : \nData : \nAddress : \nZip code : \nPhone number : \n'
+      'Name of requestor : \nAddress of request : \nRequestor phone number : \n\nDescription of problem : \nLocation of problem : \nTimes occurring : \nRequest start date : \nRequest end date : \n\nAny additional details of request : \n'
     );
   };
 
