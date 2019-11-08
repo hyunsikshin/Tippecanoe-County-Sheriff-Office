@@ -1,4 +1,4 @@
-class Lafayette {
+
   Lafayette = {
   phoneDirectory: 'https://www.tippecanoe.in.gov/Directory.aspx?did=43',
   
@@ -61,8 +61,8 @@ class Lafayette {
   eventsecurityIcon: 'https://www.flaticon.com/authors/freepik',
   weatherIcon: 'https://www.flaticon.com/authors/freepik',
   };
-}
 
+/*
 const Clinton = {
   phoneDirectory: 'https://www.clintoncountysheriff.com/contact-us/',
   
@@ -150,10 +150,8 @@ const empty = {
   instagram: '',
   twitter: '',
 };
-
+*/
 
 export default {
   Lafayette,
-  //Clinton,
-
 };

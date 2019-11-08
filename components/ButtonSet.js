@@ -97,8 +97,7 @@ class ButtonSet extends Component {
             height={styles.icon_size.height}
             width={styles.icon_size.width}
             onPress={() =>
-             
-                Platform.OS == 'ios' ? Alert.alert("Not Service Yet") :
+                Platform.OS == 'ios' ? getLink.getLink('videoVisitationWeb') :
                   getLink.openView('ModalView', 'ModalVideoVisitation')
             }
           />

@@ -14,10 +14,6 @@ const getLink = {
     switch (ControllContainer.getInstance().location) {
       case 'Lafayette':
         str = constants.Lafayette[event];
-      case 'Clinton':
-        //str = constants.Clinton[event];
-     // default :
-      //Alert.alert(ControllContainer.getInstance().location);
     }
  
     if(str == 'Null')
