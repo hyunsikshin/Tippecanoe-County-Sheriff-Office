@@ -1,6 +1,6 @@
 const Lafayette = {
   phoneDirectory: 'https://www.tippecanoe.in.gov/Directory.aspx?did=43',
-
+  
   jobApply: 'https://www.tippecanoe.in.gov/470/Employment',
   sexOffenders: 'http://www.icrimewatch.net/index.php?AgencyID=54758',
   immateLookup: 'http://www3.tippecanoe.in.gov/InmateListing/InmateSearch.aspx',
@@ -15,7 +15,7 @@ const Lafayette = {
   administration: 'tel:7654239388',
   dispatch: 'tel:7654239321',
   jail: 'tel:7654231655',
-  juvenile: 'tel:7652694025',
+  juvenile : 'tel:7652694025',
 
   sheriffsSaleGuideline:
     'https://www.tippecanoe.in.gov/DocumentCenter/View/740/Sheriff-Sale-Guidelines-PDF?bidId=',
@@ -29,6 +29,7 @@ const Lafayette = {
   securityRequest: 'rwhainje@tippecanoe.in.gov',
   extraPatrolRequest: 'tcsodispatch@tippecanoe.in.gov',
 
+
   taxWarrants: 'http://www.tippecanoe.in.gov/480/Tax-Warrants',
   privacyPolicy:
     'https://github.com/canis617/Tippecanoe-County-Sheriff-App/blob/develop2/privacy_policy.md',
@@ -37,7 +38,7 @@ const Lafayette = {
   facebook: 'https://www.facebook.com/TCSOIndiana',
   instagram: 'https://www.instagram.com/tcso79/',
   twitter: 'https://twitter.com/tippecanoecosh1',
-
+  
   FlatIcon: 'https://www.flaticon.com/',
   inmatelookupIcon: 'https://www.flaticon.com/authors/freepik',
   videovisitationIcon: 'https://www.flaticon.com/authors/phatplus',
@@ -58,11 +59,12 @@ const Lafayette = {
   socialmediaIcon: 'https://www.flaticon.com/authors/ddara',
   eventsecurityIcon: 'https://www.flaticon.com/authors/freepik',
   weatherIcon: 'https://www.flaticon.com/authors/freepik',
+  
 };
 
 const Clinton = {
   phoneDirectory: 'https://www.clintoncountysheriff.com/contact-us/',
-
+  
   jobApply: 'https://www.clintoncountysheriff.com/resources/employment/',
   sexOffenders: 'http://www.clintoncountysheriff.com/sex-offender-registry/',
   immateLookup: 'https://www.clintoncountysheriff.com/inmate-lookup/',
@@ -77,15 +79,14 @@ const Clinton = {
   administration: 'tel:7656596393',
   dispatch: 'tel:7656545563',
   jail: 'tel:7656596333',
-  juvenile: 'Null',
+  juvenile : 'Null',
 
   sheriffsSaleGuideline:
     'https://www.clintoncountysheriff.com/resources/sheriff-sales/',
   sheriffsSaleListing:
     'https://legacy.sri-taxsale.com/Foreclosure/PropertyListing.aspx?county=CLINTON',
   gunPermits: 'https://www.clintoncountysheriff.com/index.php?s=gun+permit',
-  crashReports:
-    'http://www.clintoncountysheriff.com/resources/accident-reports/',
+  crashReports: 'http://www.clintoncountysheriff.com/resources/accident-reports/',
   recordsRequest: 'Null',
   animalControl: 'Null',
 
@@ -94,18 +95,19 @@ const Clinton = {
   extraPatrolRequest: 'Null',
 
   taxWarrants: 'http://www.clintoncountysheriff.com/resources/tax-warrants/',
-  privacyPolicy: 'Null',
+  privacyPolicy:
+    'Null',
   qna: 'Null',
 
   facebook: 'https://www.facebook.com/ccsheriff/',
-  instagram:
-    'https://www.instagram.com/explore/locations/1016008225/united-states/frankfort-indiana/clinton-county-sheriffs-office/?hl=tl',
+  instagram: 'https://www.instagram.com/explore/locations/1016008225/united-states/frankfort-indiana/clinton-county-sheriffs-office/?hl=tl',
   twitter: 'https://twitter.com/clintonsheriff',
 };
 
+
 const empty = {
   phoneDirectory: '',
-
+  
   jobApply: '',
   sexOffenders: '',
   immateLookup: '',
@@ -113,7 +115,8 @@ const empty = {
   videoVisitationWeb: '',
   visMobile: 'Null',
   downloadVismobile: '',
-  visitationPolicy: '',
+  visitationPolicy:
+    '',
   weTip: '',
 
   //전화번호
@@ -121,10 +124,12 @@ const empty = {
   administration: 'tel:',
   dispatch: 'tel:',
   jail: 'tel:',
-  juvenile: 'tel:',
+  juvenile : 'tel:',
 
-  sheriffsSaleGuideline: '',
-  sheriffsSaleListing: '',
+  sheriffsSaleGuideline:
+    '',
+  sheriffsSaleListing:
+    '',
   gunPermits: '',
   crashReports: '',
   recordsRequest: '',
@@ -134,8 +139,10 @@ const empty = {
   securityRequest: '@',
   extraPatrolRequest: '@',
 
+
   taxWarrants: '',
-  privacyPolicy: '',
+  privacyPolicy:
+    '',
   qna: '',
 
   facebook: '',
@@ -143,7 +150,9 @@ const empty = {
   twitter: '',
 };
 
+
 export default {
   Lafayette,
-  Clinton,
+  //Clinton,
+
 };
