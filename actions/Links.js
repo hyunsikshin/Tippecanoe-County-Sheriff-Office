@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
   const  Lafayette = {
+=======
+  Lafayette = {
+>>>>>>> 6f8be73b6423bd87222d0628a04d944f36e3b66e
   phoneDirectory: 'https://www.tippecanoe.in.gov/Directory.aspx?did=43',
   
   jobApply: 'https://www.tippecanoe.in.gov/470/Employment',
@@ -17,6 +21,8 @@
   dispatch: 'tel:7654239321',
   jail: 'tel:7654231655',
   juvenile : 'tel:7652694025',
+  
+
 
   sheriffsSaleGuideline:
     'https://www.tippecanoe.in.gov/DocumentCenter/View/740/Sheriff-Sale-Guidelines-PDF?bidId=',
@@ -60,6 +66,15 @@
   socialmediaIcon: 'https://www.flaticon.com/authors/ddara',
   eventsecurityIcon: 'https://www.flaticon.com/authors/freepik',
   weatherIcon: 'https://www.flaticon.com/authors/freepik',
+
+  vtc:'http://www.tippecanoe.in.gov/885/Veterans-Treatment-Court',
+  pothole:'http://www.tippecanoe.in.gov/576/Report-a-Pot-Hole',
+  waste: 'http://www.tippecanoewaste.org',
+  wastephone: 'tel:765-423-2858',
+  LafayetteParksDept: 'tel:765-807-1500',
+  WestLafayetteParkDept: 'tel:765-775-5110',
+  ProphetstownStatePark: 'tel:866-622-6746',
+  TippecanoeCountyParkAdministrationDept: 'tel:765-423-2306',
   };
 
 /*
