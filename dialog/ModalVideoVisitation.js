@@ -38,17 +38,7 @@ export default class BasicModalB extends Component {
               >GTL VIDEO VISITATION WEB</Text>
             </TouchableOpacity>
        
-            <TouchableOpacity
-              style={styles.InnerText}
-              onPress={() =>
-                Linking.openURL('FaceBook://app')
-                //ToastAndroid.show(
-                //  'There is no App on your device',
-                //  ToastAndroid.SHORT
-              }>
-              <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.InnerText}>OPEN THE VISMOBILE APP</Text>
-            </TouchableOpacity>
-
+           
             <TouchableOpacity
               style={styles.InnerText}
               onPress={() => getLink.getLink('downloadVismobile')}>
@@ -68,3 +58,18 @@ export default class BasicModalB extends Component {
     );
   }
 }
+
+/*
+
+ <TouchableOpacity
+              style={styles.InnerText}
+              onPress={() =>
+                Linking.openURL('FaceBook://app')
+                //ToastAndroid.show(
+                //  'There is no App on your device',
+                //  ToastAndroid.SHORT
+              }>
+              <Text adjustsFontSizeToFit  numberOfLines={1} style={styles.InnerText}>OPEN THE VISMOBILE APP</Text>
+            </TouchableOpacity>
+
+*/ 

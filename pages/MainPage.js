@@ -88,6 +88,7 @@ class MainPage extends Component {
     }
   }
 
+
   _getWeather = (lat, lon) => {
     fetch(
       `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${API_KEY}`
@@ -116,13 +117,6 @@ class MainPage extends Component {
               city={this.state.city}
               weatherName={this.state.name}
             />
-            { <Down
-              style={styles.btn}
-              height="30"
-              width="30"
-              name="down"
-              onPress={() => navigate('SearchPage')}
-            /> }
           </View>
           <View style={styles.space}></View>
           <Logo width={width} height={height * 0.25} />
@@ -146,6 +140,17 @@ class MainPage extends Component {
     );
   }
 }
+
+
+/*
+  { <Down
+              style={styles.btn}
+              height="30"
+              width="30"
+              name="down"
+              onPress={() => navigate('SearchPage')}
+            /> }
+*/
 
 export default MainPage;
 
