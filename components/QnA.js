@@ -4,6 +4,7 @@ import DropDownItem from 'react-native-drop-down-item';
 import down from '../assets/down.png';
 import up from '../assets/up.png';
 import Megaphone from '../assets/megaphone.svg';
+import getLink from '../actions/getLink';
 
 class QnA extends Component {
   state = {
@@ -12,26 +13,91 @@ class QnA extends Component {
         title: '  Top 5 Frequently Ask Questions',
         body:
         
-        <Text style={styles.boldtext}>1. Why should I get my pet spayed/neutered?
+        <Text style={styles.boldtext}>1. What are the different types of severe weather alerts and what do they mean?
         <Text style={styles.normaltext}>{` 
- Spaying a dog or cat before their 1st heat cycle virtually eliminates the possibility of the pet getting mammary (breast) cancer. Neutering will eliminate the possibility of the pet getting testicular cancer and greatly cut down on any prostate problems. Spaying and neutering sterilizes the animal and thus reduces unwanted litters. It also may reduce undesirable behaviors such as spraying, marking, aggression towards other animals, roaming and mating behaviors. Please call 765-423-9388 for more information.
+ SPS or Special Weather Statement is issued in anticipation of hazardous weather as far out as 5-7days in advance. These can also be used to clear counties from severe weather watches.
+ `}{`Severe Thunderstorm Watch is issued when thunderstorms are possible in the watch area. severe Thunderstorm Warning is issued when sever thunderstorms are occurring or imminent in the warning area. Find more information on the TEMA page.
+ `}{`
  `}</Text>
-        <Text style={styles.boldtext}>2. Where do I get a building permit?</Text>
+        <Text style={styles.boldtext}>2. Where can I recycle hazardous household waste?</Text>
         <Text style={styles.normaltext}>{`
- If you reside inside the city limits of Lafayette, call 765-807-1050. If you reside inside the city limits of West Lafayette, call 765-775-5130. If you reside in Union Township, call 765-477-0116. If you reside outside any of these areas, you would be considered to be in the county, call 765-423-9225. If you reside in Battle Ground, Clarks Hill or Dayton call the Area Plan Commission at 765-423-9242.
- `}</Text>
-        <Text style={styles.boldtext}>3. What happens if I miss my Court date?</Text>
+ For information on how and where to dispose of hazardous cleaning cleaners, batteries, solvents, etc. Please see the Tippecanoe County Solid Waste Management District website at the following web address:
+ `}
+ <Text style={styles.underlinestyle}
+ onPress={() => {
+   getLink.getLink('waste');
+ }}
+>http://www.tippecanoewaste.org</Text>
+{` or call them at`}
+<Text style={styles.underlinestyle}
+ onPress={() => {
+   getLink.getLink('wastephone');
+ }}
+>{` 765-423-2858
+`}</Text>
+</Text>{`
+ `}
+        <Text style={styles.boldtext}>3. Where can I reserve a picnic shelter for a family gathering?</Text>
         <Text style={styles.normaltext}>{`
- Court is not an appointment that can be missed or rescheduled. If you miss your court date for a criminal case, a warrant may be issued for your arrest. If the hearing is not a criminal matter, you will likely lose the case by default. If you have a serious reason why you cannot go to court on the assigned day, please contact the court in advance of the date. Some of the courts in Tippecanoe County require you to request a schedule change in writing.
- `}</Text>
-        <Text style={styles.boldtext}>4. Does every death involve the coroner?</Text>
+ Lafayette, West Lafayette, Tippecanoe County, and Prophetstown State Park all have picnic shelters available. Some require fees. Use the the following contact information to locate and reserve a shelter:
+ `}{
+ `Lafayette Parks Dept.`}
+ <Text style={styles.underlinestyle}
+ onPress={() => {
+   getLink.getLink('LafayetteParksDept');
+ }}
+>{`765-807-1500
+`}</Text>
+
+ {`
+ West Lafayette Park Dept.`}
+ <Text style={styles.underlinestyle}
+ onPress={() => {
+   getLink.getLink('WestLafayetteParkDept');
+ }}
+>{`765-775-5110
+`}</Text>
+
+ {`
+ Prophetstown State Park`}
+ <Text style={styles.underlinestyle}
+ onPress={() => {
+   getLink.getLink('ProphetstownStatePark');
+ }}
+>{`866-622-6746
+`}</Text>
+
+ {`
+ For all county shelters please call the Tippecanoe County Park Administration Dept.`}
+ <Text style={styles.underlinestyle}
+ onPress={() => {
+   getLink.getLink('TippecanoeCountyParkAdministrationDept');
+ }}
+>{`765-423-2306
+`}</Text>
+
+ </Text>{`
+ `}
+        <Text style={styles.boldtext}>4. Veterans Treatment Court- Where can I get more information</Text>
         <Text style={styles.normaltext}>{`
- Coroners have jurisdiction over all deaths that occur in their county under suspicious, unusual or unnatural circumstances. The Coroner may also be involved in natural deaths that were unattended by a physician. The Coroner will actually investigate approximately 12% of the deaths in their county and 60% of those may be natural deaths.
- `}</Text>
-        <Text style={styles.boldtext}>5. What is a CASA volunteer?</Text>
+ Follow this link to locate the `}<Text style={styles.underlinestyle}
+ onPress={() => {
+   getLink.getLink('vtc');
+ }}
+>VTC web page</Text>
+{` and contact information.
+`}</Text>{`
+`}
+        <Text style={styles.boldtext}>5.Where Can I Report a Pothole?</Text>
         <Text style={styles.normaltext}>{`
- A Court Appointed Special Advocate (CASA) volunteer is a trained citizen who is appointed by a judge to represent the best interests of a child in court. Children helped by CASA volunteers include those for whom home placement is being determined in juvenile court. Most of the children are victims of abuse and neglect. Please call 765-423-9109 for more information.
- `}</Text>
+ Follow this `}
+ <Text style={styles.underlinestyle}
+ onPress={() => {
+   getLink.getLink('pothole');
+ }}
+>link</Text>
+{` to the Tippecanoe County Highway page and you can report a pothole.
+`}</Text>
 </Text>
         
           
@@ -102,7 +168,8 @@ const styles = StyleSheet.create({
   },
 
   boldtext:{
-    fontWeight:'bold'
+    fontWeight:'bold',
+    fontSize:20
 
   },
   icon_size: {
@@ -110,6 +177,11 @@ const styles = StyleSheet.create({
     height: 20,
     
   },
+
+  underlinestyle:{
+    color:'blue'
+  },
+  
   qna: {
    display : 'flex',
    flexDirection : 'row',
