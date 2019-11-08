@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Sheriff",
-    "slug": "sheriff",
+    "name": "Tippecanoe County Sheriff's Office",
+    "slug": "tippecanoe-county-sheriff-office",
     "privacy": "public",
     "sdkVersion": "34.0.0",
     "platforms": [
@@ -25,7 +25,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "edu.purdue.sheriff"
+      "bundleIdentifier": "com.tippsranger.tippecanoe"
     },
     "android": {
       "package": "com.tippsranger.tippecanoe_county_sheriff_app",
