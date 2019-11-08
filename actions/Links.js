@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 
   const  Lafayette = {
-=======
-  Lafayette = {
->>>>>>> 6f8be73b6423bd87222d0628a04d944f36e3b66e
   phoneDirectory: 'https://www.tippecanoe.in.gov/Directory.aspx?did=43',
   
   jobApply: 'https://www.tippecanoe.in.gov/470/Employment',
