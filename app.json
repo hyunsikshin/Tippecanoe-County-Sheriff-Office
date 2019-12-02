@@ -9,7 +9,7 @@
       "android",
       "web"
     ],
-    "version": "1.1.0",
+    "version": "1.1.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -29,6 +29,7 @@
     },
     "android": {
       "package": "com.tippsranger.tippecanoe_county_sheriff_app",
+      "versionCode": 10,
       "permissions": [
         "ACCESS_COARSE_LOCATION",
         "ACCESS_FINE_LOCATION",
