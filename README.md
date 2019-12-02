@@ -1,11 +1,11 @@
 # Tippecanoe County Sheriff's Office
 
-The application developed to help sheriff in Tippecanoe county.
+This application developed to help sheriff in Tippecanoe county.
 
 ## Team iCorn
 
 - Team Leader <b>Hyunsik Shin</b> ([Github](https://github.com/hyunsikshin), [Linkedin](https://www.linkedin.com/in/%ED%98%84%EC%8B%9D-%EC%8B%A0-84619379/))
-- Developer <b>Byounjoon Im</b>
+- Developer <b>Byoungjoon Im</b> ([Github](https://github.com/ByoungJoonIm))
 - Developer <b>Jungmin Son</b>
 - Developer <b>Mingyun Oh</b>
 - Developer <b>Suji Lee</b>
@@ -23,7 +23,7 @@ The application developed to help sheriff in Tippecanoe county.
 
 ## Quick Overview
 
-This project is made of React Native.
+This project is made by React Native.
 Make sure you have Node v6 or later installed. No Xcode or Android Studio installation is required.
 
 ```sh
