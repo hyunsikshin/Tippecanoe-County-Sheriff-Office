@@ -7,6 +7,7 @@ import {
   ScrollView,
   Dimensions,
   BackHandler,
+  StatusBar,
 } from 'react-native';
 import Weather from '../components/Weather';
 import ControllContainer from '../actions/ControllContainer';
@@ -106,6 +107,7 @@ class MainPage extends Component {
       <View>
       <ScrollView style={{ backgroundColor: '#f1f2f6' }}>
         <View style={styles.container}>
+        <StatusBar backgroundColor="blue" barStyle="dark-content" />
           <View style={styles.horizontal}>
             <Weather
               temp={Math.ceil(
