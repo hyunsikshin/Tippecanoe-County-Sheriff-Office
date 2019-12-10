@@ -4,12 +4,8 @@
     "slug": "tippecanoe-county-sheriff-office",
     "privacy": "public",
     "sdkVersion": "34.0.0",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
-    "version": "1.1.1",
+    "platforms": ["ios", "android", "web"],
+    "version": "1.1.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -20,16 +16,14 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.tippsranger.tippecanoe"
     },
     "android": {
       "package": "com.tippsranger.tippecanoe_county_sheriff_app",
-      "versionCode": 10,
+      "versionCode": 11,
       "permissions": [
         "ACCESS_COARSE_LOCATION",
         "ACCESS_FINE_LOCATION",
