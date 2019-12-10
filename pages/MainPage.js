@@ -3,7 +3,7 @@ import {
   StyleSheet,
   Text,
   View,
-  Button,
+  Alert,
   ScrollView,
   Dimensions,
   BackHandler,
@@ -79,10 +79,11 @@ class MainPage extends Component {
 
   countUpClickButton() {
     this.state.myCount = this.state.myCount + 1;
-    if (this.state.myCount >= 10) {
-      this.state.myCount = 0;
-      ControllContainer.getInstance().openViewName('Email', null);
+    if (this.state.myCount >= 12) {
+         this.state.myCount = 0;
+         getLink.openView('ModalView', 'ModalEasterEgg')
     }
+   
   }
 
   _getWeather = (lat, lon) => {
@@ -118,7 +119,7 @@ class MainPage extends Component {
             />
           </View>
           <View style={styles.space}></View>
-          <Logo width={width} height={height * 0.25} />
+          <Logo onPress={() => this.countUpClickButton()} width={width} height={height * 0.25} />
           <View style={styles.space}></View>
           <QnA />
           <View style={styles.space}></View>

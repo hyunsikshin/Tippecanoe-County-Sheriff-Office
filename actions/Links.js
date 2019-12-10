@@ -58,10 +58,20 @@
   contactsusIcon: 'https://www.flaticon.com/authors/surang',
   careerIcon: 'https://www.flaticon.com/authors/itim2101',
   animalcontrolIcon: 'https://www.flaticon.com/authors/freepik',
-  extrapatrolrequestIcon: 'https://www.flaticon.com/authors/icongeek26',
+  extrapatrolrequestIcon: 'https://www.flaticon.com/authors/becris',
   socialmediaIcon: 'https://www.flaticon.com/authors/ddara',
   eventsecurityIcon: 'https://www.flaticon.com/authors/freepik',
   weatherIcon: 'https://www.flaticon.com/authors/freepik',
+
+
+  
+  ByongJoonLink: 'https://github.com/ByoungJoonIm',
+  SujiLink : 'https://github.com/suji9787',
+  MingyunLink : 'https://github.com/OMGlikes',
+  JungminLink : 'https://www.linkedin.com/in/%EC%A0%95%EB%AF%BC-%EC%86%90-2a641a194/',
+  HyunsikLink : 'https://www.linkedin.com/in/%ED%98%84%EC%8B%9D-%EC%8B%A0-84619379/',
+
+
 
   vtc:'http://www.tippecanoe.in.gov/885/Veterans-Treatment-Court',
   pothole:'http://www.tippecanoe.in.gov/576/Report-a-Pot-Hole',

@@ -6,7 +6,7 @@ This application developed to help sheriff in Tippecanoe county.
 
 - Team Leader <b>Hyunsik Shin</b> ([Github](https://github.com/hyunsikshin), [Linkedin](https://www.linkedin.com/in/%ED%98%84%EC%8B%9D-%EC%8B%A0-84619379/))
 - Developer <b>Byoungjoon Im</b> ([Github](https://github.com/ByoungJoonIm))
-- Developer <b>Jungmin Son</b>
+- Developer <b>Jungmin Son</b> ([Github](https://github.com/jungmin3834), [Linkedin](https://www.linkedin.com/in/%EC%A0%95%EB%AF%BC-%EC%86%90-2a641a194/))
 - Developer <b>Mingyun Oh</b>
 - Developer <b>Suji Lee</b>
 

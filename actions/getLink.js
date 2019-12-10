@@ -10,7 +10,6 @@ const getLink = {
   
   getLink: function(event) {
     let str = '';
-    
     switch (ControllContainer.getInstance().location) {
       case 'Lafayette':
         str = constants.Lafayette[event];

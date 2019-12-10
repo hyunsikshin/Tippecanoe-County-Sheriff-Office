@@ -311,7 +311,7 @@ class CopyRightPage extends Component {
           <Text>Icon made by 
             <Text style={styles.underlinestyle}
             onPress={() => {
-              getLink.getLink('extrapatrolrequestlIcon');
+              getLink.getLink('extrapatrolrequestIcon');
             }}
           >Becris </Text>
              from 

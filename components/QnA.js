@@ -10,7 +10,7 @@ class QnA extends Component {
   state = {
     contents: [
       {
-        title: '  Top 5 Frequently Ask Questions',
+        title: '  Top 5 Frequently Asked Questions',
         body:
         
         <Text style={styles.boldtext}>1. What are the different types of severe weather alerts and what do they mean?
