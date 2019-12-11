@@ -68,8 +68,8 @@
   ByongJoonLink: 'https://github.com/ByoungJoonIm',
   SujiLink : 'https://github.com/suji9787',
   MingyunLink : 'https://github.com/OMGlikes',
-  JungminLink : 'https://www.linkedin.com/in/%EC%A0%95%EB%AF%BC-%EC%86%90-2a641a194/',
-  HyunsikLink : 'https://www.linkedin.com/in/%ED%98%84%EC%8B%9D-%EC%8B%A0-84619379/',
+  JungminLink : 'https://github.com/jungmin3834',
+  HyunsikLink : 'https://github.com/hyunsikshin',
 
 
 
