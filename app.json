@@ -19,7 +19,7 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.tippsranger.tippecanoe"
+      "bundleIdentifier": "com.tippecanoe.sheriff"
     },
     "android": {
       "package": "com.tippsranger.tippecanoe_county_sheriff_app",
