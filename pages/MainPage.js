@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   StyleSheet,
   Text,
@@ -7,18 +7,18 @@ import {
   ScrollView,
   Dimensions,
   BackHandler,
-  StatusBar,
-} from 'react-native';
-import Weather from '../components/Weather';
-import ControllContainer from '../actions/ControllContainer';
-import Logo from '../assets/logo.svg';
-import ButtonSet from '../components/ButtonSet';
-import QnA from '../components/QnA';
-import getLink from '../actions/getLink';
-import Down from '../assets/buttonIcons/List.svg';
-import { sendEmail } from '../actions/SendEmail';
+  StatusBar
+} from "react-native";
+import Weather from "../components/Weather";
+import ControllContainer from "../actions/ControllContainer";
+import Logo from "../assets/logo.svg";
+import ButtonSet from "../components/ButtonSet";
+import QnA from "../components/QnA";
+import getLink from "../actions/getLink";
+import Down from "../assets/buttonIcons/List.svg";
+import { sendEmail } from "../actions/SendEmail";
 
-const API_KEY = 'e02b7ad151e0ceafbbe427b2ac4dbc2f'; //날씨 api key
+const API_KEY = "e02b7ad151e0ceafbbe427b2ac4dbc2f"; //날씨 api key
 
 class MainPage extends Component {
   state = {
@@ -27,31 +27,31 @@ class MainPage extends Component {
     error: null,
     name: null,
     city: null,
-    tempertature: null,
+    tempertature: null
   };
 
   //sendEmail(e-mail address, title, content)
   contactUsEmail = () => {
-    sendEmail('hyunsik.dev@gmail.com', 'Developement Request', '');
+    sendEmail("hyunsik.dev@gmail.com", "Developement Request", "");
   };
 
   constructor(props) {
     super(props);
-    ControllContainer.getInstance().intitObject('', this);
+    ControllContainer.getInstance().intitObject("", this);
     console.disableYellowBox = true;
     this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
   }
 
   componentWillMount() {
     BackHandler.addEventListener(
-      'hardwareBackPress',
+      "hardwareBackPress",
       this.handleBackButtonClick
     );
   }
 
   componentWillUnmount() {
     BackHandler.removeEventListener(
-      'hardwareBackPress',
+      "hardwareBackPress",
       this.handleBackButtonClick
     );
   }
@@ -61,7 +61,7 @@ class MainPage extends Component {
   }
 
   static navigationOptions = {
-    header: null,
+    header: null
   };
 
   componentDidMount() {
@@ -71,7 +71,7 @@ class MainPage extends Component {
       },
       error => {
         this.setState({
-          error: error,
+          error: error
         });
       }
     );
@@ -80,16 +80,14 @@ class MainPage extends Component {
   countUpClickButton() {
     this.state.myCount = this.state.myCount + 1;
     if (this.state.myCount >= 12) {
-         this.state.myCount = 0;
-         getLink.openView('ModalView', 'ModalEasterEgg')
+      this.state.myCount = 0;
+      getLink.openView("ModalView", "ModalEasterEgg");
     }
-   
   }
 
   _getWeather = (lat, lon) => {
     fetch(
-      //`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${API_KEY}`
-      `http://api.openweathermap.org/data/2.5/weather?lat=40.426056&lon=-86.909653&APPID=${API_KEY}`
+      `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${API_KEY}`
     )
       .then(response => response.json())
       .then(json => {
@@ -97,7 +95,7 @@ class MainPage extends Component {
           city: json.name,
           name: json.weather[0].main,
           tempertature: json.main.temp,
-          isLoaded: true,
+          isLoaded: true
         });
       });
   };
@@ -106,44 +104,49 @@ class MainPage extends Component {
     const { navigate } = this.props.navigation;
     return (
       <View>
-      <ScrollView style={{ backgroundColor: '#f1f2f6' }}>
-        <View style={styles.container}>
-        <StatusBar backgroundColor="blue" barStyle="dark-content" />
-          <View style={styles.horizontal}>
-            <Weather
-              temp={Math.ceil(
-                ((this.state.tempertature - 273.15) * 9) / 5 + 32
-              )}
-              city={this.state.city}
-              weatherName={this.state.name}
+        <ScrollView style={{ backgroundColor: "#f1f2f6" }}>
+          <View style={styles.container}>
+            <StatusBar backgroundColor="blue" barStyle="dark-content" />
+            <View style={styles.horizontal}>
+              <Weather
+                temp={Math.ceil(
+                  ((this.state.tempertature - 273.15) * 9) / 5 + 32
+                )}
+                city={this.state.city}
+                weatherName={this.state.name}
+              />
+            </View>
+            <View style={styles.space}></View>
+            <Logo
+              onPress={() => this.countUpClickButton()}
+              width={width}
+              height={height * 0.25}
             />
-          </View>
-          <View style={styles.space}></View>
-          <Logo onPress={() => this.countUpClickButton()} width={width} height={height * 0.25} />
-          <View style={styles.space}></View>
-          <QnA />
-          <View style={styles.space}></View>
-          <ButtonSet />
-          
+            <View style={styles.space}></View>
+            <QnA />
+            <View style={styles.space}></View>
+            <ButtonSet />
 
-          <View style={{ marginTop: 10, marginBottom: 10 }}>
-            <Text>
-              <Text
-                style={{ marginRight: 100 }}
-                onPress={() => navigate('CopyRightPage')}>
-                CopyRight
-              </Text>{' '}
-              |{'  '}
-              <Text
-                style={{ marginLeft: 100 }}
-                onPress={() => this.contactUsEmail()}>
-                Contact Us
+            <View style={{ marginTop: 10, marginBottom: 10 }}>
+              <Text>
+                <Text
+                  style={{ marginRight: 100 }}
+                  onPress={() => navigate("CopyRightPage")}
+                >
+                  CopyRight
+                </Text>{" "}
+                |{"  "}
+                <Text
+                  style={{ marginLeft: 100 }}
+                  onPress={() => this.contactUsEmail()}
+                >
+                  Contact Us
+                </Text>
               </Text>
-            </Text>
+            </View>
           </View>
-        </View>
-      </ScrollView>
-      {ControllContainer.getInstance().checkModal()}
+        </ScrollView>
+        {ControllContainer.getInstance().checkModal()}
       </View>
     );
   }
@@ -161,33 +164,33 @@ class MainPage extends Component {
 
 export default MainPage;
 
-const width = Dimensions.get('window').width;
-const height = Dimensions.get('window').height;
+const width = Dimensions.get("window").width;
+const height = Dimensions.get("window").height;
 
 const styles = StyleSheet.create({
   container: {
     marginTop: 50,
     flex: 1,
-    backgroundColor: '#f1f2f6',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#f1f2f6",
+    alignItems: "center",
+    justifyContent: "center"
   },
   qnaContainer: {
     height: 23,
     width: width,
-    backgroundColor: '#bdc3c7',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#bdc3c7",
+    alignItems: "center",
+    justifyContent: "center"
   },
   btn: {
-    marginLeft: 10,
+    marginLeft: 10
   },
   horizontal: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center"
   },
   space: {
-    height: 10,
-  },
+    height: 10
+  }
 });
