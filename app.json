@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Tippecanoe County Sheriff's Office",
-    "slug": "tippecanoe-county-sheriff-office",
+    "name": "Tippecanoe Sheriff's Office",
+    "slug": "tippecanoe-sheriff-office",
     "privacy": "public",
     "sdkVersion": "34.0.0",
     "platforms": ["ios", "android", "web"],
@@ -19,6 +19,7 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
+      "buildNumber": "3",
       "bundleIdentifier": "com.tippecanoe.sheriff"
     },
     "android": {

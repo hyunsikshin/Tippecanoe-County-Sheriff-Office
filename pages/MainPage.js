@@ -7,7 +7,7 @@ import {
   ScrollView,
   Dimensions,
   BackHandler,
-  StatusBar
+  StatusBar,
 } from "react-native";
 import Weather from "../components/Weather";
 import ControllContainer from "../actions/ControllContainer";
@@ -27,7 +27,7 @@ class MainPage extends Component {
     error: null,
     name: null,
     city: null,
-    tempertature: null
+    tempertature: null,
   };
 
   //sendEmail(e-mail address, title, content)
@@ -61,17 +61,17 @@ class MainPage extends Component {
   }
 
   static navigationOptions = {
-    header: null
+    header: null,
   };
 
   componentDidMount() {
     navigator.geolocation.getCurrentPosition(
-      position => {
+      (position) => {
         this._getWeather(position.coords.latitude, position.coords.longitude);
       },
-      error => {
+      (error) => {
         this.setState({
-          error: error
+          error: error,
         });
       }
     );
@@ -89,13 +89,13 @@ class MainPage extends Component {
     fetch(
       `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${API_KEY}`
     )
-      .then(response => response.json())
-      .then(json => {
+      .then((response) => response.json())
+      .then((json) => {
         this.setState({
           city: json.name,
           name: json.weather[0].main,
           tempertature: json.main.temp,
-          isLoaded: true
+          isLoaded: true,
         });
       });
   };
@@ -125,8 +125,7 @@ class MainPage extends Component {
             <View style={styles.space}></View>
             <QnA />
             <View style={styles.space}></View>
-            <ButtonSet />
-
+            <ButtonSet navigate={navigate} />
             <View style={{ marginTop: 10, marginBottom: 10 }}>
               <Text>
                 <Text
@@ -173,24 +172,24 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#f1f2f6",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   qnaContainer: {
     height: 23,
     width: width,
     backgroundColor: "#bdc3c7",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   btn: {
-    marginLeft: 10
+    marginLeft: 10,
   },
   horizontal: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   space: {
-    height: 10
-  }
+    height: 10,
+  },
 });

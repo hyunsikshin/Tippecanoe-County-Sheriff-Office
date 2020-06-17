@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import { Text, View, Dimensions ,Alert , Platform} from 'react-native';
-import EStyleSheet from 'react-native-extended-stylesheet';
+import React, { Component } from "react";
+import { Text, View, Dimensions, Alert, Platform } from "react-native";
+import { WebView } from "react-native-webview";
+import EStyleSheet from "react-native-extended-stylesheet";
 import {
   FontAwesome,
   Feather,
@@ -10,30 +11,30 @@ import {
   MaterialIcons,
   Ionicons,
   MaterialCommunityIcons,
-} from '@expo/vector-icons';
-import getLink from '../actions/getLink';
+} from "@expo/vector-icons";
+import getLink from "../actions/getLink";
 //svg files
-import EventSecurity from '../assets/buttonIcons/EventSecurity.svg';
-import AnimalControl from '../assets/buttonIcons/AnimalControl.svg';
-import Commissary from '../assets/buttonIcons/Commissary.svg';
-import Contacts from '../assets/buttonIcons/Contacts.svg';
-import CrashReport from '../assets/buttonIcons/CrashReport.svg';
-import Gun from '../assets/buttonIcons/Gun.svg';
-import Inmatelookup from '../assets/buttonIcons/Inmatelookup.svg';
-import Jobapply from '../assets/buttonIcons/Jobapply.svg';
-import SocialMedia from '../assets/buttonIcons/SocialMedia.svg';
-import RecordRequest from '../assets/buttonIcons/RecordRequest.svg';
-import ExtraPatrolRequest from '../assets/buttonIcons/ExtraPatrolRequest.svg';
-import SexOffender from '../assets/buttonIcons/Card.svg';
-import VideoVisitation from '../assets/buttonIcons/VideoVisitation.svg';
-import VisitationPolicy from '../assets/buttonIcons/policy.svg';
-import Wetip from '../assets/buttonIcons/Wetip.svg';
-import SheriffSale from '../assets/buttonIcons/SheriffSale.svg';
-import TaxWarrants from '../assets/buttonIcons/TaxWarrants.svg';
-import TrafficComplaints from '../assets/buttonIcons/TrafficComplaints.svg';
+import EventSecurity from "../assets/buttonIcons/EventSecurity.svg";
+import AnimalControl from "../assets/buttonIcons/AnimalControl.svg";
+import Commissary from "../assets/buttonIcons/Commissary.svg";
+import Contacts from "../assets/buttonIcons/Contacts.svg";
+import CrashReport from "../assets/buttonIcons/CrashReport.svg";
+import Gun from "../assets/buttonIcons/Gun.svg";
+import Inmatelookup from "../assets/buttonIcons/Inmatelookup.svg";
+import Jobapply from "../assets/buttonIcons/Jobapply.svg";
+import SocialMedia from "../assets/buttonIcons/SocialMedia.svg";
+import RecordRequest from "../assets/buttonIcons/RecordRequest.svg";
+import ExtraPatrolRequest from "../assets/buttonIcons/ExtraPatrolRequest.svg";
+import SexOffender from "../assets/buttonIcons/Card.svg";
+import VideoVisitation from "../assets/buttonIcons/VideoVisitation.svg";
+import VisitationPolicy from "../assets/buttonIcons/policy.svg";
+import Wetip from "../assets/buttonIcons/Wetip.svg";
+import SheriffSale from "../assets/buttonIcons/SheriffSale.svg";
+import TaxWarrants from "../assets/buttonIcons/TaxWarrants.svg";
+import TrafficComplaints from "../assets/buttonIcons/TrafficComplaints.svg";
 
-import * as Font from 'expo-font';
-import { sendEmail } from '../actions/SendEmail';
+import * as Font from "expo-font";
+import { sendEmail } from "../actions/SendEmail";
 
 class ButtonSet extends Component {
   state = {
@@ -44,33 +45,33 @@ class ButtonSet extends Component {
   // e-mail address will be changed
   extraPatrolRequestEmail = () => {
     sendEmail(
-      'tcsodispatch@tippecanoe.in.gov',
-      'Extra Patrol Request',
-      'Name of requestor : \nAddress of request : \nRequestor phone number : \n\nDescription of problem : \nLocation of problem : \nTimes occurring : \nRequest start date : \nRequest end date : \n\nAny additional details of request : \n'
+      "tcsodispatch@tippecanoe.in.gov",
+      "Extra Patrol Request",
+      "Name of requestor : \nAddress of request : \nRequestor phone number : \n\nDescription of problem : \nLocation of problem : \nTimes occurring : \nRequest start date : \nRequest end date : \n\nAny additional details of request : \n"
     );
   };
 
   // Contents and e-mail address will be changed
   eventSecurityEmail = () => {
     sendEmail(
-      'rwhainje@tippecanoe.in.gov',
-      'Event Security',
-      'Name of requestor : \nAddress of request : \nRequestor phone number : \n\nDescription of problem : \nLocation of problem : \nTimes occurring : \nRequest start date : \nRequest end date : \n\nAny additional details of request : \n'
+      "rwhainje@tippecanoe.in.gov",
+      "Event Security",
+      "Name of requestor : \nAddress of request : \nRequestor phone number : \n\nDescription of problem : \nLocation of problem : \nTimes occurring : \nRequest start date : \nRequest end date : \n\nAny additional details of request : \n"
     );
   };
 
   // Contents and e-mail address will be changed
   trafficComplaintsEmail = () => {
     sendEmail(
-      'traffic@tippecanoe.in.gov',
-      'Traffic Complaints',
-      'Name of requestor : \nAddress of request : \nRequestor phone number : \n\nDescription of problem : \nLocation of problem : \nTimes occurring : \nRequest start date : \nRequest end date : \n\nAny additional details of request : \n'
+      "traffic@tippecanoe.in.gov",
+      "Traffic Complaints",
+      "Name of requestor : \nAddress of request : \nRequestor phone number : \n\nDescription of problem : \nLocation of problem : \nTimes occurring : \nRequest start date : \nRequest end date : \n\nAny additional details of request : \n"
     );
   };
 
   async componentDidMount() {
     await Font.loadAsync({
-      CustomFont: require('../assets/fonts/SCDream6.otf'),
+      CustomFont: require("../assets/fonts/SCDream6.otf"),
     });
 
     this.setState({ fontLoaded: true });
@@ -83,9 +84,10 @@ class ButtonSet extends Component {
           <Inmatelookup
             height={styles.icon_size.height}
             width={styles.icon_size.width}
-            onPress={() => {
-              getLink.getLink('immateLookup');
-            }}
+            // onPress={() => {
+            //   getLink.getLink('immateLookup');
+            // }}
+            onPress={() => this.props.navigate("Inmatelookup")}
           />
           {this.state.fontLoaded ? (
             <Text style={styles.text}>Inmate Lookup</Text>
@@ -97,21 +99,22 @@ class ButtonSet extends Component {
             height={styles.icon_size.height}
             width={styles.icon_size.width}
             onPress={() =>
-                Platform.OS == 'ios' ? getLink.getLink('videoVisitationWeb') :
-                  getLink.openView('ModalView', 'ModalVideoVisitation')
+              Platform.OS == "ios"
+                ? this.props.navigate("VideoVisitation")
+                : getLink.openView("ModalView", "ModalVideoVisitation")
             }
           />
           {this.state.fontLoaded ? (
             <Text style={styles.text}>Video Visitation</Text>
           ) : null}
         </View>
-        
+
         <View style={styles.cell}>
           <VisitationPolicy
             height={styles.icon_size.height}
             width={styles.icon_size.width}
             onPress={() => {
-              getLink.getLink('visitationPolicy');
+              this.props.navigate("VisitationPolicy");
             }}
           />
           {this.state.fontLoaded ? (
@@ -124,7 +127,7 @@ class ButtonSet extends Component {
             height={styles.icon_size.height}
             width={styles.icon_size.width}
             onPress={() => {
-              getLink.getLink('commissary');
+              this.props.navigate("Commissary");
             }}
           />
           {this.state.fontLoaded ? (
@@ -137,7 +140,7 @@ class ButtonSet extends Component {
             height={styles.icon_size.height}
             width={styles.icon_size.width}
             onPress={() => {
-              getLink.getLink('crashReports');
+              this.props.navigate("CrashReport");
             }}
           />
           {this.state.fontLoaded ? (
@@ -150,7 +153,7 @@ class ButtonSet extends Component {
             height={styles.icon_size.height}
             width={styles.icon_size.width}
             onPress={() => {
-              getLink.getLink('recordsRequest');
+              this.props.navigate("RecordRequest");
             }}
           />
           {this.state.fontLoaded ? (
@@ -174,7 +177,7 @@ class ButtonSet extends Component {
             height={styles.icon_size.height}
             width={styles.icon_size.width}
             onPress={() => {
-              getLink.getLink('weTip');
+              this.props.navigate("Wetip");
             }}
           />
           {this.state.fontLoaded ? (
@@ -187,7 +190,7 @@ class ButtonSet extends Component {
             height={styles.icon_size.height}
             width={styles.icon_size.width}
             onPress={() => {
-              getLink.getLink('sexOffenders');
+              this.props.navigate("SexOffender");
             }}
           />
           {this.state.fontLoaded ? (
@@ -199,7 +202,7 @@ class ButtonSet extends Component {
           <SheriffSale
             height={styles.icon_size.height}
             width={styles.icon_size.width}
-            onPress={() => getLink.openView('ModalView', 'ModalSheriffSale')}
+            onPress={() => getLink.openView("ModalView", "ModalSheriffSale")}
           />
           {this.state.fontLoaded ? (
             <Text style={styles.text}>Sheriff Sale</Text>
@@ -211,7 +214,7 @@ class ButtonSet extends Component {
             height={styles.icon_size.height}
             width={styles.icon_size.width}
             onPress={() => {
-              getLink.getLink('taxWarrants');
+              this.props.navigate("TaxWarrants");
             }}
           />
           {this.state.fontLoaded ? (
@@ -224,7 +227,7 @@ class ButtonSet extends Component {
             height={styles.icon_size.height}
             width={styles.icon_size.width}
             onPress={() => {
-              getLink.getLink('gunPermits');
+              this.props.navigate("Gun");
             }}
           />
           {this.state.fontLoaded ? (
@@ -236,7 +239,7 @@ class ButtonSet extends Component {
           <Contacts
             height={styles.icon_size.height}
             width={styles.icon_size.width}
-            onPress={() => getLink.openView('ModalView', 'ModalContackUs')}
+            onPress={() => getLink.openView("ModalView", "ModalContackUs")}
           />
           {this.state.fontLoaded ? (
             <Text style={styles.text}>Contacts Us</Text>
@@ -248,7 +251,7 @@ class ButtonSet extends Component {
             height={styles.icon_size.height}
             width={styles.icon_size.width}
             onPress={() => {
-              getLink.getLink('jobApply');
+              this.props.navigate("Career");
             }}
           />
           {this.state.fontLoaded ? (
@@ -261,7 +264,7 @@ class ButtonSet extends Component {
             height={styles.icon_size.height}
             width={styles.icon_size.width}
             onPress={() => {
-              getLink.getLink('animalControl');
+              this.props.navigate("AnimalControl");
             }}
           />
           {this.state.fontLoaded ? (
@@ -284,7 +287,7 @@ class ButtonSet extends Component {
           <SocialMedia
             height={styles.icon_size.height}
             width={styles.icon_size.width}
-            onPress={() => getLink.openView('ModalView', 'ModalSocialMdeida')}
+            onPress={() => getLink.openView("ModalView", "ModalSocialMdeida")}
           />
           {this.state.fontLoaded ? (
             <Text style={styles.text}>Social Media</Text>
@@ -308,33 +311,33 @@ class ButtonSet extends Component {
 
 export default ButtonSet;
 
-const entireScreenWidth = Dimensions.get('window').width;
+const entireScreenWidth = Dimensions.get("window").width;
 EStyleSheet.build({ $rem: entireScreenWidth / 380 });
 
 const styles = EStyleSheet.create({
   container: {
-    display: 'flex',
-    justifyContent: 'center',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    backgroundColor: '#ced6e0',
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    backgroundColor: "#ced6e0",
     padding: 20,
   },
   cell: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '110rem',
-    height: '110rem',
-    backgroundColor: 'white',
+    justifyContent: "center",
+    alignItems: "center",
+    width: "110rem",
+    height: "110rem",
+    backgroundColor: "white",
   },
   text: {
-    color: 'black',
-    textAlign: 'center',
-    fontFamily: 'CustomFont',
+    color: "black",
+    textAlign: "center",
+    fontFamily: "CustomFont",
     fontSize: 13,
   },
   icon_size: {
-    width: '60rem',
-    height: '60rem',
+    width: "60rem",
+    height: "60rem",
   },
 });
