@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   View,
   Text,
   TouchableOpacity,
   TextInput,
   StyleSheet,
-} from 'react-native';
-import { sendEmail } from '../actions/SendEmail';
+} from "react-native";
+import { sendEmail } from "../actions/SendEmail";
 
 const EventPage = () => {
-  const [value, onChangeText] = React.useState('Useless Multiline Placeholder');
-  const [request, setRequest] = React.useState('');
-  const [area, setArea] = useState('');
-  const [time, setTime] = useState('');
-  const [info, setInfo] = useState('');
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-
+  const [value, onChangeText] = React.useState("Useless Multiline Placeholder");
+  const [request, setRequest] = React.useState("");
+  const [area, setArea] = useState("");
+  const [time, setTime] = useState("");
+  const [info, setInfo] = useState("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [status, setStatus] = useState(navigator.onLine);
   active_send_email = () => {
-    sendEmail('tlshdtlr@gmail.com', name, request);
+    sendEmail("tlshdtlr@gmail.com", name, request);
   };
 
   return (
@@ -29,7 +29,7 @@ const EventPage = () => {
         placeholder="Name"
         placeholderTextColor="#9a73ef"
         autoCapitalize="none"
-        onChangeText={text => setName(text)}
+        onChangeText={(text) => setName(text)}
       />
 
       <TextInput
@@ -38,7 +38,7 @@ const EventPage = () => {
         placeholder="Phone"
         placeholderTextColor="#9a73ef"
         autoCapitalize="none"
-        onChangeText={text => setPhone(text)}
+        onChangeText={(text) => setPhone(text)}
       />
 
       <TextInput
@@ -47,7 +47,7 @@ const EventPage = () => {
         placeholder="Request"
         placeholderTextColor="#9a73ef"
         autoCapitalize="none"
-        onChangeText={text => setRequest(text)}
+        onChangeText={(text) => setRequest(text)}
       />
 
       <TextInput
@@ -56,7 +56,7 @@ const EventPage = () => {
         placeholder="Area"
         placeholderTextColor="#9a73ef"
         autoCapitalize="none"
-        onChangeText={text => setArea(text)}
+        onChangeText={(text) => setArea(text)}
       />
 
       <TextInput
@@ -65,12 +65,13 @@ const EventPage = () => {
         placeholder="Info"
         placeholderTextColor="#9a73ef"
         autoCapitalize="none"
-        onChangeText={text => setInfo(text)}
+        onChangeText={(text) => setInfo(text)}
       />
 
       <TouchableOpacity
         style={styles.submitButton}
-        onPress={this.active_send_email}>
+        onPress={this.active_send_email}
+      >
         <Text style={styles.submitButtonText}> Send </Text>
       </TouchableOpacity>
     </View>
@@ -78,7 +79,7 @@ const EventPage = () => {
 };
 
 EventPage.navigationOptions = {
-  title: 'Event Page',
+  title: "Event Page",
 };
 
 export default EventPage;
@@ -90,16 +91,16 @@ const styles = StyleSheet.create({
   input: {
     margin: 15,
     height: 40,
-    borderColor: '#7a42f4',
+    borderColor: "#7a42f4",
     borderWidth: 1,
   },
   submitButton: {
-    backgroundColor: '#7a42f4',
+    backgroundColor: "#7a42f4",
     padding: 10,
     margin: 15,
     height: 40,
   },
   submitButtonText: {
-    color: 'white',
+    color: "white",
   },
 });
